@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Duomenų bazės",
+    "description": "Naršykite ir redaguokite MySQL, MariaDB, PostgreSQL bei SQLite duomenų bazes savo serveriuose viename skirtuke."
+  },
+  "common": {
+    "save": "Išsaugoti",
+    "cancel": "Atšaukti",
+    "back": "Atgal",
+    "delete": "Pašalinti",
+    "refresh": "Atnaujinti"
+  },
+  "permissions": {
+    "use": {
+      "title": "Naudoti duomenų bazes",
+      "description": "Atidaryti „Duomenų bazių“ skirtuką ir dirbti su duomenų bazėmis prieinamuose serveriuose."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Duomenų bazės",
+        "description": "Rodyti šio serverio meniu skirtuką „Duomenų bazės“."
+      }
+    }
+  },
+  "tab": {
+    "title": "Duomenų bazės",
+    "noHost": "Atidarykite „Duomenų bazes“ iš serverio.",
+    "error": "Nepavyko įkelti duomenų bazių iš šio serverio.",
+    "sudo": "Šiam serveriui reikia slaptažodžio nereikalaujančio „sudo“, kad būtų galima vykdyti komandas kaip kitas vartotojas.",
+    "noTools": "Šiame serveryje nerastas duomenų bazių klientas. Įdiekite „mysql“, „psql“ arba „sqlite3“, kad galėtumėte naudoti šį skirtuką.",
+    "empty": "Dar nėra duomenų bazių prisijungimų",
+    "emptyHint": "Pridėkite prisijungimą prie duomenų bazės, kuri veikia šiame serveryje arba yra pasiekiama iš jo.",
+    "clientMissing": "Klientas nerastas"
+  },
+  "conn": {
+    "add": "Pridėti prisijungimą",
+    "edit": "Redaguoti",
+    "addTitle": "Nauji duomenų bazės prisijungimo duomenys",
+    "name": "Pavadinimas",
+    "type": "Duomenų bazės tipas",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Šio duomenų bazės tipo klientas serveryje nerastas.",
+    "file": "Duomenų bazės failas",
+    "fileHint": "Pilnas SQLite failo kelias serveryje.",
+    "address": "Adresas",
+    "addressHint": "Palikite tuščią, kad būtų naudojamas vietinis lizdas.",
+    "port": "Prievadas",
+    "user": "Naudotojas",
+    "password": "Slaptažodis",
+    "passwordSaved": "Slaptažodis išsaugotas. Palikite tuščią, kad jį išlaikytumėte.",
+    "passwordHint": "Palikite tuščią lizdo arba partnerio prisijungimui.",
+    "clearPassword": "Pašalinti išsaugotą slaptažodį",
+    "database": "Numatytoji duomenų bazė",
+    "databaseHint": "Pasirinktinai. Duomenų bazė, kurią atidaryti pirmiausia.",
+    "runAs": "Vykdyti kaip Linux vartotoją",
+    "runAsHint": "Nebūtina. Vykdo klientą kaip šį vartotoją su sudo, pavyzdžiui, postgres. Reikia sudo be slaptažodžio.",
+    "readOnly": "Tik skaitymui",
+    "readOnlyDesc": "Blokuoja per šį prisijungimą Termix atliktus pakeitimus. Duomenų bazės vartotojo teises vis tiek taikoma.",
+    "readOnlyBadge": "Tik skaitymui",
+    "socket": "Vietinis lizdas",
+    "test": "Išbandyti ryšį",
+    "testing": "Testuojama",
+    "testOk": "Prisijungta. {{version}}",
+    "testFailed": "Nepavyko prisijungti.",
+    "saveFailed": "Nepavyko išsaugoti prisijungimo.",
+    "deleteTitle": "Ištrinti „{{name}}“?",
+    "deleteDesc": "Tai pašalins išsaugotą prisijungimą iš Termix. Duomenų bazė neliesiama.",
+    "deleteFailed": "Nepavyko ištrinti prisijungimo.",
+    "showPassword": "Rodyti slaptažodį",
+    "hidePassword": "Slėpti slaptažodį"
+  },
+  "browse": {
+    "tables": "Lentelės",
+    "sql": "SQL",
+    "database": "Duomenų bazė",
+    "search": "Ieškoti lentelių",
+    "noTables": "Nerasta jokių lentelių.",
+    "view": "Peržiūra",
+    "rows": "{{count}} eilutės",
+    "loadFailed": "Nepavyko perskaityti duomenų bazės.",
+    "pick": "Pasirinkite lentelę kairėje."
+  },
+  "data": {
+    "title": "Duomenys",
+    "add": "Pridėti eilutę",
+    "noKey": "Ši lentelė neturi pirminio rakto, todėl jos eilutės yra tik skaitomos.",
+    "readOnly": "Šios eilutės čia pakeisti negalima.",
+    "noRows": "Eilučių nėra.",
+    "apply": "Filtruoti",
+    "clear": "Išvalyti",
+    "filterPlaceholder": "Sąlyga, pvz., status = 'active'",
+    "range": "{{from}}–{{to}} iš {{total}}",
+    "rowCount": "Eilutės: {{count}}",
+    "prev": "Ankstesnis puslapis",
+    "next": "Kitas puslapis",
+    "loadFailed": "Nepavyko perskaityti eilučių."
+  },
+  "row": {
+    "addTitle": "Pridėti eilutę",
+    "editTitle": "Redaguoti eilutę",
+    "defaultHint": "Numatytasis: {{value}}",
+    "setValue": "Nustatyti reikšmę",
+    "setNull": "Nustatyti NULL",
+    "saveFailed": "Nepavyko išsaugoti eilutės.",
+    "deleteTitle": "Pašalinti šią eilutę?",
+    "deleteDesc": "Šio veiksmo negalima atšaukti.",
+    "deleteFailed": "Nepavyko pašalinti eilutės.",
+    "locked": "Šių stulpelių čia redaguoti negalima:"
+  },
+  "structure": {
+    "title": "Struktūra",
+    "name": "Stulpelis",
+    "type": "Tipas",
+    "nullable": "Nulinė",
+    "key": "Raktas",
+    "default": "Numatytasis",
+    "extra": "Papildoma",
+    "yes": "Taip",
+    "no": "Ne",
+    "indexes": "Indeksai",
+    "noIndexes": "Nėra indeksų."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Vykdyti",
+    "running": "Vykdoma",
+    "hint": "Paspaudus Ctrl+Enter, užklausa bus vykdoma.",
+    "history": "Naujausi",
+    "failed": "Užklausa nepavyko.",
+    "noResult": "Pareigybė įvykdyta. Eilučių negauta.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Tik skaitymo sesija",
+    "truncated": "Rodomos pirmosios {{count}} eilutės."
+  }
+}

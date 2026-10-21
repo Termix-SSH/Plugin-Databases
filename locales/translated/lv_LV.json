@@ -1,0 +1,141 @@
+{
+  "plugin": {
+    "name": "Datubāzes",
+    "description": "Pārlūkojiet un rediģējiet MySQL, MariaDB, PostgreSQL un SQLite datubāzes savos resursdatoros vienā cilnē."
+  },
+  "common": {
+    "save": "Saglabāt",
+    "cancel": "Atcelt",
+    "back": "Atpakaļ",
+    "delete": "Dzēst",
+    "refresh": "Atsvaidzināt"
+  },
+  "permissions": {
+    "use": {
+      "title": "Izmantot datubāzes",
+      "description": "Atveriet datubāzu cilni un strādājiet ar datubāzēm resursos, pie kuriem jums ir piekļuve."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Datubāzes",
+        "description": "Rādīt šī hosta izvēlnē Databases cilni."
+      }
+    }
+  },
+  "tab": {
+    "title": "Databases",
+    "noHost": "Atveriet Databases no hosta.",
+    "error": "Neizdevās ielādēt Databases no šī hosta.",
+    "sudo": "Šim hostam ir nepieciešams sudo bez paroles, lai izpildītu komandas kā cits lietotājs.",
+    "noTools": "Šajā hostā netika atrasts neviens datubāzes klients. Instalējiet mysql, psql vai sqlite3, lai izmantotu šo cilni.",
+    "empty": "Vēl nav datubāzes pieteikumu",
+    "emptyHint": "Pievienojiet pieteikumu datubāzei, kas darbojas šajā hostā vai ir sasniedzama no tā.",
+    "clientMissing": "Klients nav pieejams"
+  },
+  "conn": {
+    "add": "Pievienot pieteikumu",
+    "edit": "Rediģēt",
+    "addTitle": "Jauns datubāzes pieteikums",
+    "name": "Nosaukums",
+    "type": "Datubāzes veids",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Šī datubāzes veida klients uz servera netika atrasts.",
+    "file": "Datubāzes fails",
+    "fileHint": "Pilns SQLite faila ceļš uz servera.",
+    "address": "Adrese",
+    "addressHint": "Atstāj tukšu, lai izmantotu vietējo ligzdu.",
+    "port": "Ports",
+    "user": "Lietotājs",
+    "password": "Parole",
+    "passwordSaved": "Parole ir saglabāta. Atstāj tukšu, lai to saglabātu.",
+    "passwordHint": "Atstāj tukšu ligzdas vai partnera pieteikumam.",
+    "clearPassword": "Noņemt saglabāto paroli",
+    "database": "Noklusējuma datubāze",
+    "databaseHint": "Neobligāti. Datubāze, kuru atvērt pirmo.",
+    "runAs": "Palaist kā Linux lietotājam",
+    "runAsHint": "Neobligāts. Palaista klientu kā šim lietotājam ar sudo, piemēram, postgres. Nepieciešama paroles nav nepieciešama sudo.",
+    "readOnly": "Tikai lasīšanai",
+    "readOnlyDesc": "Bloķēt izmaiņas, kas veiktas caur šo pieteikumu Termix. Datubāzes lietotāja pašas tiesības joprojām ir spēkā.",
+    "readOnlyBadge": "Tikai lasīšanai",
+    "socket": "Vietējais ligzda",
+    "test": "Testēt savienojumu",
+    "testing": "Testēšana",
+    "testOk": "Savienojums izveidots. {{version}}",
+    "testFailed": "Neizdevās izveidot savienojumu.",
+    "saveFailed": "Neizdevās saglabāt pieteikšanās datus.",
+    "deleteTitle": "Vai dzēst {{name}}?",
+    "deleteDesc": "Tā rezultātā pieteikšanās dati tiks noņemti no Termix. Datubāze netiek skarta.",
+    "deleteFailed": "Neizdevās dzēst pieteikšanās datus.",
+    "showPassword": "Rādīt paroli",
+    "hidePassword": "Paslēpt paroli"
+  },
+  "browse": {
+    "tables": "Tabulas",
+    "sql": "SQL",
+    "database": "Datubāze",
+    "search": "Meklēt tabulas",
+    "noTables": "Nav atrasta neviens tabula.",
+    "view": "Apskatīt",
+    "loadFailed": "Neizdevās izlasīt datubāzi.",
+    "pick": "Izvēlieties tabulu kreisajā pusē."
+  },
+  "data": {
+    "title": "Dati",
+    "add": "Pievienot rindu",
+    "noKey": "Šai tabulai nav primārā atslēga, tāpēc tās rindas ir tikai lasāmas.",
+    "readOnly": "Šo rindu nevar mainīt šeit.",
+    "noRows": "Nav rindu.",
+    "apply": "Filtrēt",
+    "clear": "Notīrīt",
+    "filterPlaceholder": "Nosacījums, piemēram, status = 'aktīvs'",
+    "range": "no {{from}} līdz {{to}} no {{total}}",
+    "rowCount": "zero: \"0 rindas\", one: \"1 rinda\", other: \"{{count}} rindas\"",
+    "prev": "Iepriekšējā lapa",
+    "next": "Nākamā lapa",
+    "loadFailed": "Neizdevās izlasīt rindas."
+  },
+  "row": {
+    "addTitle": "Pievienot rindu",
+    "editTitle": "Rediģēt rindu",
+    "defaultHint": "Noklusējums: {{value}}",
+    "setValue": "Iestatīt vērtību",
+    "setNull": "Iestatīt NULL",
+    "saveFailed": "Neizdevās saglabāt rindu.",
+    "deleteTitle": "Dzēst šo rindu?",
+    "deleteDesc": "Šo darbību nevar atsaukt.",
+    "deleteFailed": "Neizdevās dzēst rindu.",
+    "locked": "Šīs kolonnas šeit nevar rediģēt:"
+  },
+  "structure": {
+    "title": "Struktūra",
+    "name": "Kolonna",
+    "type": "Tips",
+    "nullable": "Null",
+    "key": "Atslēga",
+    "default": "Noklusējums",
+    "extra": "Papildu",
+    "yes": "Jā",
+    "no": "Nē",
+    "indexes": "Indeksi",
+    "noIndexes": "Nav indeksu."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Palaist",
+    "running": "Notiek izpilde",
+    "hint": "Lai palaistu vaicājumu, nospiediet Ctrl+Enter.",
+    "history": "Nesenie",
+    "failed": "Vaicājums neizdevās.",
+    "noResult": "Declarācija tika izpildīta. Rezultātu rindas netika atgrieztas.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sesija tikai lasīšanai",
+    "truncated": "Tiek parādītas pirmās {{count}} rindas."
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "plugin": {
+    "name": "Baze podatkov",
+    "description": "Prebrskajte in urejajte baze podatkov MySQL, MariaDB, PostgreSQL in SQLite na svojih gostiteljih v enem zavihku."
+  },
+  "common": {
+    "save": "Shrani",
+    "cancel": "Prekliči",
+    "back": "Nazaj",
+    "delete": "Izbriši",
+    "refresh": "Osveži"
+  },
+  "permissions": {
+    "use": {
+      "title": "Uporaba baz podatkov",
+      "description": "Odprite zavihek Baze podatkov in delajte z bazami podatkov na gostiteljih, ki jih lahko dostopate."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Baze podatkov",
+        "description": "Prikaži zavihek Baze podatkov za tega gostitelja v njegovem meniju."
+      }
+    }
+  },
+  "tab": {
+    "title": "Baze podatkov",
+    "noHost": "Odprite Baze podatkov iz gostitelja.",
+    "error": "Baz podatkov iz tega gostitelja ni bilo mogoče naložiti.",
+    "sudo": "Ta gostitelj zahteva sudo brez gesla za izvajanje ukazov kot drug uporabnik.",
+    "noTools": "Na tem gostitelju ni bilo najdenega nobenega odjemalca za baze podatkov. Za uporabo tega zavihka namestite mysql, psql ali sqlite3.",
+    "empty": "Še ni prijav v bazo podatkov",
+    "emptyHint": "Dodajte prijavo za bazo podatkov, ki teče na tem gostitelju ali je dosegljiva od njega.",
+    "clientMissing": "Manjkajoče odjemalsko programje"
+  },
+  "conn": {
+    "add": "Dodaj prijavo",
+    "edit": "Uredi",
+    "addTitle": "Nova prijava v bazo podatkov",
+    "name": "Ime",
+    "type": "Vrsta baze podatkov",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Odjemalnik za to vrsto baze podatkov ni bil najden na gostitelju.",
+    "file": "Datoteka baze podatkov",
+    "fileHint": "Polna pot do datoteke SQLite na gostitelju.",
+    "address": "Naslov",
+    "addressHint": "Pustite prazno za uporabo lokalnega vtičnice.",
+    "port": "Vrata",
+    "user": "Uporabnik",
+    "password": "Geslo",
+    "passwordSaved": "Geslo je shranjeno. Pustite prazno, da ga obdržite.",
+    "passwordHint": "Pustite prazno za prijavo prek vtičnice ali vrstni red.",
+    "clearPassword": "Odstrani shranjeno geslo",
+    "database": "Privzeta baza podatkov",
+    "databaseHint": "Neobvezno. Baza podatkov, ki se bo odprla prva.",
+    "runAs": "Izvedi kot Linux uporabnik",
+    "runAsHint": "Neobvezno. Odpre odjemalec kot ta uporabnik z sudo, na primer postgres. Zahteva sudo brez gesla.",
+    "readOnly": "Samo za branje",
+    "readOnlyDesc": "Prepreči spremembe, narejene prek te prijave v Termix. Pravice uporabnika baze podatkov še vedno veljajo.",
+    "readOnlyBadge": "Samo za branje",
+    "socket": "Lokalni vtič",
+    "test": "Preveri povezavo",
+    "testing": "Preverjanje",
+    "testOk": "Povezano. {{version}}",
+    "testFailed": "Povezava ni uspela.",
+    "saveFailed": "Prijava se ni uspela shraniti.",
+    "deleteTitle": "Izbrišem {{name}}?",
+    "deleteDesc": "To bo iz Termixa odstranilo shranjeno prijavo. Baza podatkov ne bo prizadeta.",
+    "deleteFailed": "Prijava se ni uspela izbrisati.",
+    "showPassword": "Prikaži geslo",
+    "hidePassword": "Skrij geslo"
+  },
+  "browse": {
+    "tables": "Tabele",
+    "sql": "SQL",
+    "database": "Baza podatkov",
+    "search": "Išči tabele",
+    "noTables": "Ni najdenih tabel.",
+    "view": "Prikaz",
+    "loadFailed": "Baze podatkov ni bilo mogoče prebrati.",
+    "pick": "Izberite tabelo na levi."
+  },
+  "data": {
+    "title": "Podatki",
+    "add": "Dodaj vrstico",
+    "noKey": "Ta tabela nima primarnega ključa, zato so njene vrstice samo za branje.",
+    "readOnly": "Te vrstice ni mogoče spremeniti tukaj.",
+    "noRows": "Ni vrstic.",
+    "apply": "Filtriraj",
+    "clear": "Počisti",
+    "filterPlaceholder": "Pogoj, na primer status = 'aktiven'",
+    "range": "{{from}} do {{to}} od {{total}}",
+    "rowCount": "vrstic: {{count}}",
+    "prev": "Prejšnja stran",
+    "next": "Naslednja stran",
+    "loadFailed": "Vrstic ni bilo mogoče prebrati."
+  },
+  "row": {
+    "addTitle": "Dodaj vrstico",
+    "editTitle": "Uredi vrstico",
+    "defaultHint": "Privzeto: {{value}}",
+    "setValue": "Nastavi vrednost",
+    "setNull": "Nastavi NULL",
+    "saveFailed": "Vrstice ni bilo mogoče shraniti.",
+    "deleteTitle": "Izbrišete to vrstico?",
+    "deleteDesc": "Tega ni mogoče razveljaviti.",
+    "deleteFailed": "Vrstice ni bilo mogoče izbrisati.",
+    "locked": "Tistih stolpcev ni mogoče urejati tukaj:"
+  },
+  "structure": {
+    "title": "Struktura",
+    "name": "Stolpec",
+    "type": "Vrsta",
+    "nullable": "Nič",
+    "key": "Ključ",
+    "default": "Privzeto",
+    "extra": "Dodatno",
+    "yes": "Da",
+    "no": "Ne",
+    "indexes": "Indeksi",
+    "noIndexes": "Ni indeksov."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Izvedi",
+    "running": "V teku",
+    "hint": "Z Ctrl+Enter izvedete poizvedbo.",
+    "history": "Nedavno",
+    "failed": "Poizvedba ni uspela.",
+    "noResult": "Stavek je bil izveden. Ni bilo vrnjenih vrstic.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sesija samo za branje",
+    "truncated": "Prikazanih je prvih {{count}} vrstic."
+  }
+}

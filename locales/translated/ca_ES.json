@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Bases de dades",
+    "description": "Navegueu i editeu bases de dades MySQL, MariaDB, PostgreSQL i SQLite als vostres amfitrions des d'una sola pestanya."
+  },
+  "common": {
+    "save": "Desa",
+    "cancel": "Cancel·la",
+    "back": "Enrere",
+    "delete": "Suprimeix",
+    "refresh": "Actualitza"
+  },
+  "permissions": {
+    "use": {
+      "title": "Utilitza Bases de dades",
+      "description": "Obriu la pestanya Bases de dades i treballeu amb bases de dades en amfitrions a què teniu accés."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Bases de dades",
+        "description": "Mostra la pestanya Bases de dades per a aquest amfitrió al seu menú."
+      }
+    }
+  },
+  "tab": {
+    "title": "Bases de dades",
+    "noHost": "Obriu Bases de dades des d'un amfitrió.",
+    "error": "No s'han pogut carregar les Bases de dades d'aquest amfitrió.",
+    "sudo": "Aquest amfitrió necessita sudo sense contrasenya per executar comandes com un altre usuari.",
+    "noTools": "No s'ha trobat cap client de base de dades en aquest amfitrió. Instal·leu mysql, psql o sqlite3 per utilitzar aquesta pestanya.",
+    "empty": "Encara no hi ha inicis de sessió de bases de dades",
+    "emptyHint": "Afegiu un inici de sessió per a una base de dades que s'executi en aquest amfitrió o que sigui accessible des d'ell.",
+    "clientMissing": "Client mancant"
+  },
+  "conn": {
+    "add": "Afegeix inici de sessió",
+    "edit": "Edita",
+    "addTitle": "Nou inici de sessió de base de dades",
+    "name": "Nom",
+    "type": "Tipus de base de dades",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "No s'ha trobat el client per a aquest tipus de base de dades en l'amfitrió.",
+    "file": "Fitxer de base de dades",
+    "fileHint": "Ruta completa del fitxer SQLite en l'amfitrió.",
+    "address": "Adreça",
+    "addressHint": "Deixeu-ho buit per utilitzar el socket local.",
+    "port": "Port",
+    "user": "Usuari",
+    "password": "Contrasenya",
+    "passwordSaved": "Hi ha una contrasenya desada. Deixeu-ho buit per mantenir-la.",
+    "passwordHint": "Deixeu-ho buit per a l'inici de sessió per socket o peer.",
+    "clearPassword": "Elimina la contrasenya desada",
+    "database": "Base de dades predeterminada",
+    "databaseHint": "Opcional. La base de dades a obrir primer.",
+    "runAs": "Executa com a usuari de Linux",
+    "runAsHint": "Opcional. Executa el client com a aquest usuari amb sudo, per exemple postgres. Requereix sudo sense contrasenya.",
+    "readOnly": "Només lectura",
+    "readOnlyDesc": "Bloqueja els canvis fets a través d'aquest inici de sessió a Termix. Els permisos propis de l'usuari de la base de dades continuen sent vàlids.",
+    "readOnlyBadge": "Només lectura",
+    "socket": "Socket local",
+    "test": "Prova la connexió",
+    "testing": "Provant",
+    "testOk": "Connectat. {{version}}",
+    "testFailed": "No s'ha pogut connectar.",
+    "saveFailed": "No s'ha pogut desar l'inici de sessió.",
+    "deleteTitle": "Vols suprimir {{name}}?",
+    "deleteDesc": "Això elimina l'inici de sessió desat de Termix. La base de dades no es veu afectada.",
+    "deleteFailed": "No s'ha pogut suprimir l'inici de sessió.",
+    "showPassword": "Mostra la contrasenya",
+    "hidePassword": "Amaga la contrasenya"
+  },
+  "browse": {
+    "tables": "Taules",
+    "sql": "SQL",
+    "database": "Base de dades",
+    "search": "Cerca taules",
+    "noTables": "No s'han trobat taules.",
+    "view": "Visualitza",
+    "rows": "{{count}} files",
+    "loadFailed": "No s'ha pogut llegir la base de dades.",
+    "pick": "Tria una taula a l'esquerra."
+  },
+  "data": {
+    "title": "Dades",
+    "add": "Afegeix fila",
+    "noKey": "Aquesta taula no té clau primària, per tant, les seves files són de només lectura.",
+    "readOnly": "Aquesta fila no es pot modificar aquí.",
+    "noRows": "Cap fila.",
+    "apply": "Filtra",
+    "clear": "Neteja",
+    "filterPlaceholder": "Condició, per exemple status = 'active'",
+    "range": "de {{from}} a {{to}} de {{total}}",
+    "rowCount": "{{count}} files",
+    "prev": "Pàgina anterior",
+    "next": "Pàgina següent",
+    "loadFailed": "No s'han pogut llegir les files."
+  },
+  "row": {
+    "addTitle": "Afegeix fila",
+    "editTitle": "Edita fila",
+    "defaultHint": "Per defecte: {{value}}",
+    "setValue": "Estableix valor",
+    "setNull": "Estableix NULL",
+    "saveFailed": "No s'ha pogut desar la fila.",
+    "deleteTitle": "Vols suprimir aquesta fila?",
+    "deleteDesc": "Aquesta acció no es pot desfer.",
+    "deleteFailed": "No s'ha pogut suprimir la fila.",
+    "locked": "Aquestes columnes no es poden editar aquí:"
+  },
+  "structure": {
+    "title": "Estructura",
+    "name": "Columna",
+    "type": "Tipus",
+    "nullable": "Null",
+    "key": "Clau",
+    "default": "Per defecte",
+    "extra": "Extra",
+    "yes": "Sí",
+    "no": "No",
+    "indexes": "Índexs",
+    "noIndexes": "Cap índex."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Executa",
+    "running": "S'està executant",
+    "hint": "Ctrl+Enter executa la consulta.",
+    "history": "Recents",
+    "failed": "La consulta ha fallat.",
+    "noResult": "L'ordre s'ha executat. No s'han retornat files.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sessió de només lectura",
+    "truncated": "S'estan mostrant les primeres {{count}} files."
+  }
+}

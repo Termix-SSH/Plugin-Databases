@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Andmebaasid",
+    "description": "Sirvige ja redigeerige MySQL, MariaDB, PostgreSQL ja SQLite andmebaase oma hostidelt ühest vahelehingest."
+  },
+  "common": {
+    "save": "Salvesta",
+    "cancel": "Tühista",
+    "back": "Tagasi",
+    "delete": "Kustuta",
+    "refresh": "Värskenda"
+  },
+  "permissions": {
+    "use": {
+      "title": "Andmebaaside kasutamine",
+      "description": "Ava Andmebaaside vaheleht ja töötle andmebaase hostidel, millele sul on ligipääs."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Andmebaasid",
+        "description": "Kuva selle hosti menüüs Andmebaaside vaheleht."
+      }
+    }
+  },
+  "tab": {
+    "title": "Andmebaasid",
+    "noHost": "Ava Andmebaasid hostilt.",
+    "error": "Andmebaase ei õnnestunud sellelt hostilt laadida.",
+    "sudo": "Selle hosti puhul on vaja paroolita sudo, et käivitada käske teise kasutajana.",
+    "noTools": "Sellelt hostilt ei leitud ühtegi andmebaasi klienti. Paigalda mysql, psql või sqlite3, et seda vahelehte kasutada.",
+    "empty": "Andmebaasi sisselogimisi pole veel",
+    "emptyHint": "Lisa sisselogimine andmebaasile, mis töötab sellel hostil või on selle kaudu saadaval.",
+    "clientMissing": "Klient puudub"
+  },
+  "conn": {
+    "add": "Lisa sisselogimine",
+    "edit": "Redigeeri",
+    "addTitle": "Uus andmebaasi sisselogimine",
+    "name": "Nimi",
+    "type": "Andmebaasi tüüp",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Selle andmebaasi tüübi klienti ei leitud hostilt.",
+    "file": "Andmebaasi fail",
+    "fileHint": "SQLite faili täielik asukoht hostil.",
+    "address": "Aadress",
+    "addressHint": "Jäta tühjaks, et kasutada lokaalset soketit.",
+    "port": "Port",
+    "user": "Kasutaja",
+    "password": "Parool",
+    "passwordSaved": "Parool on salvestatud. Jäta see tühjaks, et seda säilitada.",
+    "passwordHint": "Jäta tühjaks soketi või peer-sisselogimise korral.",
+    "clearPassword": "Eemalda salvestatud parool",
+    "database": "Vaikimisi andmebaas",
+    "databaseHint": "Valikuline. Andmebaas, mis avatakse esimesena.",
+    "runAs": "Käivita Linuxi kasutajana",
+    "runAsHint": "Valikuline. Käivitab kliendi selle kasutajana sudo abil, näiteks postgres. Nõuab paroolita sudo.",
+    "readOnly": "Ainult lugemiseks",
+    "readOnlyDesc": "Blokeeri selle sisselogimise kaudu Termixis tehtavad muudatused. Andmebaasi kasutaja enda õigused kehtivad endiselt.",
+    "readOnlyBadge": "Ainult lugemiseks",
+    "socket": "Lokaalne soket",
+    "test": "Testi ühendust",
+    "testing": "Testimine",
+    "testOk": "Ühendatud. {{version}}",
+    "testFailed": "Ühenduse loomine ebaõnnestus.",
+    "saveFailed": "Sisselogimist ei õnnestunud salvestada.",
+    "deleteTitle": "Kustutada {{name}}?",
+    "deleteDesc": "See eemaldab salvestatud sisselogimise Termixist. Andmebaas ise ei puutu mängu.",
+    "deleteFailed": "Sisselogimist ei õnnestunud kustutada.",
+    "showPassword": "Kuva parool",
+    "hidePassword": "Peida parool"
+  },
+  "browse": {
+    "tables": "Tabelid",
+    "sql": "SQL",
+    "database": "Andmebaas",
+    "search": "Otsi tabelitest",
+    "noTables": "Ühtegi tabelit ei leitud.",
+    "view": "Vaade",
+    "rows": "{{count}} rida",
+    "loadFailed": "Andmebaasi ei õnnestunud lugeda.",
+    "pick": "Valige tabel vasakult."
+  },
+  "data": {
+    "title": "Andmed",
+    "add": "Lisa rida",
+    "noKey": "Sellel tabelil puudub primaarne võti, seega on selle read ainult lugemiseks.",
+    "readOnly": "Seda rida ei saa siin muuta.",
+    "noRows": "Read puuduvad.",
+    "apply": "Filtreeri",
+    "clear": "Tühjenda",
+    "filterPlaceholder": "Tingimus, näiteks status = 'active'",
+    "range": "{{from}}–{{to}} kokku {{total}}",
+    "rowCount": "{{count}} rida",
+    "prev": "Eelmine lehekülg",
+    "next": "Järgmine lehekülg",
+    "loadFailed": "Ridade lugemine ei õnnestunud."
+  },
+  "row": {
+    "addTitle": "Lisa rida",
+    "editTitle": "Muuda rida",
+    "defaultHint": "Vaikimisi: {{value}}",
+    "setValue": "Määra väärtus",
+    "setNull": "Määra NULL",
+    "saveFailed": "Rea salvestamine ei õnnestunud.",
+    "deleteTitle": "Kas kustutada see rida?",
+    "deleteDesc": "Seda ei saa tagasi võtta.",
+    "deleteFailed": "Rea kustutamine ei õnnestunud.",
+    "locked": "Neid veerge ei saa siin muuta:"
+  },
+  "structure": {
+    "title": "Struktuur",
+    "name": "Veerg",
+    "type": "Tüüp",
+    "nullable": "Null",
+    "key": "Võti",
+    "default": "Vaikimisi",
+    "extra": "Lisainfo",
+    "yes": "Jah",
+    "no": "Ei",
+    "indexes": "Indeksid",
+    "noIndexes": "Indekseid ei ole."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Käivita",
+    "running": "Käivitub",
+    "hint": "Ctrl+Enter käivitab päringu.",
+    "history": "Viimased",
+    "failed": "Päring ebaõnnestus.",
+    "noResult": "Käsk käivitati. Ühtegi rida ei tagastatud.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Ainult lugemiseks mõeldud sessioon",
+    "truncated": "Kuvatakse esimesed {{count}} rida."
+  }
+}

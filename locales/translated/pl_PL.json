@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Bazy danych",
+    "description": "Przeglądaj i edytuj bazy danych MySQL, MariaDB, PostgreSQL oraz SQLite na swoich hostach w jednej karcie."
+  },
+  "common": {
+    "save": "Zapisz",
+    "cancel": "Anuluj",
+    "back": "Wstecz",
+    "delete": "Usuń",
+    "refresh": "Odśwież"
+  },
+  "permissions": {
+    "use": {
+      "title": "Używanie baz danych",
+      "description": "Otwieranie karty Bazy danych i praca z bazami na hostach, do których masz dostęp."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Bazy danych",
+        "description": "Wyświetl kartę Bazy danych dla tego hosta w jego menu."
+      }
+    }
+  },
+  "tab": {
+    "title": "Bazy danych",
+    "noHost": "Otwórz Bazy danych z hosta.",
+    "error": "Nie udało się załadować Baz danych z tego hosta.",
+    "sudo": "Ten host wymaga sudo bez hasła, aby uruchamiać polecenia jako inny użytkownik.",
+    "noTools": "Nie znaleziono klienta bazy danych na tym hoście. Zainstaluj mysql, psql lub sqlite3, aby korzystać z tej karty.",
+    "empty": "Brak zapisanych logowań do baz danych",
+    "emptyHint": "Dodaj logowanie do bazy danych działającej na tym hoście lub dostępnej z niego.",
+    "clientMissing": "Brak klienta"
+  },
+  "conn": {
+    "add": "Dodaj logowanie",
+    "edit": "Edytuj",
+    "addTitle": "Nowe dane logowania do bazy danych",
+    "name": "Nazwa",
+    "type": "Typ bazy danych",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Klient dla tego typu bazy danych nie został znaleziony na hoście.",
+    "file": "Plik bazy danych",
+    "fileHint": "Pełna ścieżka do pliku SQLite na hoście.",
+    "address": "Adres",
+    "addressHint": "Pozostaw puste, aby użyć lokalnego gniazda.",
+    "port": "Port",
+    "user": "Użytkownik",
+    "password": "Hasło",
+    "passwordSaved": "Hasło jest zapisane. Pozostaw puste, aby je zachować.",
+    "passwordHint": "Pozostaw puste dla logowania przez gniazdo lub peer.",
+    "clearPassword": "Usuń zapisane hasło",
+    "database": "Domyślna baza danych",
+    "databaseHint": "Opcjonalnie. Baza danych do otwarcia jako pierwsza.",
+    "runAs": "Uruchom jako użytkownik Linuxa",
+    "runAsHint": "Opcjonalne. Uruchamia klienta jako ten użytkownik za pomocą sudo, np. postgres. Wymaga sudo bez hasła.",
+    "readOnly": "Tylko do odczytu",
+    "readOnlyDesc": "Blokuj zmiany wprowadzane przez to połączenie w Termix. Nadal obowiązują uprawnienia samego użytkownika bazy danych.",
+    "readOnlyBadge": "Tylko do odczytu",
+    "socket": "Gniazdo lokalne",
+    "test": "Przetestuj połączenie",
+    "testing": "Testowanie",
+    "testOk": "Połączono. {{version}}",
+    "testFailed": "Nie udało się połączyć.",
+    "saveFailed": "Nie udało się zapisać danych logowania.",
+    "deleteTitle": "Usunąć {{name}}?",
+    "deleteDesc": "Spowoduje to usunięcie zapisanych danych logowania z Termix. Baza danych nie zostanie zmieniona.",
+    "deleteFailed": "Nie udało się usunąć danych logowania.",
+    "showPassword": "Pokaż hasło",
+    "hidePassword": "Ukryj hasło"
+  },
+  "browse": {
+    "tables": "Tabele",
+    "sql": "SQL",
+    "database": "Baza danych",
+    "search": "Szukaj tabel",
+    "noTables": "Nie znaleziono tabel.",
+    "view": "Podgląd",
+    "rows": "Wiersze: {{count}}",
+    "loadFailed": "Nie udało się odczytać bazy danych.",
+    "pick": "Wybierz tabelę po lewej stronie."
+  },
+  "data": {
+    "title": "Dane",
+    "add": "Dodaj wiersz",
+    "noKey": "Ta tabela nie ma klucza głównego, więc jej wiersze są tylko do odczytu.",
+    "readOnly": "Tego wiersza nie można tutaj modyfikować.",
+    "noRows": "Brak wierszy.",
+    "apply": "Filtruj",
+    "clear": "Wyczyść",
+    "filterPlaceholder": "Warunek, np. status = 'active'",
+    "range": "{{from}}–{{to}} z {{total}}",
+    "rowCount": "{{count}} wierszy",
+    "prev": "Poprzednia strona",
+    "next": "Następna strona",
+    "loadFailed": "Nie udało się wczytać wierszy."
+  },
+  "row": {
+    "addTitle": "Dodaj wiersz",
+    "editTitle": "Edytuj wiersz",
+    "defaultHint": "Domyślnie: {{value}}",
+    "setValue": "Ustaw wartość",
+    "setNull": "Ustaw NULL",
+    "saveFailed": "Nie udało się zapisać wiersza.",
+    "deleteTitle": "Usunąć ten wiersz?",
+    "deleteDesc": "Tej operacji nie można cofnąć.",
+    "deleteFailed": "Nie udało się usunąć wiersza.",
+    "locked": "Te kolumny nie mogą być edytowane tutaj:"
+  },
+  "structure": {
+    "title": "Struktura",
+    "name": "Kolumna",
+    "type": "Typ",
+    "nullable": "Null",
+    "key": "Klucz",
+    "default": "Domyślny",
+    "extra": "Dodatkowe",
+    "yes": "Tak",
+    "no": "Nie",
+    "indexes": "Indeksy",
+    "noIndexes": "Brak indeksów."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Uruchom",
+    "running": "Uruchamianie",
+    "hint": "Ctrl+Enter uruchamia zapytanie.",
+    "history": "Ostatnie",
+    "failed": "Zapytanie nie powiodło się.",
+    "noResult": "Instrukcja została wykonana. Nie zwrócono żadnych wierszy.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sesja tylko do odczytu",
+    "truncated": "Wyświetlanie pierwszych {{count}} wierszy."
+  }
+}

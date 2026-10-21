@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Pangkalan Data",
+    "description": "Layari dan sunting pangkalan data MySQL, MariaDB, PostgreSQL dan SQLite pada hos anda dari satu tab."
+  },
+  "common": {
+    "save": "Simpan",
+    "cancel": "Batal",
+    "back": "Kembali",
+    "delete": "Padam",
+    "refresh": "Muat Semula"
+  },
+  "permissions": {
+    "use": {
+      "title": "Gunakan Pangkalan Data",
+      "description": "Buka tab Pangkalan Data dan uruskan pangkalan data pada hos yang boleh anda akses."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Pangkalan Data",
+        "description": "Paparkan tab Pangkalan Data untuk hos ini dalam menunya."
+      }
+    }
+  },
+  "tab": {
+    "title": "Pangkalan Data",
+    "noHost": "Buka Pangkalan Data dari hos.",
+    "error": "Gagal memuatkan Pangkalan Data dari hos ini.",
+    "sudo": "Hos ini memerlukan sudo tanpa kata laluan untuk menjalankan arahan sebagai pengguna lain.",
+    "noTools": "Tiada klien pangkalan data ditemui pada hos ini. Pasang mysql, psql atau sqlite3 untuk menggunakan tab ini.",
+    "empty": "Tiada log masuk pangkalan data lagi",
+    "emptyHint": "Tambah log masuk untuk pangkalan data yang berjalan pada hos ini atau boleh dicapai daripadanya.",
+    "clientMissing": "Klien tiada"
+  },
+  "conn": {
+    "add": "Tambah log masuk",
+    "edit": "Sunting",
+    "addTitle": "Log masuk pangkalan data baharu",
+    "name": "Nama",
+    "type": "Jenis pangkalan data",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Pelanggan untuk jenis pangkalan data ini tidak ditemui pada hos.",
+    "file": "Fail pangkalan data",
+    "fileHint": "Laluan penuh fail SQLite pada hos.",
+    "address": "Alamat",
+    "addressHint": "Biarkan kosong untuk menggunakan soket tempatan.",
+    "port": "Port",
+    "user": "Pengguna",
+    "password": "Kata Laluan",
+    "passwordSaved": "Kata laluan telah disimpan. Biarkan kosong untuk mengekalkannya.",
+    "passwordHint": "Biarkan kosong untuk soket atau log masuk peer.",
+    "clearPassword": "Buang kata laluan yang disimpan",
+    "database": "Pangkalan data lalai",
+    "databaseHint": "Pilihan. Pangkalan data untuk dibuka dahulu.",
+    "runAs": "Jalankan sebagai pengguna Linux",
+    "runAsHint": "Pilihan. Menjalankan klien sebagai pengguna ini dengan sudo, contohnya postgres. Memerlukan sudo tanpa kata laluan.",
+    "readOnly": "Baca sahaja",
+    "readOnlyDesc": "Halang perubahan yang dibuat melalui log masuk ini dalam Termix. Hak pengguna pangkalan data sendiri masih terpakai.",
+    "readOnlyBadge": "Baca sahaja",
+    "socket": "Socket tempatan",
+    "test": "Uji sambungan",
+    "testing": "Sedang menguji",
+    "testOk": "Bersambung. {{version}}",
+    "testFailed": "Tidak dapat menyambung.",
+    "saveFailed": "Gagal menyimpan log masuk.",
+    "deleteTitle": "Padam {{name}}?",
+    "deleteDesc": "Ini akan membuang log masuk yang disimpan daripada Termix. Pangkalan data tidak akan disentuh.",
+    "deleteFailed": "Gagal memadam log masuk.",
+    "showPassword": "Paparkan kata laluan",
+    "hidePassword": "Sembunyikan kata laluan"
+  },
+  "browse": {
+    "tables": "Jadual",
+    "sql": "SQL",
+    "database": "Pangkalan data",
+    "search": "Cari jadual",
+    "noTables": "Tiada jadual ditemui.",
+    "view": "Lihat",
+    "rows": "{{count}} baris",
+    "loadFailed": "Tidak dapat membaca pangkalan data.",
+    "pick": "Pilih jadual di sebelah kiri."
+  },
+  "data": {
+    "title": "Data",
+    "add": "Tambah baris",
+    "noKey": "Jadual ini tiada kunci utama, jadi barisnya hanya boleh dibaca.",
+    "readOnly": "Baris ini tidak boleh diubah di sini.",
+    "noRows": "Tiada baris.",
+    "apply": "Tapis",
+    "clear": "Kosongkan",
+    "filterPlaceholder": "Syarat, contohnya status = 'aktif'",
+    "range": "{{from}} hingga {{to}} daripada {{total}}",
+    "rowCount": "{{count}} baris",
+    "prev": "Halaman sebelumnya",
+    "next": "Halaman seterusnya",
+    "loadFailed": "Tidak dapat membaca baris."
+  },
+  "row": {
+    "addTitle": "Tambah baris",
+    "editTitle": "Sunting baris",
+    "defaultHint": "Lalai: {{value}}",
+    "setValue": "Tetapkan nilai",
+    "setNull": "Tetapkan NULL",
+    "saveFailed": "Tidak dapat menyimpan baris.",
+    "deleteTitle": "Padam baris ini?",
+    "deleteDesc": "Tindakan ini tidak boleh dibatalkan.",
+    "deleteFailed": "Tidak dapat memadam baris.",
+    "locked": "Kolum ini tidak boleh disunting di sini:"
+  },
+  "structure": {
+    "title": "Struktur",
+    "name": "Kolum",
+    "type": "Jenis",
+    "nullable": "Null",
+    "key": "Kunci",
+    "default": "Lalai",
+    "extra": "Tambahan",
+    "yes": "Ya",
+    "no": "Tidak",
+    "indexes": "Indeks",
+    "noIndexes": "Tiada indeks."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Jalankan",
+    "running": "Sedang dijalankan",
+    "hint": "Ctrl+Enter menjalankan pertanyaan.",
+    "history": "Terbaru",
+    "failed": "Pertanyaan gagal.",
+    "noResult": "Pernyataan telah dijalankan. Tiada baris dikembalikan.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sesi hanya baca",
+    "truncated": "Menunjukkan {{count}} baris pertama."
+  }
+}

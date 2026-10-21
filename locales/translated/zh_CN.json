@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "数据库",
+    "description": "在一个标签页中浏览和编辑主机上的 MySQL、MariaDB、PostgreSQL 和 SQLite 数据库。"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "back": "返回",
+    "delete": "删除",
+    "refresh": "刷新"
+  },
+  "permissions": {
+    "use": {
+      "title": "使用数据库",
+      "description": "打开数据库标签页，并操作你有权限访问的主机上的数据库。"
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "数据库",
+        "description": "在此主机的菜单中显示数据库标签页。"
+      }
+    }
+  },
+  "tab": {
+    "title": "数据库",
+    "noHost": "从主机打开数据库。",
+    "error": "无法从此主机加载数据库。",
+    "sudo": "此主机需要免密 sudo 才能以其他用户身份运行命令。",
+    "noTools": "未在此主机上找到数据库客户端。请安装 mysql、psql 或 sqlite3 以使用此标签页。",
+    "empty": "暂无数据库登录信息",
+    "emptyHint": "添加一个在此主机上运行或可从该主机访问的数据库的登录信息。",
+    "clientMissing": "缺少客户端"
+  },
+  "conn": {
+    "add": "添加登录信息",
+    "edit": "编辑",
+    "addTitle": "新建数据库登录信息",
+    "name": "名称",
+    "type": "数据库类型",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "未在此主机上找到该数据库类型的客户端。",
+    "file": "数据库文件",
+    "fileHint": "主机上 SQLite 文件的完整路径。",
+    "address": "地址",
+    "addressHint": "留空则使用本地套接字。",
+    "port": "端口",
+    "user": "用户",
+    "password": "密码",
+    "passwordSaved": "已保存密码。留空则保留原密码。",
+    "passwordHint": "套接字或同行登录请留空。",
+    "clearPassword": "移除已保存的密码",
+    "database": "默认数据库",
+    "databaseHint": "可选。首次打开时要连接的数据库。",
+    "runAs": "以 Linux 用户身份运行",
+    "runAsHint": "可选。通过 sudo 以该用户身份运行客户端，例如 postgres。需要免密 sudo。",
+    "readOnly": "只读",
+    "readOnlyDesc": "阻止通过 Termix 中的此登录信息进行的更改。数据库用户自身的权限仍然有效。",
+    "readOnlyBadge": "只读",
+    "socket": "本地套接字",
+    "test": "测试连接",
+    "testing": "测试中",
+    "testOk": "已连接。{{version}}",
+    "testFailed": "无法连接。",
+    "saveFailed": "无法保存登录信息。",
+    "deleteTitle": "删除 {{name}}？",
+    "deleteDesc": "这将从 Termix 中移除已保存的登录信息。数据库本身不会受到影响。",
+    "deleteFailed": "无法删除登录信息。",
+    "showPassword": "显示密码",
+    "hidePassword": "隐藏密码"
+  },
+  "browse": {
+    "tables": "表",
+    "sql": "SQL",
+    "database": "数据库",
+    "search": "搜索表",
+    "noTables": "未找到任何表。",
+    "view": "查看",
+    "rows": "{{count}} 行",
+    "loadFailed": "无法读取数据库。",
+    "pick": "请在左侧选择一个表。"
+  },
+  "data": {
+    "title": "数据",
+    "add": "添加行",
+    "noKey": "此表没有主键，因此其数据为只读。",
+    "readOnly": "此行无法在此处修改。",
+    "noRows": "没有数据行。",
+    "apply": "筛选",
+    "clear": "清除",
+    "filterPlaceholder": "条件，例如 status = 'active'",
+    "range": "第 {{from}} 至 {{to}} 条，共 {{total}} 条",
+    "rowCount": "{{count}} 行",
+    "prev": "上一页",
+    "next": "下一页",
+    "loadFailed": "无法读取数据行。"
+  },
+  "row": {
+    "addTitle": "添加行",
+    "editTitle": "编辑行",
+    "defaultHint": "默认值：{{value}}",
+    "setValue": "设置值",
+    "setNull": "设为 NULL",
+    "saveFailed": "无法保存该行。",
+    "deleteTitle": "删除此行？",
+    "deleteDesc": "此操作无法撤销。",
+    "deleteFailed": "无法删除该行。",
+    "locked": "以下列无法在此处编辑："
+  },
+  "structure": {
+    "title": "结构",
+    "name": "列",
+    "type": "类型",
+    "nullable": "允许空值",
+    "key": "键",
+    "default": "默认值",
+    "extra": "额外信息",
+    "yes": "是",
+    "no": "否",
+    "indexes": "索引",
+    "noIndexes": "没有索引。"
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "运行",
+    "running": "运行中",
+    "hint": "按 Ctrl+Enter 运行查询。",
+    "history": "最近查询",
+    "failed": "查询失败。",
+    "noResult": "语句已执行。未返回任何行。",
+    "elapsed": "{{ms}} 毫秒",
+    "readOnlySession": "只读会话",
+    "truncated": "仅显示前 {{count}} 行。"
+  }
+}

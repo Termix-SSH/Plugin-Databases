@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Bases de données",
+    "description": "Parcourez et modifiez les bases de données MySQL, MariaDB, PostgreSQL et SQLite sur vos hôtes depuis un seul onglet."
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "back": "Retour",
+    "delete": "Supprimer",
+    "refresh": "Actualiser"
+  },
+  "permissions": {
+    "use": {
+      "title": "Utiliser les bases de données",
+      "description": "Ouvrez l'onglet Bases de données et travaillez avec les bases de données sur les hôtes auxquels vous avez accès."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Bases de données",
+        "description": "Afficher l'onglet Bases de données pour cet hôte dans son menu."
+      }
+    }
+  },
+  "tab": {
+    "title": "Bases de données",
+    "noHost": "Ouvrir les bases de données depuis un hôte.",
+    "error": "Impossible de charger les bases de données depuis cet hôte.",
+    "sudo": "Cet hôte nécessite un sudo sans mot de passe pour exécuter des commandes en tant qu'autre utilisateur.",
+    "noTools": "Aucun client de base de données n'a été trouvé sur cet hôte. Installez mysql, psql ou sqlite3 pour utiliser cet onglet.",
+    "empty": "Aucune connexion de base de données pour le moment",
+    "emptyHint": "Ajoutez une connexion pour une base de données qui s'exécute sur cet hôte ou qui est accessible depuis celui-ci.",
+    "clientMissing": "Client manquant"
+  },
+  "conn": {
+    "add": "Ajouter une connexion",
+    "edit": "Modifier",
+    "addTitle": "Nouvelle connexion à la base de données",
+    "name": "Nom",
+    "type": "Type de base de données",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Le client pour ce type de base de données n'a pas été trouvé sur l'hôte.",
+    "file": "Fichier de base de données",
+    "fileHint": "Chemin complet du fichier SQLite sur l'hôte.",
+    "address": "Adresse",
+    "addressHint": "Laissez vide pour utiliser le socket local.",
+    "port": "Port",
+    "user": "Utilisateur",
+    "password": "Mot de passe",
+    "passwordSaved": "Un mot de passe est enregistré. Laissez ce champ vide pour le conserver.",
+    "passwordHint": "Laissez vide pour une connexion par socket ou pair.",
+    "clearPassword": "Supprimer le mot de passe enregistré",
+    "database": "Base de données par défaut",
+    "databaseHint": "Facultatif. La base de données à ouvrir en premier.",
+    "runAs": "Exécuter en tant qu'utilisateur Linux",
+    "runAsHint": "Facultatif. Exécute le client en tant que cet utilisateur avec sudo, par exemple postgres. Nécessite un sudo sans mot de passe.",
+    "readOnly": "Lecture seule",
+    "readOnlyDesc": "Bloque les modifications effectuées via cette connexion dans Termix. Les droits propres de l'utilisateur de la base de données s'appliquent toujours.",
+    "readOnlyBadge": "Lecture seule",
+    "socket": "Socket local",
+    "test": "Tester la connexion",
+    "testing": "Test en cours",
+    "testOk": "Connecté. {{version}}",
+    "testFailed": "Impossible de se connecter.",
+    "saveFailed": "Impossible d'enregistrer les informations de connexion.",
+    "deleteTitle": "Supprimer {{name}} ?",
+    "deleteDesc": "Cela supprime les informations de connexion enregistrées de Termix. La base de données n'est pas modifiée.",
+    "deleteFailed": "Impossible de supprimer les informations de connexion.",
+    "showPassword": "Afficher le mot de passe",
+    "hidePassword": "Masquer le mot de passe"
+  },
+  "browse": {
+    "tables": "Tables",
+    "sql": "SQL",
+    "database": "Base de données",
+    "search": "Rechercher des tables",
+    "noTables": "Aucune table trouvée.",
+    "view": "Afficher",
+    "rows": "one: {{count}} ligne",
+    "loadFailed": "Impossible de lire la base de données.",
+    "pick": "Sélectionnez une table à gauche."
+  },
+  "data": {
+    "title": "Données",
+    "add": "Ajouter une ligne",
+    "noKey": "Cette table ne possède pas de clé primaire, ses lignes sont donc en lecture seule.",
+    "readOnly": "Cette ligne ne peut pas être modifiée ici.",
+    "noRows": "Aucune ligne.",
+    "apply": "Filtrer",
+    "clear": "Effacer",
+    "filterPlaceholder": "Condition, par exemple status = 'active'",
+    "range": "{{from}} à {{to}} sur {{total}}",
+    "rowCount": "one: {{count}} ligne",
+    "prev": "Page précédente",
+    "next": "Page suivante",
+    "loadFailed": "Impossible de lire les lignes."
+  },
+  "row": {
+    "addTitle": "Ajouter une ligne",
+    "editTitle": "Modifier la ligne",
+    "defaultHint": "Par défaut : {{value}}",
+    "setValue": "Définir la valeur",
+    "setNull": "Définir NULL",
+    "saveFailed": "Impossible d'enregistrer la ligne.",
+    "deleteTitle": "Supprimer cette ligne ?",
+    "deleteDesc": "Cette action est irréversible.",
+    "deleteFailed": "Impossible de supprimer la ligne.",
+    "locked": "Ces colonnes ne peuvent pas être modifiées ici :"
+  },
+  "structure": {
+    "title": "Structure",
+    "name": "Colonne",
+    "type": "Type",
+    "nullable": "Nul",
+    "key": "Clé",
+    "default": "Par défaut",
+    "extra": "Supplémentaire",
+    "yes": "Oui",
+    "no": "Non",
+    "indexes": "Index",
+    "noIndexes": "Aucun index."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Exécuter",
+    "running": "En cours d'exécution",
+    "hint": "Ctrl+Entrée exécute la requête.",
+    "history": "Récents",
+    "failed": "La requête a échoué.",
+    "noResult": "L'instruction a été exécutée. Aucune ligne retournée.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Session en lecture seule",
+    "truncated": "Affichage des {{count}} premières lignes."
+  }
+}

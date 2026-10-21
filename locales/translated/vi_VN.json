@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Cơ sở dữ liệu",
+    "description": "Duyệt và chỉnh sửa các cơ sở dữ liệu MySQL, MariaDB, PostgreSQL và SQLite trên các máy chủ của bạn từ một tab duy nhất."
+  },
+  "common": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "back": "Quay lại",
+    "delete": "Xóa",
+    "refresh": "Làm mới"
+  },
+  "permissions": {
+    "use": {
+      "title": "Sử dụng Cơ sở dữ liệu",
+      "description": "Mở tab Cơ sở dữ liệu và làm việc với các cơ sở dữ liệu trên các máy chủ bạn có quyền truy cập."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Cơ sở dữ liệu",
+        "description": "Hiển thị tab Cơ sở dữ liệu cho máy chủ này trong menu của nó."
+      }
+    }
+  },
+  "tab": {
+    "title": "Cơ sở dữ liệu",
+    "noHost": "Mở Cơ sở dữ liệu từ một máy chủ.",
+    "error": "Không thể tải Cơ sở dữ liệu từ máy chủ này.",
+    "sudo": "Máy chủ này cần sudo không mật khẩu để chạy lệnh dưới quyền người dùng khác.",
+    "noTools": "Không tìm thấy trình khách cơ sở dữ liệu nào trên máy chủ này. Cài đặt mysql, psql hoặc sqlite3 để sử dụng tab này.",
+    "empty": "Chưa có thông tin đăng nhập cơ sở dữ liệu nào",
+    "emptyHint": "Thêm thông tin đăng nhập cho cơ sở dữ liệu chạy trên máy chủ này hoặc có thể truy cập từ máy chủ này.",
+    "clientMissing": "Thiếu trình khách"
+  },
+  "conn": {
+    "add": "Thêm thông tin đăng nhập",
+    "edit": "Chỉnh sửa",
+    "addTitle": "Đăng nhập cơ sở dữ liệu mới",
+    "name": "Tên",
+    "type": "Loại cơ sở dữ liệu",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Không tìm thấy ứng dụng khách cho loại cơ sở dữ liệu này trên máy chủ.",
+    "file": "Tệp cơ sở dữ liệu",
+    "fileHint": "Đường dẫn đầy đủ của tệp SQLite trên máy chủ.",
+    "address": "Địa chỉ",
+    "addressHint": "Để trống để sử dụng socket cục bộ.",
+    "port": "Cổng",
+    "user": "Người dùng",
+    "password": "Mật khẩu",
+    "passwordSaved": "Đã lưu mật khẩu. Để trống để giữ nguyên.",
+    "passwordHint": "Để trống để đăng nhập qua socket hoặc peer.",
+    "clearPassword": "Xóa mật khẩu đã lưu",
+    "database": "Cơ sở dữ liệu mặc định",
+    "databaseHint": "Tùy chọn. Cơ sở dữ liệu sẽ mở đầu tiên.",
+    "runAs": "Chạy dưới quyền người dùng Linux",
+    "runAsHint": "Tùy chọn. Chạy ứng dụng khách dưới quyền người dùng này bằng sudo, ví dụ: postgres. Yêu cầu sudo không cần mật khẩu.",
+    "readOnly": "Chỉ đọc",
+    "readOnlyDesc": "Chặn các thay đổi được thực hiện thông qua đăng nhập này trong Termix. Quyền riêng của người dùng cơ sở dữ liệu vẫn được áp dụng.",
+    "readOnlyBadge": "Chỉ đọc",
+    "socket": "Socket cục bộ",
+    "test": "Kiểm tra kết nối",
+    "testing": "Đang kiểm tra",
+    "testOk": "Đã kết nối. {{version}}",
+    "testFailed": "Không thể kết nối.",
+    "saveFailed": "Không thể lưu thông tin đăng nhập.",
+    "deleteTitle": "Xóa {{name}}?",
+    "deleteDesc": "Hành động này sẽ xóa thông tin đăng nhập đã lưu khỏi Termix. Cơ sở dữ liệu sẽ không bị ảnh hưởng.",
+    "deleteFailed": "Không thể xóa thông tin đăng nhập.",
+    "showPassword": "Hiển thị mật khẩu",
+    "hidePassword": "Ẩn mật khẩu"
+  },
+  "browse": {
+    "tables": "Bảng",
+    "sql": "SQL",
+    "database": "Cơ sở dữ liệu",
+    "search": "Tìm kiếm bảng",
+    "noTables": "Không tìm thấy bảng nào.",
+    "view": "Xem",
+    "rows": "{{count}} hàng",
+    "loadFailed": "Không thể đọc cơ sở dữ liệu.",
+    "pick": "Chọn một bảng ở bên trái."
+  },
+  "data": {
+    "title": "Dữ liệu",
+    "add": "Thêm hàng",
+    "noKey": "Bảng này không có khóa chính, do đó các hàng chỉ có thể đọc.",
+    "readOnly": "Hàng này không thể thay đổi ở đây.",
+    "noRows": "Không có hàng nào.",
+    "apply": "Lọc",
+    "clear": "Xóa",
+    "filterPlaceholder": "Điều kiện, ví dụ status = 'active'",
+    "range": "{{from}} đến {{to}} trong tổng số {{total}}",
+    "rowCount": "{{count}} hàng",
+    "prev": "Trang trước",
+    "next": "Trang sau",
+    "loadFailed": "Không thể đọc các hàng."
+  },
+  "row": {
+    "addTitle": "Thêm hàng",
+    "editTitle": "Chỉnh sửa hàng",
+    "defaultHint": "Mặc định: {{value}}",
+    "setValue": "Đặt giá trị",
+    "setNull": "Đặt NULL",
+    "saveFailed": "Không thể lưu hàng.",
+    "deleteTitle": "Xóa hàng này?",
+    "deleteDesc": "Thao tác này không thể hoàn tác.",
+    "deleteFailed": "Không thể xóa hàng.",
+    "locked": "Các cột này không thể chỉnh sửa ở đây:"
+  },
+  "structure": {
+    "title": "Cấu trúc",
+    "name": "Cột",
+    "type": "Kiểu",
+    "nullable": "Null",
+    "key": "Khóa",
+    "default": "Mặc định",
+    "extra": "Bổ sung",
+    "yes": "Có",
+    "no": "Không",
+    "indexes": "Chỉ mục",
+    "noIndexes": "Không có chỉ mục."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Chạy",
+    "running": "Đang chạy",
+    "hint": "Ctrl+Enter để chạy truy vấn.",
+    "history": "Gần đây",
+    "failed": "Truy vấn thất bại.",
+    "noResult": "Câu lệnh đã chạy. Không có hàng nào trả về.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Phiên chỉ đọc",
+    "truncated": "Hiển thị {{count}} hàng đầu tiên."
+  }
+}

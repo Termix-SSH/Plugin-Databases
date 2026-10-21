@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Veritabanları",
+    "description": "Sunucularınızdaki MySQL, MariaDB, PostgreSQL ve SQLite veritabanlarını tek bir sekmeden görüntüleyin ve düzenleyin."
+  },
+  "common": {
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "back": "Geri",
+    "delete": "Sil",
+    "refresh": "Yenile"
+  },
+  "permissions": {
+    "use": {
+      "title": "Veritabanlarını Kullan",
+      "description": "Veritabanları sekmesini açın ve erişebildiğiniz sunuculardaki veritabanlarıyla çalışın."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Veritabanları",
+        "description": "Bu ana bilgisayarın menüsünde Veritabanları sekmesini göster."
+      }
+    }
+  },
+  "tab": {
+    "title": "Veritabanları",
+    "noHost": "Bir ana bilgisayardan Veritabanları sekmesini açın.",
+    "error": "Bu ana bilgisayardan Veritabanları yüklenemedi.",
+    "sudo": "Bu ana bilgisayarın komutları başka bir kullanıcı olarak çalıştırabilmesi için şifresiz sudo'ya ihtiyacı var.",
+    "noTools": "Bu ana bilgisayarda veritabanı istemcisi bulunamadı. Bu sekmeyi kullanmak için mysql, psql veya sqlite3 yükleyin.",
+    "empty": "Henüz veritabanı oturumu yok",
+    "emptyHint": "Bu ana bilgisayarda çalışan veya bu ana bilgisayardan erişilebilen bir veritabanı için oturum ekleyin.",
+    "clientMissing": "İstemci eksik"
+  },
+  "conn": {
+    "add": "Oturum ekle",
+    "edit": "Düzenle",
+    "addTitle": "Yeni veritabanı girişi",
+    "name": "Ad",
+    "type": "Veritabanı türü",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Bu veritabanı türü için istemci sunucuda bulunamadı.",
+    "file": "Veritabanı dosyası",
+    "fileHint": "Sunucudaki SQLite dosyasının tam yolu.",
+    "address": "Adres",
+    "addressHint": "Yerel soketi kullanmak için boş bırakın.",
+    "port": "Port",
+    "user": "Kullanıcı",
+    "password": "Şifre",
+    "passwordSaved": "Bir şifre kaydedildi. Korumak için bunu boş bırakın.",
+    "passwordHint": "Soket veya eş oturum açma için boş bırakın.",
+    "clearPassword": "Kaydedilmiş şifreyi kaldır",
+    "database": "Varsayılan veritabanı",
+    "databaseHint": "İsteğe bağlı. İlk açılacak veritabanı.",
+    "runAs": "Linux kullanıcısı olarak çalıştır",
+    "runAsHint": "İsteğe bağlı. İstemciyi sudo ile bu kullanıcı olarak çalıştırır, örneğin postgres. Şifresiz sudo gerektirir.",
+    "readOnly": "Salt okunur",
+    "readOnlyDesc": "Termix üzerinden bu oturumla yapılan değişiklikleri engeller. Veritabanı kullanıcısının kendi yetkileri hala geçerlidir.",
+    "readOnlyBadge": "Salt okunur",
+    "socket": "Yerel soket",
+    "test": "Bağlantıyı test et",
+    "testing": "Test ediliyor",
+    "testOk": "Bağlandı. {{version}}",
+    "testFailed": "Bağlanılamadı.",
+    "saveFailed": "Oturum bilgileri kaydedilemedi.",
+    "deleteTitle": "{{name}} silinsin mi?",
+    "deleteDesc": "Bu işlem, kaydedilmiş oturum bilgilerini Termix'ten kaldırır. Veritabanına dokunulmaz.",
+    "deleteFailed": "Oturum bilgileri silinemedi.",
+    "showPassword": "Şifreyi göster",
+    "hidePassword": "Şifreyi gizle"
+  },
+  "browse": {
+    "tables": "Tablolar",
+    "sql": "SQL",
+    "database": "Veritabanı",
+    "search": "Tabloları ara",
+    "noTables": "Hiç tablo bulunamadı.",
+    "view": "Görüntüle",
+    "rows": "{{count}} satır",
+    "loadFailed": "Veritabanı okunamadı.",
+    "pick": "Soldan bir tablo seçin."
+  },
+  "data": {
+    "title": "Veri",
+    "add": "Satır ekle",
+    "noKey": "Bu tablonun birincil anahtarı yok, bu nedenle satırları salt okunur.",
+    "readOnly": "Bu satır burada değiştirilemez.",
+    "noRows": "Satır yok.",
+    "apply": "Filtrele",
+    "clear": "Temizle",
+    "filterPlaceholder": "Koşul, örneğin durum = 'aktif'",
+    "range": "{{total}} içinde {{from}}-{{to}}",
+    "rowCount": "{{count}} satır",
+    "prev": "Önceki sayfa",
+    "next": "Sonraki sayfa",
+    "loadFailed": "Satırlar okunamadı."
+  },
+  "row": {
+    "addTitle": "Satır ekle",
+    "editTitle": "Satırı düzenle",
+    "defaultHint": "Varsayılan: {{value}}",
+    "setValue": "Değer ata",
+    "setNull": "NULL ata",
+    "saveFailed": "Satır kaydedilemedi.",
+    "deleteTitle": "Bu satır silinsin mi?",
+    "deleteDesc": "Bu işlem geri alınamaz.",
+    "deleteFailed": "Satır silinemedi.",
+    "locked": "Bu sütunlar burada düzenlenemez:"
+  },
+  "structure": {
+    "title": "Yapı",
+    "name": "Sütun",
+    "type": "Tür",
+    "nullable": "Boş",
+    "key": "Anahtar",
+    "default": "Varsayılan",
+    "extra": "Ekstra",
+    "yes": "Evet",
+    "no": "Hayır",
+    "indexes": "Dizinler",
+    "noIndexes": "Dizin yok."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Çalıştır",
+    "running": "Çalışıyor",
+    "hint": "Ctrl+Enter sorguyu çalıştırır.",
+    "history": "Son Sorgular",
+    "failed": "Sorgu başarısız oldu.",
+    "noResult": "İşlem çalıştırıldı. Hiçbir satır döndürülmedi.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Salt okunur oturum",
+    "truncated": "İlk {{count}} satır gösteriliyor."
+  }
+}

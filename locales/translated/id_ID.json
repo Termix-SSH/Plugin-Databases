@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Basis Data",
+    "description": "Jelajahi dan edit basis data MySQL, MariaDB, PostgreSQL, dan SQLite pada host Anda dari satu tab."
+  },
+  "common": {
+    "save": "Simpan",
+    "cancel": "Batal",
+    "back": "Kembali",
+    "delete": "Hapus",
+    "refresh": "Muat Ulang"
+  },
+  "permissions": {
+    "use": {
+      "title": "Gunakan Basis Data",
+      "description": "Buka tab Basis Data dan kelola basis data pada host yang dapat Anda akses."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Basis Data",
+        "description": "Tampilkan tab Basis Data untuk host ini di menunya."
+      }
+    }
+  },
+  "tab": {
+    "title": "Basis Data",
+    "noHost": "Buka Basis Data dari sebuah host.",
+    "error": "Gagal memuat Basis Data dari host ini.",
+    "sudo": "Host ini memerlukan sudo tanpa kata sandi untuk menjalankan perintah sebagai pengguna lain.",
+    "noTools": "Tidak ditemukan klien basis data di host ini. Instal mysql, psql, atau sqlite3 untuk menggunakan tab ini.",
+    "empty": "Belum ada login basis data",
+    "emptyHint": "Tambahkan login untuk basis data yang berjalan di host ini atau dapat diakses darinya.",
+    "clientMissing": "Klien tidak ditemukan"
+  },
+  "conn": {
+    "add": "Tambahkan login",
+    "edit": "Edit",
+    "addTitle": "Login database baru",
+    "name": "Nama",
+    "type": "Jenis database",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Klien untuk jenis database ini tidak ditemukan di host.",
+    "file": "File database",
+    "fileHint": "Path lengkap file SQLite di host.",
+    "address": "Alamat",
+    "addressHint": "Kosongkan untuk menggunakan soket lokal.",
+    "port": "Port",
+    "user": "Pengguna",
+    "password": "Kata Sandi",
+    "passwordSaved": "Kata sandi telah disimpan. Kosongkan untuk mempertahankannya.",
+    "passwordHint": "Kosongkan untuk login melalui soket atau peer.",
+    "clearPassword": "Hapus kata sandi yang disimpan",
+    "database": "Database default",
+    "databaseHint": "Opsional. Database yang akan dibuka pertama kali.",
+    "runAs": "Jalankan sebagai pengguna Linux",
+    "runAsHint": "Opsional. Menjalankan klien sebagai pengguna ini dengan sudo, misalnya postgres. Memerlukan sudo tanpa kata sandi.",
+    "readOnly": "Hanya baca",
+    "readOnlyDesc": "Memblokir perubahan yang dibuat melalui login ini di Termix. Hak milik pengguna database tetap berlaku.",
+    "readOnlyBadge": "Hanya baca",
+    "socket": "Socket lokal",
+    "test": "Uji koneksi",
+    "testing": "Sedang menguji",
+    "testOk": "Terhubung. {{version}}",
+    "testFailed": "Tidak dapat terhubung.",
+    "saveFailed": "Gagal menyimpan login.",
+    "deleteTitle": "Hapus {{name}}?",
+    "deleteDesc": "Ini akan menghapus login yang tersimpan dari Termix. Basis data tidak akan terpengaruh.",
+    "deleteFailed": "Gagal menghapus login.",
+    "showPassword": "Tampilkan kata sandi",
+    "hidePassword": "Sembunyikan kata sandi"
+  },
+  "browse": {
+    "tables": "Tabel",
+    "sql": "SQL",
+    "database": "Basis Data",
+    "search": "Cari tabel",
+    "noTables": "Tidak ada tabel ditemukan.",
+    "view": "Lihat",
+    "rows": "{{count}} baris",
+    "loadFailed": "Tidak dapat membaca database.",
+    "pick": "Pilih tabel di sebelah kiri."
+  },
+  "data": {
+    "title": "Data",
+    "add": "Tambah baris",
+    "noKey": "Tabel ini tidak memiliki kunci utama, sehingga barisnya hanya dapat dibaca.",
+    "readOnly": "Baris ini tidak dapat diubah di sini.",
+    "noRows": "Tidak ada baris.",
+    "apply": "Filter",
+    "clear": "Bersihkan",
+    "filterPlaceholder": "Kondisi, misalnya status = 'aktif'",
+    "range": "{{from}} hingga {{to}} dari {{total}}",
+    "rowCount": "{{count}} baris",
+    "prev": "Halaman sebelumnya",
+    "next": "Halaman berikutnya",
+    "loadFailed": "Tidak dapat membaca baris."
+  },
+  "row": {
+    "addTitle": "Tambah baris",
+    "editTitle": "Edit baris",
+    "defaultHint": "Bawaan: {{value}}",
+    "setValue": "Atur nilai",
+    "setNull": "Atur NULL",
+    "saveFailed": "Tidak dapat menyimpan baris.",
+    "deleteTitle": "Hapus baris ini?",
+    "deleteDesc": "Tindakan ini tidak dapat dibatalkan.",
+    "deleteFailed": "Tidak dapat menghapus baris.",
+    "locked": "Kolom-kolom ini tidak dapat diedit di sini:"
+  },
+  "structure": {
+    "title": "Struktur",
+    "name": "Kolom",
+    "type": "Tipe",
+    "nullable": "Null",
+    "key": "Kunci",
+    "default": "Bawaan",
+    "extra": "Ekstra",
+    "yes": "Ya",
+    "no": "Tidak",
+    "indexes": "Indeks",
+    "noIndexes": "Tidak ada indeks."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Jalankan",
+    "running": "Sedang berjalan",
+    "hint": "Ctrl+Enter menjalankan kueri.",
+    "history": "Terbaru",
+    "failed": "Kueri gagal.",
+    "noResult": "Pernyataan berjalan. Tidak ada baris yang dikembalikan.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sesi hanya baca",
+    "truncated": "Menampilkan {{count}} baris pertama."
+  }
+}

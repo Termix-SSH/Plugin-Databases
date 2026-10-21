@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Baze podataka",
+    "description": "Pregledavajte i uređujte MySQL, MariaDB, PostgreSQL i SQLite baze podataka na svojim hostovima iz jedne kartice."
+  },
+  "common": {
+    "save": "Spremi",
+    "cancel": "Otkaži",
+    "back": "Natrag",
+    "delete": "Izbriši",
+    "refresh": "Osvježi"
+  },
+  "permissions": {
+    "use": {
+      "title": "Koristi baze podataka",
+      "description": "Otvori karticu Baze podataka i radi s bazama podataka na hostovima na koje imaš pristup."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Baze podataka",
+        "description": "Prikaži karticu Baze podataka za ovaj host u njegovom izborniku."
+      }
+    }
+  },
+  "tab": {
+    "title": "Baze podataka",
+    "noHost": "Otvori Baze podataka s hosta.",
+    "error": "Nije moguće učitati Baze podataka s ovog hosta.",
+    "sudo": "Ovaj host zahtijeva sudo bez lozinke za izvršavanje naredbi kao drugi korisnik.",
+    "noTools": "Na ovom hostu nije pronađen klijent za baze podataka. Instaliraj mysql, psql ili sqlite3 za korištenje ove kartice.",
+    "empty": "Još nema prijava za baze podataka",
+    "emptyHint": "Dodaj prijavu za bazu podataka koja se pokreće na ovom hostu ili je dostupna s njega.",
+    "clientMissing": "Klijent nedostaje"
+  },
+  "conn": {
+    "add": "Dodaj prijavu",
+    "edit": "Uredi",
+    "addTitle": "Nova prijava za bazu podataka",
+    "name": "Naziv",
+    "type": "Vrsta baze podataka",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Klijent za ovu vrstu baze podataka nije pronađen na hostu.",
+    "file": "Datoteka baze podataka",
+    "fileHint": "Potpuna putanja do SQLite datoteke na hostu.",
+    "address": "Adresa",
+    "addressHint": "Ostavi prazno za korištenje lokalnog soketa.",
+    "port": "Port",
+    "user": "Korisnik",
+    "password": "Lozinka",
+    "passwordSaved": "Lozinka je spremljena. Ostavi ovo prazno da je zadržiš.",
+    "passwordHint": "Ostavi prazno za prijavu putem soketa ili peer autentifikacije.",
+    "clearPassword": "Ukloni spremljenu lozinku",
+    "database": "Zadana baza podataka",
+    "databaseHint": "Opcionalno. Baza podataka koja će se otvoriti prva.",
+    "runAs": "Pokreni kao Linux korisnik",
+    "runAsHint": "Opcionalno. Pokreće klijent kao ovaj korisnik pomoću sudo, na primjer postgres. Zahtijeva sudo bez lozinke.",
+    "readOnly": "Samo za čitanje",
+    "readOnlyDesc": "Blokiraj promjene napravljene kroz ovu prijavu u Termixu. Prava korisnika baze podataka i dalje vrijede.",
+    "readOnlyBadge": "Samo za čitanje",
+    "socket": "Lokalni socket",
+    "test": "Testiraj vezu",
+    "testing": "Testiranje",
+    "testOk": "Povezano. {{version}}",
+    "testFailed": "Nije moguće uspostaviti vezu.",
+    "saveFailed": "Nije moguće spremiti prijavu.",
+    "deleteTitle": "Izbrisati {{name}}?",
+    "deleteDesc": "Ovo uklanja spremljenu prijavu iz Termixa. Baza podataka ostaje netaknuta.",
+    "deleteFailed": "Nije moguće izbrisati prijavu.",
+    "showPassword": "Prikaži lozinku",
+    "hidePassword": "Sakrij lozinku"
+  },
+  "browse": {
+    "tables": "Tablice",
+    "sql": "SQL",
+    "database": "Baza podataka",
+    "search": "Pretraži tablice",
+    "noTables": "Nema pronađenih tablica.",
+    "view": "Pregled",
+    "rows": "{{count}} redaka",
+    "loadFailed": "Baza podataka se ne može čitati.",
+    "pick": "Odaberite tablicu s lijeve strane."
+  },
+  "data": {
+    "title": "Podaci",
+    "add": "Dodaj redak",
+    "noKey": "Ova tablica nema primarni ključ, stoga su njezini retci samo za čitanje.",
+    "readOnly": "Ovaj redak se ne može mijenjati ovdje.",
+    "noRows": "Nema redaka.",
+    "apply": "Filtriraj",
+    "clear": "Očisti",
+    "filterPlaceholder": "Uvjet, npr. status = 'active'",
+    "range": "od {{from}} do {{to}} od {{total}}",
+    "rowCount": "{{count}} redaka",
+    "prev": "Prethodna stranica",
+    "next": "Sljedeća stranica",
+    "loadFailed": "Redci se ne mogu čitati."
+  },
+  "row": {
+    "addTitle": "Dodaj redak",
+    "editTitle": "Uredi redak",
+    "defaultHint": "Zadano: {{value}}",
+    "setValue": "Postavi vrijednost",
+    "setNull": "Postavi NULL",
+    "saveFailed": "Redak se ne može spremiti.",
+    "deleteTitle": "Izbrisati ovaj redak?",
+    "deleteDesc": "Ovo se ne može poništiti.",
+    "deleteFailed": "Redak se ne može izbrisati.",
+    "locked": "Ove stupce se ne može uređivati ovdje:"
+  },
+  "structure": {
+    "title": "Struktura",
+    "name": "Stupac",
+    "type": "Vrsta",
+    "nullable": "Null",
+    "key": "Ključ",
+    "default": "Zadano",
+    "extra": "Dodatno",
+    "yes": "Da",
+    "no": "Ne",
+    "indexes": "Indeksi",
+    "noIndexes": "Nema indeksa."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Izvrši",
+    "running": "Izvršava se",
+    "hint": "Ctrl+Enter izvršava upit.",
+    "history": "Nedavno",
+    "failed": "Upit nije uspio.",
+    "noResult": "Naredba je izvršena. Nema povratnih redaka.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sesija samo za čitanje",
+    "truncated": "Prikazuje se prvih {{count}} redaka."
+  }
+}

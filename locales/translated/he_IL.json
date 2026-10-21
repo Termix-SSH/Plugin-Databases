@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "מסדי נתונים",
+    "description": "עיין וערוך מסדי נתונים MySQL, MariaDB, PostgreSQL ו־SQLite במארחים שלך מתוך לשונית אחת."
+  },
+  "common": {
+    "save": "שמירה",
+    "cancel": "ביטול",
+    "back": "חזרה",
+    "delete": "מחיקה",
+    "refresh": "רענון"
+  },
+  "permissions": {
+    "use": {
+      "title": "שימוש במסדי נתונים",
+      "description": "פתח את לשונית מסדי נתונים ועבוד עם מסדי נתונים במארחים שיש לך גישה אליהם."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "מסדי נתונים",
+        "description": "הצג את הלשונית \"מסדי נתונים\" עבור מארח זה בתפריט שלו."
+      }
+    }
+  },
+  "tab": {
+    "title": "מסדי נתונים",
+    "noHost": "פתח את מסדי הנתונים ממארח.",
+    "error": "לא ניתן היה לטעון את מסדי הנתונים ממארח זה.",
+    "sudo": "מארח זה דורש sudo ללא סיסמה כדי להפעיל פקודות כמשתמש אחר.",
+    "noTools": "לא נמצא לקוח מסד נתונים במארח זה. התקן mysql, psql או sqlite3 כדי להשתמש בלשונית זו.",
+    "empty": "אין התחברויות למסדי נתונים עדיין",
+    "emptyHint": "הוסף התחברות למסד נתונים שרץ על מארח זה או ניתן להגעה אליו ממנו.",
+    "clientMissing": "לקוח חסר"
+  },
+  "conn": {
+    "add": "הוסף התחברות",
+    "edit": "עריכה",
+    "addTitle": "התחברות חדשה למסד נתונים",
+    "name": "שם",
+    "type": "סוג מסד נתונים",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "הלקוח לסוג מסד הנתונים הזה לא נמצא במארח.",
+    "file": "קובץ מסד נתונים",
+    "fileHint": "הנתיב המלא לקובץ ה-SQLite במארח.",
+    "address": "כתובת",
+    "addressHint": "השאר ריק כדי להשתמש ב-socket המקומי.",
+    "port": "פורט",
+    "user": "משתמש",
+    "password": "סיסמה",
+    "passwordSaved": "סיסמה שמורה. השאר ריק כדי לשמור אותה.",
+    "passwordHint": "השאר ריק להתחברות דרך socket או peer.",
+    "clearPassword": "הסר את הסיסמה השמורה",
+    "database": "מסד נתונים ברירת מחדל",
+    "databaseHint": "אופציונלי. מסד הנתונים לפתיחה ראשונה.",
+    "runAs": "הפעל כמשתמש לינוקס",
+    "runAsHint": "אופציונלי. מפעיל את הלקוח כמשתמש זה באמצעות sudo, למשל postgres. דורש sudo ללא סיסמה.",
+    "readOnly": "לקריאה בלבד",
+    "readOnlyDesc": "חוסם שינויים שבוצעו דרך התחברות זו ב-Termix. הרשאות המשתמש במסד הנתונים עדיין תקפות.",
+    "readOnlyBadge": "לקריאה בלבד",
+    "socket": "Socket מקומי",
+    "test": "בדיקת חיבור",
+    "testing": "מבצע בדיקה",
+    "testOk": "מחובר. {{version}}",
+    "testFailed": "לא ניתן להתחבר.",
+    "saveFailed": "לא ניתן לשמור את פרטי ההתחברות.",
+    "deleteTitle": "למחוק את {{name}}?",
+    "deleteDesc": "פעולה זו תסיר את פרטי ההתחברות השמורים מ-Termix. מסד הנתונים לא ייפגע.",
+    "deleteFailed": "לא ניתן למחוק את פרטי ההתחברות.",
+    "showPassword": "הצג סיסמה",
+    "hidePassword": "הסתר סיסמה"
+  },
+  "browse": {
+    "tables": "טבלאות",
+    "sql": "SQL",
+    "database": "מסד נתונים",
+    "search": "חפש בטבלאות",
+    "noTables": "לא נמצאו טבלאות.",
+    "view": "תצוגה",
+    "rows": "שורות: {{count}}",
+    "loadFailed": "לא ניתן לקרוא את המסד הנתונים.",
+    "pick": "בחר טבלה מהצד השמאלי."
+  },
+  "data": {
+    "title": "נתונים",
+    "add": "הוסף שורה",
+    "noKey": "לטבלה זו אין מפתח ראשי, ולכן השורות שלה ניתנות לקריאה בלבד.",
+    "readOnly": "לא ניתן לשנות שורה זו כאן.",
+    "noRows": "אין שורות.",
+    "apply": "סינון",
+    "clear": "נקה",
+    "filterPlaceholder": "תנאי, למשל status = 'active'",
+    "range": "{{from}} עד {{to}} מתוך {{total}}",
+    "rowCount": "שורות {{count}}",
+    "prev": "עמוד קודם",
+    "next": "עמוד הבא",
+    "loadFailed": "לא ניתן לקרוא את השורות."
+  },
+  "row": {
+    "addTitle": "הוסף שורה",
+    "editTitle": "ערוך שורה",
+    "defaultHint": "ברירת מחדל: {{value}}",
+    "setValue": "הגדר ערך",
+    "setNull": "הגדר NULL",
+    "saveFailed": "לא ניתן לשמור את השורה.",
+    "deleteTitle": "למחוק את השורה הזו?",
+    "deleteDesc": "פעולה זו אינה ניתנת לביטול.",
+    "deleteFailed": "לא ניתן למחוק את השורה.",
+    "locked": "לא ניתן לערוך את העמודות האלה כאן:"
+  },
+  "structure": {
+    "title": "מבנה",
+    "name": "עמודה",
+    "type": "סוג",
+    "nullable": "ריק",
+    "key": "מפתח",
+    "default": "ברירת מחדל",
+    "extra": "נוסף",
+    "yes": "כן",
+    "no": "לא",
+    "indexes": "אינדקסים",
+    "noIndexes": "אין אינדקסים."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "הפעל",
+    "running": "מבצע",
+    "hint": "Ctrl+Enter מפעיל את השאילתה.",
+    "history": "אחרונים",
+    "failed": "השאילתה נכשלה.",
+    "noResult": "הפקודה בוצעה. לא הוחזרו שורות.",
+    "elapsed": "{{ms}} מ\"ש",
+    "readOnlySession": "הפעלה לקריאה בלבד",
+    "truncated": "מוצגות {{count}} השורות הראשונות."
+  }
+}

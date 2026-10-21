@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Databaser",
+    "description": "Bla gjennom og rediger MySQL-, MariaDB-, PostgreSQL- og SQLite-databaser på vertene dine fra én fane."
+  },
+  "common": {
+    "save": "Lagre",
+    "cancel": "Avbryt",
+    "back": "Tilbake",
+    "delete": "Slett",
+    "refresh": "Oppdater"
+  },
+  "permissions": {
+    "use": {
+      "title": "Bruk databaser",
+      "description": "Åpne fanen Databaser og arbeid med databaser på vertene du har tilgang til."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Databaser",
+        "description": "Vis fanen Databaser for denne verten i menyen."
+      }
+    }
+  },
+  "tab": {
+    "title": "Databaser",
+    "noHost": "Åpne Databaser fra en vert.",
+    "error": "Kunne ikke laste inn Databaser fra denne verten.",
+    "sudo": "Denne verten trenger passordfri sudo for å kjøre kommandoer som en annen bruker.",
+    "noTools": "Ingen databaseklient ble funnet på denne verten. Installer mysql, psql eller sqlite3 for å bruke denne fanen.",
+    "empty": "Ingen databaseinnlogginger ennå",
+    "emptyHint": "Legg til en innlogging for en database som kjører på denne verten eller som kan nås fra den.",
+    "clientMissing": "Klient mangler"
+  },
+  "conn": {
+    "add": "Legg til innlogging",
+    "edit": "Rediger",
+    "addTitle": "Ny databasetilgang",
+    "name": "Navn",
+    "type": "Databasetype",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Klienten for denne databasetypen ble ikke funnet på verten.",
+    "file": "Databasefil",
+    "fileHint": "Fullstendig sti til SQLite-filen på verten.",
+    "address": "Adresse",
+    "addressHint": "La tomt for å bruke den lokale sokkelen.",
+    "port": "Port",
+    "user": "Bruker",
+    "password": "Passord",
+    "passwordSaved": "Et passord er lagret. La dette stå tomt for å beholde det.",
+    "passwordHint": "La tomt for sokkel- eller peer-innlogging.",
+    "clearPassword": "Fjern det lagrede passordet",
+    "database": "Standarddatabase",
+    "databaseHint": "Valgfritt. Databasen som skal åpnes først.",
+    "runAs": "Kjør som Linux-bruker",
+    "runAsHint": "Valgfritt. Kjør klienten som denne brukeren med sudo, for eksempel postgres. Krever passordløs sudo.",
+    "readOnly": "Skrivebeskyttet",
+    "readOnlyDesc": "Blokker endringer gjort gjennom denne innloggingen i Termix. Databasebrukerens egne rettigheter gjelder fortsatt.",
+    "readOnlyBadge": "Skrivebeskyttet",
+    "socket": "Lokal socket",
+    "test": "Test tilkobling",
+    "testing": "Tester",
+    "testOk": "Tilkoblet. {{version}}",
+    "testFailed": "Kunne ikke koble til.",
+    "saveFailed": "Kunne ikke lagre påloggingsinformasjonen.",
+    "deleteTitle": "Slette {{name}}?",
+    "deleteDesc": "Dette fjerner den lagrede påloggingsinformasjonen fra Termix. Databasen berøres ikke.",
+    "deleteFailed": "Kunne ikke slette påloggingsinformasjonen.",
+    "showPassword": "Vis passord",
+    "hidePassword": "Skjul passord"
+  },
+  "browse": {
+    "tables": "Tabeller",
+    "sql": "SQL",
+    "database": "Database",
+    "search": "Søk i tabeller",
+    "noTables": "Ingen tabeller funnet.",
+    "view": "Vis",
+    "rows": "{{count}} rader",
+    "loadFailed": "Kunne ikke lese databasen.",
+    "pick": "Velg en tabell til venstre."
+  },
+  "data": {
+    "title": "Data",
+    "add": "Legg til rad",
+    "noKey": "Denne tabellen har ingen primærnøkkel, så radene er skrivebeskyttet.",
+    "readOnly": "Denne raden kan ikke endres her.",
+    "noRows": "Ingen rader.",
+    "apply": "Filtrer",
+    "clear": "Tøm",
+    "filterPlaceholder": "Vilkår, for eksempel status = 'active'",
+    "range": "{{from}} til {{to}} av {{total}}",
+    "rowCount": "{{count}} rader",
+    "prev": "Forrige side",
+    "next": "Neste side",
+    "loadFailed": "Kunne ikke lese radene."
+  },
+  "row": {
+    "addTitle": "Legg til rad",
+    "editTitle": "Rediger rad",
+    "defaultHint": "Standard: {{value}}",
+    "setValue": "Angi verdi",
+    "setNull": "Angi NULL",
+    "saveFailed": "Kunne ikke lagre raden.",
+    "deleteTitle": "Slett denne raden?",
+    "deleteDesc": "Dette kan ikke angres.",
+    "deleteFailed": "Kunne ikke slette raden.",
+    "locked": "Disse kolonnene kan ikke redigeres her:"
+  },
+  "structure": {
+    "title": "Struktur",
+    "name": "Kolonne",
+    "type": "Type",
+    "nullable": "Null",
+    "key": "Nøkkel",
+    "default": "Standard",
+    "extra": "Ekstra",
+    "yes": "Ja",
+    "no": "Nei",
+    "indexes": "Indekser",
+    "noIndexes": "Ingen indekser."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Kjør",
+    "running": "Kjører",
+    "hint": "Ctrl+Enter kjører spørringen.",
+    "history": "Siste",
+    "failed": "Spørringen mislyktes.",
+    "noResult": "Setningen ble kjørt. Ingen rader ble returnert.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Skrivebeskyttet økt",
+    "truncated": "Viser de første {{count}} radene."
+  }
+}

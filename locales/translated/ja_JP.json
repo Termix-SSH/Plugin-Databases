@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "データベース",
+    "description": "1つのタブから、ホスト上の MySQL、MariaDB、PostgreSQL、SQLite データベースを閲覧・編集できます。"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "キャンセル",
+    "back": "戻る",
+    "delete": "削除",
+    "refresh": "更新"
+  },
+  "permissions": {
+    "use": {
+      "title": "データベースの使用",
+      "description": "データベースタブを開き、アクセス可能なホスト上のデータベースを操作します。"
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "データベース",
+        "description": "このホストのメニューに「データベース」タブを表示します。"
+      }
+    }
+  },
+  "tab": {
+    "title": "データベース",
+    "noHost": "ホストからデータベースを開いてください。",
+    "error": "このホストからデータベースを読み込めませんでした。",
+    "sudo": "このホストでは、別のユーザーとしてコマンドを実行するためにパスワード不要の sudo が必要です。",
+    "noTools": "このホストにデータベースクライアントが見つかりませんでした。このタブを使用するには、mysql、psql、または sqlite3 をインストールしてください。",
+    "empty": "データベースのログイン情報はまだありません",
+    "emptyHint": "このホスト上で実行されている、またはこのホストからアクセス可能なデータベースのログイン情報を追加してください。",
+    "clientMissing": "クライアントが見つかりません"
+  },
+  "conn": {
+    "add": "ログイン情報を追加",
+    "edit": "編集",
+    "addTitle": "新しいデータベースログイン",
+    "name": "名前",
+    "type": "データベースの種類",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "このデータベースタイプのクライアントがホスト上で見つかりませんでした。",
+    "file": "データベースファイル",
+    "fileHint": "ホスト上のSQLiteファイルのフルパス。",
+    "address": "アドレス",
+    "addressHint": "ローカルソケットを使用する場合は空白のままにしてください。",
+    "port": "ポート",
+    "user": "ユーザー",
+    "password": "パスワード",
+    "passwordSaved": "パスワードが保存されています。そのまま維持する場合は空白のままにしてください。",
+    "passwordHint": "ソケットまたはピアログインの場合は空白のままにしてください。",
+    "clearPassword": "保存されたパスワードを削除",
+    "database": "デフォルトのデータベース",
+    "databaseHint": "オプション。最初に開くデータベースを指定します。",
+    "runAs": "Linux ユーザーとして実行",
+    "runAsHint": "オプション。sudo を使用してこのユーザー（例：postgres）としてクライアントを実行します。パスワードなしの sudo が必要です。",
+    "readOnly": "読み取り専用",
+    "readOnlyDesc": "Termix でのこのログインによる変更をブロックします。データベースユーザー自身の権限は引き続き適用されます。",
+    "readOnlyBadge": "読み取り専用",
+    "socket": "ローカルソケット",
+    "test": "接続テスト",
+    "testing": "テスト中",
+    "testOk": "接続成功。{{version}}",
+    "testFailed": "接続できませんでした。",
+    "saveFailed": "ログイン情報を保存できませんでした。",
+    "deleteTitle": "{{name}} を削除しますか？",
+    "deleteDesc": "これにより、Termix から保存されたログイン情報が削除されます。データベース自体には影響ありません。",
+    "deleteFailed": "ログイン情報を削除できませんでした。",
+    "showPassword": "パスワードを表示",
+    "hidePassword": "パスワードを非表示"
+  },
+  "browse": {
+    "tables": "テーブル",
+    "sql": "SQL",
+    "database": "データベース",
+    "search": "テーブルを検索",
+    "noTables": "テーブルが見つかりません。",
+    "view": "表示",
+    "rows": "other: \"{{count}} 行\"",
+    "loadFailed": "データベースを読み取れませんでした。",
+    "pick": "左側からテーブルを選択してください。"
+  },
+  "data": {
+    "title": "データ",
+    "add": "行を追加",
+    "noKey": "このテーブルには主キーがないため、行は読み取り専用です。",
+    "readOnly": "この行はここで変更できません。",
+    "noRows": "行がありません。",
+    "apply": "フィルター",
+    "clear": "クリア",
+    "filterPlaceholder": "条件（例：status = 'active'）",
+    "range": "{{total}} 件中 {{from}} - {{to}}",
+    "rowCount": "other: \"{{count}} 行\"",
+    "prev": "前のページ",
+    "next": "次のページ",
+    "loadFailed": "行を読み取れませんでした。"
+  },
+  "row": {
+    "addTitle": "行を追加",
+    "editTitle": "行を編集",
+    "defaultHint": "デフォルト: {{value}}",
+    "setValue": "値を設定",
+    "setNull": "NULL に設定",
+    "saveFailed": "行を保存できませんでした。",
+    "deleteTitle": "この行を削除しますか？",
+    "deleteDesc": "この操作は元に戻せません。",
+    "deleteFailed": "行を削除できませんでした。",
+    "locked": "これらの列はここで編集できません:"
+  },
+  "structure": {
+    "title": "構造",
+    "name": "列",
+    "type": "型",
+    "nullable": "NULL 許容",
+    "key": "キー",
+    "default": "デフォルト",
+    "extra": "その他",
+    "yes": "はい",
+    "no": "いいえ",
+    "indexes": "インデックス",
+    "noIndexes": "インデックスがありません。"
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "実行",
+    "running": "実行中",
+    "hint": "Ctrl+Enter でクエリを実行します。",
+    "history": "最近使用",
+    "failed": "クエリが失敗しました。",
+    "noResult": "ステートメントが実行されました。行は返されませんでした。",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "読み取り専用セッション",
+    "truncated": "最初の {{count}} 行を表示しています。"
+  }
+}

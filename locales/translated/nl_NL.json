@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Databases",
+    "description": "Blader door en bewerk MySQL-, MariaDB-, PostgreSQL- en SQLite-databases op je hosts vanuit één tabblad."
+  },
+  "common": {
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "back": "Terug",
+    "delete": "Verwijderen",
+    "refresh": "Vernieuwen"
+  },
+  "permissions": {
+    "use": {
+      "title": "Databases gebruiken",
+      "description": "Open het tabblad Databases en werk met databases op hosts waartoe je toegang hebt."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Databases",
+        "description": "Toon het tabblad Databases voor deze host in het menu."
+      }
+    }
+  },
+  "tab": {
+    "title": "Databases",
+    "noHost": "Open Databases vanaf een host.",
+    "error": "Kon geen Databases laden van deze host.",
+    "sudo": "Deze host heeft wachtwoordloze sudo nodig om opdrachten uit te voeren als een andere gebruiker.",
+    "noTools": "Er is geen databaseclient gevonden op deze host. Installeer mysql, psql of sqlite3 om dit tabblad te gebruiken.",
+    "empty": "Nog geen database-logins",
+    "emptyHint": "Voeg een login toe voor een database die op deze host draait of vanaf deze host bereikbaar is.",
+    "clientMissing": "Client ontbreekt"
+  },
+  "conn": {
+    "add": "Login toevoegen",
+    "edit": "Bewerken",
+    "addTitle": "Nieuwe database-login",
+    "name": "Naam",
+    "type": "Database-type",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "De client voor dit database-type is niet gevonden op de host.",
+    "file": "Databasebestand",
+    "fileHint": "Volledig pad van het SQLite-bestand op de host.",
+    "address": "Adres",
+    "addressHint": "Laat leeg om de lokale socket te gebruiken.",
+    "port": "Poort",
+    "user": "Gebruiker",
+    "password": "Wachtwoord",
+    "passwordSaved": "Er is een wachtwoord opgeslagen. Laat dit leeg om het te behouden.",
+    "passwordHint": "Laat leeg voor socket- of peer-login.",
+    "clearPassword": "Verwijder het opgeslagen wachtwoord",
+    "database": "Standaarddatabase",
+    "databaseHint": "Optioneel. De database die eerst geopend moet worden.",
+    "runAs": "Uitvoeren als Linux-gebruiker",
+    "runAsHint": "Optioneel. Voert de client uit als deze gebruiker met sudo, bijvoorbeeld postgres. Vereist wachtwoordloze sudo.",
+    "readOnly": "Alleen-lezen",
+    "readOnlyDesc": "Blokkeer wijzigingen die via deze login in Termix worden gemaakt. De eigen rechten van de databasegebruiker blijven van toepassing.",
+    "readOnlyBadge": "Alleen-lezen",
+    "socket": "Lokale socket",
+    "test": "Verbinding testen",
+    "testing": "Bezig met testen",
+    "testOk": "Verbonden. {{version}}",
+    "testFailed": "Kon geen verbinding maken.",
+    "saveFailed": "Kon de login niet opslaan.",
+    "deleteTitle": "Verwijder {{name}}?",
+    "deleteDesc": "Hiermee wordt de opgeslagen login uit Termix verwijderd. De database zelf blijft onaangetast.",
+    "deleteFailed": "Kon de login niet verwijderen.",
+    "showPassword": "Wachtwoord tonen",
+    "hidePassword": "Wachtwoord verbergen"
+  },
+  "browse": {
+    "tables": "Tabellen",
+    "sql": "SQL",
+    "database": "Database",
+    "search": "Zoek in tabellen",
+    "noTables": "Geen tabellen gevonden.",
+    "view": "Weergave",
+    "rows": "{{count}} rijen",
+    "loadFailed": "De database kon niet worden gelezen.",
+    "pick": "Selecteer een tabel aan de linkerkant."
+  },
+  "data": {
+    "title": "Gegevens",
+    "add": "Rij toevoegen",
+    "noKey": "Deze tabel heeft geen primaire sleutel, dus zijn rijen zijn alleen-lezen.",
+    "readOnly": "Deze rij kan hier niet worden gewijzigd.",
+    "noRows": "Geen rijen.",
+    "apply": "Filteren",
+    "clear": "Wissen",
+    "filterPlaceholder": "Voorwaarde, bijvoorbeeld status = 'active'",
+    "range": "{{from}} tot {{to}} van {{total}}",
+    "rowCount": "{{count}} rijen",
+    "prev": "Vorige pagina",
+    "next": "Volgende pagina",
+    "loadFailed": "De rijen konden niet worden gelezen."
+  },
+  "row": {
+    "addTitle": "Rij toevoegen",
+    "editTitle": "Rij bewerken",
+    "defaultHint": "Standaard: {{value}}",
+    "setValue": "Waarde instellen",
+    "setNull": "NULL instellen",
+    "saveFailed": "De rij kon niet worden opgeslagen.",
+    "deleteTitle": "Deze rij verwijderen?",
+    "deleteDesc": "Dit kan niet ongedaan worden gemaakt.",
+    "deleteFailed": "De rij kon niet worden verwijderd.",
+    "locked": "Deze kolommen kunnen hier niet worden bewerkt:"
+  },
+  "structure": {
+    "title": "Structuur",
+    "name": "Kolom",
+    "type": "Type",
+    "nullable": "Null",
+    "key": "Sleutel",
+    "default": "Standaard",
+    "extra": "Extra",
+    "yes": "Ja",
+    "no": "Nee",
+    "indexes": "Indices",
+    "noIndexes": "Geen indices."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Uitvoeren",
+    "running": "Bezig met uitvoeren",
+    "hint": "Ctrl+Enter voert de query uit.",
+    "history": "Recent",
+    "failed": "De query is mislukt.",
+    "noResult": "De instructie is uitgevoerd. Er zijn geen rijen teruggekomen.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Alleen-lezen sessie",
+    "truncated": "De eerste {{count}} rijen worden weergegeven."
+  }
+}

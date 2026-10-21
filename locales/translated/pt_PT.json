@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Bases de dados",
+    "description": "Navegue e edite bases de dados MySQL, MariaDB, PostgreSQL e SQLite nos seus hosts a partir de uma única aba."
+  },
+  "common": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "back": "Voltar",
+    "delete": "Eliminar",
+    "refresh": "Atualizar"
+  },
+  "permissions": {
+    "use": {
+      "title": "Usar Bases de dados",
+      "description": "Abrir a aba Bases de dados e trabalhar com bases de dados nos hosts a que tem acesso."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Bases de dados",
+        "description": "Mostrar a separação Bases de Dados para este host no seu menu."
+      }
+    }
+  },
+  "tab": {
+    "title": "Bases de Dados",
+    "noHost": "Abra Bases de Dados a partir de um host.",
+    "error": "Não foi possível carregar as Bases de Dados deste host.",
+    "sudo": "Este host precisa de sudo sem palavra-passe para executar comandos como outro utilizador.",
+    "noTools": "Nenhum cliente de base de dados foi encontrado neste host. Instale mysql, psql ou sqlite3 para utilizar esta separação.",
+    "empty": "Ainda não há credenciais de base de dados",
+    "emptyHint": "Adicione uma credencial para uma base de dados que esteja a executar neste host ou que seja acessível a partir dele.",
+    "clientMissing": "Cliente em falta"
+  },
+  "conn": {
+    "add": "Adicionar credencial",
+    "edit": "Editar",
+    "addTitle": "Novo login de base de dados",
+    "name": "Nome",
+    "type": "Tipo de base de dados",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "O cliente para este tipo de base de dados não foi encontrado no host.",
+    "file": "Ficheiro da base de dados",
+    "fileHint": "Caminho completo do ficheiro SQLite no host.",
+    "address": "Endereço",
+    "addressHint": "Deixe vazio para usar o socket local.",
+    "port": "Porta",
+    "user": "Utilizador",
+    "password": "Palavra-passe",
+    "passwordSaved": "Uma palavra-passe está guardada. Deixe vazio para a manter.",
+    "passwordHint": "Deixe vazio para login por socket ou peer.",
+    "clearPassword": "Remover a palavra-passe guardada",
+    "database": "Base de dados padrão",
+    "databaseHint": "Opcional. A base de dados a abrir primeiro.",
+    "runAs": "Executar como utilizador Linux",
+    "runAsHint": "Opcional. Executa o cliente como este utilizador com sudo, por exemplo postgres. Requer sudo sem palavra-passe.",
+    "readOnly": "Apenas leitura",
+    "readOnlyDesc": "Bloqueia alterações feitas através desta sessão no Termix. Os próprios direitos do utilizador da base de dados continuam a aplicar-se.",
+    "readOnlyBadge": "Apenas leitura",
+    "socket": "Socket local",
+    "test": "Testar ligação",
+    "testing": "A testar",
+    "testOk": "Ligado. {{version}}",
+    "testFailed": "Não foi possível ligar.",
+    "saveFailed": "Não foi possível guardar a ligação.",
+    "deleteTitle": "Eliminar {{name}}?",
+    "deleteDesc": "Isto remove a ligação guardada do Termix. A base de dados não é afetada.",
+    "deleteFailed": "Não foi possível eliminar a ligação.",
+    "showPassword": "Mostrar palavra-passe",
+    "hidePassword": "Ocultar palavra-passe"
+  },
+  "browse": {
+    "tables": "Tabelas",
+    "sql": "SQL",
+    "database": "Base de dados",
+    "search": "Pesquisar tabelas",
+    "noTables": "Nenhuma tabela encontrada.",
+    "view": "Ver",
+    "rows": "{{count}} linhas",
+    "loadFailed": "Não foi possível ler a base de dados.",
+    "pick": "Selecione uma tabela à esquerda."
+  },
+  "data": {
+    "title": "Dados",
+    "add": "Adicionar linha",
+    "noKey": "Esta tabela não tem chave primária, pelo que as suas linhas são apenas de leitura.",
+    "readOnly": "Esta linha não pode ser alterada aqui.",
+    "noRows": "Sem linhas.",
+    "apply": "Filtrar",
+    "clear": "Limpar",
+    "filterPlaceholder": "Condição, por exemplo status = 'active'",
+    "range": "{{from}} a {{to}} de {{total}}",
+    "rowCount": "{{count}} linhas",
+    "prev": "Página anterior",
+    "next": "Página seguinte",
+    "loadFailed": "Não foi possível ler as linhas."
+  },
+  "row": {
+    "addTitle": "Adicionar linha",
+    "editTitle": "Editar linha",
+    "defaultHint": "Predefinição: {{value}}",
+    "setValue": "Definir valor",
+    "setNull": "Definir NULL",
+    "saveFailed": "Não foi possível guardar a linha.",
+    "deleteTitle": "Eliminar esta linha?",
+    "deleteDesc": "Esta ação não pode ser desfeita.",
+    "deleteFailed": "Não foi possível eliminar a linha.",
+    "locked": "Estas colunas não podem ser editadas aqui:"
+  },
+  "structure": {
+    "title": "Estrutura",
+    "name": "Coluna",
+    "type": "Tipo",
+    "nullable": "Nulo",
+    "key": "Chave",
+    "default": "Predefinição",
+    "extra": "Extra",
+    "yes": "Sim",
+    "no": "Não",
+    "indexes": "Índices",
+    "noIndexes": "Sem índices."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Executar",
+    "running": "A executar",
+    "hint": "Ctrl+Enter executa a consulta.",
+    "history": "Recentes",
+    "failed": "A consulta falhou.",
+    "noResult": "A instrução foi executada. Nenhuma linha foi retornada.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sessão apenas de leitura",
+    "truncated": "A mostrar as primeiras {{count}} linhas."
+  }
+}

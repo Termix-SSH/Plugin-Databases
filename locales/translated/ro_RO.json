@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Baze de date",
+    "description": "Răsfoiți și editați bazele de date MySQL, MariaDB, PostgreSQL și SQLite de pe gazdele dvs. dintr-o singură filă."
+  },
+  "common": {
+    "save": "Salvează",
+    "cancel": "Anulează",
+    "back": "Înapoi",
+    "delete": "Șterge",
+    "refresh": "Reîmprospătează"
+  },
+  "permissions": {
+    "use": {
+      "title": "Utilizare baze de date",
+      "description": "Deschideți fila Baze de date și lucrați cu bazele de date de pe gazdele la care aveți acces."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Baze de date",
+        "description": "Afișează fila Baze de date pentru acest gazdă în meniul său."
+      }
+    }
+  },
+  "tab": {
+    "title": "Baze de date",
+    "noHost": "Deschide Bazele de date dintr-o gazdă.",
+    "error": "Nu s-au putut încărca Bazele de date de la această gazdă.",
+    "sudo": "Această gazdă necesită sudo fără parolă pentru a executa comenzi ca alt utilizator.",
+    "noTools": "Nu s-a găsit niciun client de bază de date pe această gazdă. Instalează mysql, psql sau sqlite3 pentru a folosi această filă.",
+    "empty": "Niciun cont de autentificare pentru baze de date încă",
+    "emptyHint": "Adaugă un cont de autentificare pentru o bază de date care rulează pe această gazdă sau care poate fi accesată de la aceasta.",
+    "clientMissing": "Client lipsă"
+  },
+  "conn": {
+    "add": "Adaugă cont de autentificare",
+    "edit": "Editează",
+    "addTitle": "Autentificare nouă în baza de date",
+    "name": "Nume",
+    "type": "Tipul bazei de date",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Clientul pentru acest tip de bază de date nu a fost găsit pe gazdă.",
+    "file": "Fișierul bazei de date",
+    "fileHint": "Calea completă către fișierul SQLite pe gazdă.",
+    "address": "Adresă",
+    "addressHint": "Lăsați gol pentru a utiliza socket-ul local.",
+    "port": "Port",
+    "user": "Utilizator",
+    "password": "Parolă",
+    "passwordSaved": "O parolă este salvată. Lăsați gol pentru a o păstra.",
+    "passwordHint": "Lăsați gol pentru autentificare prin socket sau peer.",
+    "clearPassword": "Ștergeți parola salvată",
+    "database": "Baza de date implicită",
+    "databaseHint": "Opțional. Baza de date de deschis prima dată.",
+    "runAs": "Rulează ca utilizator Linux",
+    "runAsHint": "Opțional. Rulează clientul ca acest utilizator cu sudo, de exemplu postgres. Necesită sudo fără parolă.",
+    "readOnly": "Doar citire",
+    "readOnlyDesc": "Blochează modificările făcute prin această sesiune în Termix. Drepturile proprii ale utilizatorului de bază de date rămân valabile.",
+    "readOnlyBadge": "Doar citire",
+    "socket": "Socket local",
+    "test": "Testează conexiunea",
+    "testing": "Se testează",
+    "testOk": "Conectat. {{version}}",
+    "testFailed": "Nu s-a putut conecta.",
+    "saveFailed": "Nu s-a putut salva autentificarea.",
+    "deleteTitle": "Ștergeți {{name}}?",
+    "deleteDesc": "Aceasta elimină autentificarea salvată din Termix. Baza de date nu este afectată.",
+    "deleteFailed": "Nu s-a putut șterge autentificarea.",
+    "showPassword": "Afișează parola",
+    "hidePassword": "Ascunde parola"
+  },
+  "browse": {
+    "tables": "Tabele",
+    "sql": "SQL",
+    "database": "Bază de date",
+    "search": "Caută tabele",
+    "noTables": "Nicio tabelă găsită.",
+    "view": "Vizualizare",
+    "rows": "one: {{count}} rând",
+    "loadFailed": "Nu s-a putut citi baza de date.",
+    "pick": "Selectați o tabelă din stânga."
+  },
+  "data": {
+    "title": "Date",
+    "add": "Adaugă rând",
+    "noKey": "Această tabelă nu are cheie primară, prin urmare rândurile sunt doar în regim de citire.",
+    "readOnly": "Acest rând nu poate fi modificat aici.",
+    "noRows": "Niciun rând.",
+    "apply": "Filtru",
+    "clear": "Șterge",
+    "filterPlaceholder": "Condiție, de exemplu status = 'active'",
+    "range": "{{from}} până la {{to}} din {{total}}",
+    "rowCount": "{{count}} rânduri",
+    "prev": "Pagina anterioară",
+    "next": "Pagina următoare",
+    "loadFailed": "Nu s-au putut citi rândurile."
+  },
+  "row": {
+    "addTitle": "Adaugă rând",
+    "editTitle": "Editează rând",
+    "defaultHint": "Implicit: {{value}}",
+    "setValue": "Setează valoarea",
+    "setNull": "Setează NULL",
+    "saveFailed": "Nu s-a putut salva rândul.",
+    "deleteTitle": "Șterge acest rând?",
+    "deleteDesc": "Această acțiune nu poate fi anulată.",
+    "deleteFailed": "Nu s-a putut șterge rândul.",
+    "locked": "Aceste coloane nu pot fi editate aici:"
+  },
+  "structure": {
+    "title": "Structură",
+    "name": "Coloană",
+    "type": "Tip",
+    "nullable": "Null",
+    "key": "Cheie",
+    "default": "Implicit",
+    "extra": "Extra",
+    "yes": "Da",
+    "no": "Nu",
+    "indexes": "Indici",
+    "noIndexes": "Niciun indice."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Execută",
+    "running": "Se execută",
+    "hint": "Ctrl+Enter execută interogarea.",
+    "history": "Recente",
+    "failed": "Interogarea a eșuat.",
+    "noResult": "Instrucțiunea s-a executat. Nu s-au returnat rânduri.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sesiune doar în citire",
+    "truncated": "Se afișează primele {{count}} rânduri."
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Databasisse",
+    "description": "Blader en redigeer MySQL, MariaDB, PostgreSQL en SQLite-databasisse op jou gasheer vanaf een oortjie."
+  },
+  "common": {
+    "save": "Stoor",
+    "cancel": "Kanselleer",
+    "back": "Terug",
+    "delete": "Vee uit",
+    "refresh": "Verfris"
+  },
+  "permissions": {
+    "use": {
+      "title": "Gebruik Databasisse",
+      "description": "Maak die Databasisse-oortjie oop en werk met databasisse op gasheer wat jy kan bereik."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Databasisse",
+        "description": "Wys die Databasisse-oortjie vir hierdie gasheer in sy kieslys."
+      }
+    }
+  },
+  "tab": {
+    "title": "Databasisse",
+    "noHost": "Maak Databasisse oop vanaf 'n gasheer.",
+    "error": "Kon nie Databasisse van hierdie gasheer laai nie.",
+    "sudo": "Hierdie gasheer benodig wagwoordlose sudo om opdragte as 'n ander gebruiker uit te voer.",
+    "noTools": "Geen databasis-kliënt is op hierdie gasheer gevind nie. Installeer mysql, psql of sqlite3 om hierdie oortjie te gebruik.",
+    "empty": "Nog geen databasis-aanmeldings nie",
+    "emptyHint": "Voeg 'n aanmelding by vir 'n databasis wat op hierdie gasheer loop of daarvandaan bereik kan word.",
+    "clientMissing": "Kliënt ontbreek"
+  },
+  "conn": {
+    "add": "Voeg aanmelding by",
+    "edit": "Redigeer",
+    "addTitle": "Nuwe databasis-aanmelding",
+    "name": "Naam",
+    "type": "Databasis-tipe",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Die kliënt vir hierdie databasis-tipe is nie op die gasheer gevind nie.",
+    "file": "Databasis-lêer",
+    "fileHint": "Volle pad van die SQLite-lêer op die gasheer.",
+    "address": "Adres",
+    "addressHint": "Laat leeg om die plaaslike sokkel te gebruik.",
+    "port": "Poort",
+    "user": "Gebruiker",
+    "password": "Wagwoord",
+    "passwordSaved": "'n Wagwoord is gestoor. Laat dit leeg om dit te behou.",
+    "passwordHint": "Laat leeg vir sokkel- of peer-aanmelding.",
+    "clearPassword": "Verwyder die gestoorde wagwoord",
+    "database": "Verstek-databasis",
+    "databaseHint": "Opsioneel. Die databasis om eerste oop te maak.",
+    "runAs": "Voer uit as Linux-gebruiker",
+    "runAsHint": "Opsioneel. Voer die kliënt uit as hierdie gebruiker met sudo, byvoorbeeld postgres. Benodig wagwoordlose sudo.",
+    "readOnly": "Slegs lees",
+    "readOnlyDesc": "Blokkeer veranderinge gemaak deur hierdie aanmelding in Termix. Die databasisgebruiker se eie regte geld steeds.",
+    "readOnlyBadge": "Slegs lees",
+    "socket": "Plaaslike sokkel",
+    "test": "Toets verbinding",
+    "testing": "Toets",
+    "testOk": "Verbind. {{version}}",
+    "testFailed": "Kon nie verbind nie.",
+    "saveFailed": "Kon nie die aanmelding stoor nie.",
+    "deleteTitle": "Vee {{name}} uit?",
+    "deleteDesc": "Dit verwyder die gestoorde aanmelding uit Termix. Die databasis word nie aangeraak nie.",
+    "deleteFailed": "Kon nie die aanmelding uitvee nie.",
+    "showPassword": "Wys wagwoord",
+    "hidePassword": "Versteek wagwoord"
+  },
+  "browse": {
+    "tables": "Tabelle",
+    "sql": "SQL",
+    "database": "Databasis",
+    "search": "Soek tabelle",
+    "noTables": "Geen tabelle gevind nie.",
+    "view": "Besigtig",
+    "rows": "1 {{count}} ry",
+    "loadFailed": "Kon nie die databasis lees nie.",
+    "pick": "Kies 'n tabel aan die linkerkant."
+  },
+  "data": {
+    "title": "Data",
+    "add": "Voeg ry by",
+    "noKey": "Hierdie tabel het geen primêre sleutel nie, dus is sy rye slegs leesbaar.",
+    "readOnly": "Hierdie ry kan nie hier verander word nie.",
+    "noRows": "Geen rye nie.",
+    "apply": "Filter",
+    "clear": "Vee uit",
+    "filterPlaceholder": "Voorwaarde, byvoorbeeld status = 'aktief'",
+    "range": "{{from}} tot {{to}} van {{total}}",
+    "rowCount": "1 {{count}} ry",
+    "prev": "Vorige bladsy",
+    "next": "Volgende bladsy",
+    "loadFailed": "Kon nie die rye lees nie."
+  },
+  "row": {
+    "addTitle": "Voeg ry by",
+    "editTitle": "Redigeer ry",
+    "defaultHint": "Verstek: {{value}}",
+    "setValue": "Stel waarde",
+    "setNull": "Stel NULL",
+    "saveFailed": "Kon nie die ry stoor nie.",
+    "deleteTitle": "Vee hierdie ry uit?",
+    "deleteDesc": "Dit kan nie ongedaan gemaak word nie.",
+    "deleteFailed": "Kon nie die ry uitvee nie.",
+    "locked": "Hierdie kolomme kan nie hier redigeer word nie:"
+  },
+  "structure": {
+    "title": "Struktuur",
+    "name": "Kolom",
+    "type": "Tipe",
+    "nullable": "Null",
+    "key": "Sleutel",
+    "default": "Verstek",
+    "extra": "Ekstra",
+    "yes": "Ja",
+    "no": "Nee",
+    "indexes": "Indekse",
+    "noIndexes": "Geen indekse nie."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Voer uit",
+    "running": "Besig om uit te voer",
+    "hint": "Ctrl+Enter voer die navraag uit.",
+    "history": "Onlangse",
+    "failed": "Die navraag het misluk.",
+    "noResult": "Die verklaring is uitgevoer. Geen rye is teruggegee nie.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Slegs-lees sessie",
+    "truncated": "Die eerste {{count}} rye word vertoon."
+  }
+}

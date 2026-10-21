@@ -1,0 +1,141 @@
+{
+  "plugin": {
+    "name": "Databaser",
+    "description": "Bläddra och redigera MySQL, MariaDB, PostgreSQL och SQLite-databaser på dina värdar från en flik."
+  },
+  "common": {
+    "save": "Spara",
+    "cancel": "Avbryt",
+    "back": "Tillbaka",
+    "delete": "Ta bort",
+    "refresh": "Uppdatera"
+  },
+  "permissions": {
+    "use": {
+      "title": "Använd Databaser",
+      "description": "Öppna fliken Databaser och arbeta med databaser på värdar du har tillgång till."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Databaser",
+        "description": "Visa fliken Databaser för denna värd i dess meny."
+      }
+    }
+  },
+  "tab": {
+    "title": "Databaser",
+    "noHost": "Öppna Databaser från en värd.",
+    "error": "Kunde inte ladda Databaser från denna värd.",
+    "sudo": "Denna värd kräver lösenordsfritt sudo för att köra kommandon som en annan användare.",
+    "noTools": "Ingen databasklient hittades på denna värd. Installera mysql, psql eller sqlite3 för att använda denna flik.",
+    "empty": "Inga databasloggar ännu",
+    "emptyHint": "Lägg till en inloggning för en databas som körs på denna värd eller som kan nås från den.",
+    "clientMissing": "Klient saknas"
+  },
+  "conn": {
+    "add": "Lägg till inloggning",
+    "edit": "Redigera",
+    "addTitle": "Ny databasanslutning",
+    "name": "Namn",
+    "type": "Databastyp",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Klienten för denna databastyp hittades inte på värdservern.",
+    "file": "Databasfil",
+    "fileHint": "Fullständig sökväg till SQLite-filen på värdservern.",
+    "address": "Adress",
+    "addressHint": "Lämna tomt för att använda den lokala socketen.",
+    "port": "Port",
+    "user": "Användare",
+    "password": "Lösenord",
+    "passwordSaved": "Ett lösenord är sparad. Lämna detta tomt för att behålla det.",
+    "passwordHint": "Lämna tomt för socket- eller peer-inloggning.",
+    "clearPassword": "Ta bort det sparade lösenordet",
+    "database": "Standarddatabas",
+    "databaseHint": "Valfritt. Databasen som ska öppnas först.",
+    "runAs": "Kör som Linux-användare",
+    "runAsHint": "Valfritt. Kör klienten som denna användare med sudo, till exempel postgres. Kräver lösenordsfritt sudo.",
+    "readOnly": "Skrivskyddad",
+    "readOnlyDesc": "Blockera ändringar som görs via denna inloggning i Termix. Databasanvändarens egna behörigheter gäller fortfarande.",
+    "readOnlyBadge": "Skrivskyddad",
+    "socket": "Lokal socket",
+    "test": "Testa anslutning",
+    "testing": "Testar",
+    "testOk": "Ansluten. {{version}}",
+    "testFailed": "Kunde inte ansluta.",
+    "saveFailed": "Kunde inte spara inloggningsuppgifterna.",
+    "deleteTitle": "Vill du ta bort {{name}}?",
+    "deleteDesc": "Detta tar bort de sparade inloggningsuppgifterna från Termix. Databasen påverkas inte.",
+    "deleteFailed": "Kunde inte ta bort inloggningsuppgifterna.",
+    "showPassword": "Visa lösenord",
+    "hidePassword": "Dölj lösenord"
+  },
+  "browse": {
+    "tables": "Tabeller",
+    "sql": "SQL",
+    "database": "Databas",
+    "search": "Sök i tabeller",
+    "noTables": "Inga tabeller hittades.",
+    "view": "Visa",
+    "rows": "one: {{count}} rad",
+    "loadFailed": "Kunde inte läsa databasen.",
+    "pick": "Välj en tabell till vänster."
+  },
+  "data": {
+    "title": "Data",
+    "add": "Lägg till rad",
+    "noKey": "Denna tabell har inget primärt nyckelfält, så dess rader är skrivskyddade.",
+    "readOnly": "Denna rad kan inte ändras här.",
+    "noRows": "Inga rader.",
+    "apply": "Filtrera",
+    "clear": "Rensa",
+    "filterPlaceholder": "Villkor, till exempel status = 'aktiv'",
+    "range": "{{from}} till {{to}} av {{total}}",
+    "prev": "Föregående sida",
+    "next": "Nästa sida",
+    "loadFailed": "Kunde inte läsa raderna."
+  },
+  "row": {
+    "addTitle": "Lägg till rad",
+    "editTitle": "Redigera rad",
+    "defaultHint": "Standard: {{value}}",
+    "setValue": "Ange värde",
+    "setNull": "Ange NULL",
+    "saveFailed": "Kunde inte spara raden.",
+    "deleteTitle": "Vill du ta bort denna rad?",
+    "deleteDesc": "Detta kan inte ångras.",
+    "deleteFailed": "Kunde inte ta bort raden.",
+    "locked": "Dessa kolumner kan inte redigeras här:"
+  },
+  "structure": {
+    "title": "Struktur",
+    "name": "Kolumn",
+    "type": "Typ",
+    "nullable": "Null",
+    "key": "Nyckel",
+    "default": "Standard",
+    "extra": "Extra",
+    "yes": "Ja",
+    "no": "Nej",
+    "indexes": "Index",
+    "noIndexes": "Inga index."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Kör",
+    "running": "Kör...",
+    "hint": "Ctrl+Enter kör frågan.",
+    "history": "Senaste",
+    "failed": "Frågan misslyckades.",
+    "noResult": "Satsen kördes. Inga rader returnerades.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Skrivskyddad session",
+    "truncated": "Visar de första {{count}} raderna."
+  }
+}

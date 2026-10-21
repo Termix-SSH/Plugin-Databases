@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Database",
+    "description": "Sfoglia e modifica database MySQL, MariaDB, PostgreSQL e SQLite sui tuoi host da un'unica scheda."
+  },
+  "common": {
+    "save": "Salva",
+    "cancel": "Annulla",
+    "back": "Indietro",
+    "delete": "Elimina",
+    "refresh": "Aggiorna"
+  },
+  "permissions": {
+    "use": {
+      "title": "Usa Database",
+      "description": "Apri la scheda Database e lavora con i database sugli host a cui hai accesso."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Database",
+        "description": "Mostra la scheda Database per questo host nel suo menu."
+      }
+    }
+  },
+  "tab": {
+    "title": "Database",
+    "noHost": "Apri Database da un host.",
+    "error": "Impossibile caricare i Database da questo host.",
+    "sudo": "Questo host richiede sudo senza password per eseguire comandi come un altro utente.",
+    "noTools": "Nessun client di database trovato su questo host. Installa mysql, psql o sqlite3 per utilizzare questa scheda.",
+    "empty": "Nessun accesso al database ancora",
+    "emptyHint": "Aggiungi un accesso per un database che gira su questo host o che può essere raggiunto da esso.",
+    "clientMissing": "Client mancante"
+  },
+  "conn": {
+    "add": "Aggiungi accesso",
+    "edit": "Modifica",
+    "addTitle": "Nuovo accesso al database",
+    "name": "Nome",
+    "type": "Tipo di database",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Il client per questo tipo di database non è stato trovato sull'host.",
+    "file": "File di database",
+    "fileHint": "Percorso completo del file SQLite sull'host.",
+    "address": "Indirizzo",
+    "addressHint": "Lascia vuoto per usare il socket locale.",
+    "port": "Porta",
+    "user": "Utente",
+    "password": "Password",
+    "passwordSaved": "Una password è salvata. Lascia vuoto per mantenerla.",
+    "passwordHint": "Lascia vuoto per accesso tramite socket o peer.",
+    "clearPassword": "Rimuovi la password salvata",
+    "database": "Database predefinito",
+    "databaseHint": "Opzionale. Il database da aprire per primo.",
+    "runAs": "Esegui come utente Linux",
+    "runAsHint": "Opzionale. Esegue il client come questo utente con sudo, ad esempio postgres. Richiede sudo senza password.",
+    "readOnly": "Sola lettura",
+    "readOnlyDesc": "Blocca le modifiche effettuate tramite questo accesso in Termix. I diritti dell'utente del database rimangono invariati.",
+    "readOnlyBadge": "Sola lettura",
+    "socket": "Socket locale",
+    "test": "Testa connessione",
+    "testing": "Test in corso",
+    "testOk": "Connesso. {{version}}",
+    "testFailed": "Impossibile connettersi.",
+    "saveFailed": "Impossibile salvare l'accesso.",
+    "deleteTitle": "Eliminare {{name}}?",
+    "deleteDesc": "Questo rimuove l'accesso salvato da Termix. Il database non viene modificato.",
+    "deleteFailed": "Impossibile eliminare l'accesso.",
+    "showPassword": "Mostra password",
+    "hidePassword": "Nascondi password"
+  },
+  "browse": {
+    "tables": "Tabelle",
+    "sql": "SQL",
+    "database": "Database",
+    "search": "Cerca tabelle",
+    "noTables": "Nessuna tabella trovata.",
+    "view": "Visualizza",
+    "rows": "righe {{count}}",
+    "loadFailed": "Impossibile leggere il database.",
+    "pick": "Seleziona una tabella a sinistra."
+  },
+  "data": {
+    "title": "Dati",
+    "add": "Aggiungi riga",
+    "noKey": "Questa tabella non ha una chiave primaria, quindi le sue righe sono in sola lettura.",
+    "readOnly": "Questa riga non può essere modificata qui.",
+    "noRows": "Nessuna riga.",
+    "apply": "Filtra",
+    "clear": "Cancella",
+    "filterPlaceholder": "Condizione, ad esempio status = 'active'",
+    "range": "{{from}} di {{to}} su {{total}}",
+    "rowCount": "{{count}} righe",
+    "prev": "Pagina precedente",
+    "next": "Pagina successiva",
+    "loadFailed": "Impossibile leggere le righe."
+  },
+  "row": {
+    "addTitle": "Aggiungi riga",
+    "editTitle": "Modifica riga",
+    "defaultHint": "Predefinito: {{value}}",
+    "setValue": "Imposta valore",
+    "setNull": "Imposta NULL",
+    "saveFailed": "Impossibile salvare la riga.",
+    "deleteTitle": "Eliminare questa riga?",
+    "deleteDesc": "Questa azione non può essere annullata.",
+    "deleteFailed": "Impossibile eliminare la riga.",
+    "locked": "Queste colonne non possono essere modificate qui:"
+  },
+  "structure": {
+    "title": "Struttura",
+    "name": "Colonna",
+    "type": "Tipo",
+    "nullable": "Nullo",
+    "key": "Chiave",
+    "default": "Predefinito",
+    "extra": "Extra",
+    "yes": "Sì",
+    "no": "No",
+    "indexes": "Indici",
+    "noIndexes": "Nessun indice."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Esegui",
+    "running": "In esecuzione",
+    "hint": "Ctrl+Invio esegue la query.",
+    "history": "Recenti",
+    "failed": "La query non è riuscita.",
+    "noResult": "L'istruzione è stata eseguita. Nessun record restituito.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Sessione di sola lettura",
+    "truncated": "Vengono mostrate le prime {{count}} righe."
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "plugin": {
+    "name": "Databáze",
+    "description": "Prohlížejte a upravujte databáze MySQL, MariaDB, PostgreSQL a SQLite na vašich hostitelích z jednoho panelu."
+  },
+  "common": {
+    "save": "Uložit",
+    "cancel": "Zrušit",
+    "back": "Zpět",
+    "delete": "Smazat",
+    "refresh": "Obnovit"
+  },
+  "permissions": {
+    "use": {
+      "title": "Používat databáze",
+      "description": "Otevřete panel Databáze a pracujte s databázemi na hostitelích, ke kterým máte přístup."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Databáze",
+        "description": "Zobrazí kartu Databáze pro tohoto hostitele v jeho nabídce."
+      }
+    }
+  },
+  "tab": {
+    "title": "Databáze",
+    "noHost": "Otevřete Databáze z hostitele.",
+    "error": "Nelze načíst databáze z tohoto hostitele.",
+    "sudo": "Tento hostitel vyžaduje sudo bez hesla pro spuštění příkazů jako jiný uživatel.",
+    "noTools": "Na tomto hostiteli nebyl nalezen žádný databázový klient. Pro použití této karty nainstalujte mysql, psql nebo sqlite3.",
+    "empty": "Zatím žádné přihlášení do databáze",
+    "emptyHint": "Přidejte přihlášení pro databázi, která běží na tomto hostiteli nebo je z něj dosažitelná.",
+    "clientMissing": "Chybějící klient"
+  },
+  "conn": {
+    "add": "Přidat přihlášení",
+    "edit": "Upravit",
+    "addTitle": "Nové přihlašovací údaje do databáze",
+    "name": "Název",
+    "type": "Typ databáze",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Klient pro tento typ databáze nebyl na hostiteli nalezen.",
+    "file": "Soubor databáze",
+    "fileHint": "Plná cesta k souboru SQLite na hostiteli.",
+    "address": "Adresa",
+    "addressHint": "Ponechte prázdné pro použití místního socketu.",
+    "port": "Port",
+    "user": "Uživatel",
+    "password": "Heslo",
+    "passwordSaved": "Heslo je uloženo. Ponechte prázdné pro zachování.",
+    "passwordHint": "Ponechte prázdné pro přihlášení přes socket nebo peer.",
+    "clearPassword": "Odstranit uložené heslo",
+    "database": "Výchozí databáze",
+    "databaseHint": "Volitelné. Databáze, která se otevře jako první.",
+    "runAs": "Spustit jako Linuxový uživatel",
+    "runAsHint": "Volitelné. Spustí klienta jako tento uživatel pomocí sudo, například postgres. Vyžaduje sudo bez hesla.",
+    "readOnly": "Pouze pro čtení",
+    "readOnlyDesc": "Zablokujte změny provedené tímto přihlášením v Termixu. Stále platí vlastní oprávnění uživatele databáze.",
+    "readOnlyBadge": "Pouze pro čtení",
+    "socket": "Místní socket",
+    "test": "Otestovat připojení",
+    "testing": "Testování",
+    "testOk": "Připojeno. {{version}}",
+    "testFailed": "Nelze se připojit.",
+    "saveFailed": "Přihlášení se nepodařilo uložit.",
+    "deleteTitle": "Smazat {{name}}?",
+    "deleteDesc": "Tím se odstraní uložené přihlášení z Termixu. Databáze zůstane nedotčena.",
+    "deleteFailed": "Přihlášení se nepodařilo smazat.",
+    "showPassword": "Zobrazit heslo",
+    "hidePassword": "Skrýt heslo"
+  },
+  "browse": {
+    "tables": "Tabulky",
+    "sql": "SQL",
+    "database": "Databáze",
+    "search": "Hledat tabulky",
+    "noTables": "Nebyly nalezeny žádné tabulky.",
+    "view": "Zobrazit",
+    "loadFailed": "Nelze přečíst databázi.",
+    "pick": "Vyberte tabulku vlevo."
+  },
+  "data": {
+    "title": "Data",
+    "add": "Přidat řádek",
+    "noKey": "Tato tabulka nemá primární klíč, takže jsou její řádky pouze pro čtení.",
+    "readOnly": "Tento řádek nelze zde změnit.",
+    "noRows": "Žádné řádky.",
+    "apply": "Filtr",
+    "clear": "Vymazat",
+    "filterPlaceholder": "Podmínka, například status = 'active'",
+    "range": "{{from}} až {{to}} z {{total}}",
+    "rowCount": "{{count}} řádků",
+    "prev": "Předchozí strana",
+    "next": "Další strana",
+    "loadFailed": "Nelze načíst řádky."
+  },
+  "row": {
+    "addTitle": "Přidat řádek",
+    "editTitle": "Upravit řádek",
+    "defaultHint": "Výchozí: {{value}}",
+    "setValue": "Nastavit hodnotu",
+    "setNull": "Nastavit NULL",
+    "saveFailed": "Řádek se nepodařilo uložit.",
+    "deleteTitle": "Smazat tento řádek?",
+    "deleteDesc": "Tuto akci nelze vrátit zpět.",
+    "deleteFailed": "Řádek se nepodařilo smazat.",
+    "locked": "Tyto sloupce nelze zde upravovat:"
+  },
+  "structure": {
+    "title": "Struktura",
+    "name": "Sloupec",
+    "type": "Typ",
+    "nullable": "Nulový",
+    "key": "Klíč",
+    "default": "Výchozí",
+    "extra": "Extra",
+    "yes": "Ano",
+    "no": "Ne",
+    "indexes": "Indexy",
+    "noIndexes": "Žádné indexy."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Spustit",
+    "running": "Probíhá",
+    "hint": "Stisknutím Ctrl+Enter se dotaz spustí.",
+    "history": "Nedávné",
+    "failed": "Dotaz selhal.",
+    "noResult": "Příkaz byl proveden. Nebyly vráceny žádné řádky.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Relace pouze pro čtení",
+    "truncated": "Zobrazují se první {{count}} řádky."
+  }
+}

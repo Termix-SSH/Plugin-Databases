@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "데이터베이스",
+    "description": "하나의 탭에서 호스트의 MySQL, MariaDB, PostgreSQL 및 SQLite 데이터베이스를 탐색하고 편집하세요."
+  },
+  "common": {
+    "save": "저장",
+    "cancel": "취소",
+    "back": "뒤로",
+    "delete": "삭제",
+    "refresh": "새로고침"
+  },
+  "permissions": {
+    "use": {
+      "title": "데이터베이스 사용",
+      "description": "데이터베이스 탭을 열고 접근 가능한 호스트의 데이터베이스를 작업하세요."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "데이터베이스",
+        "description": "이 호스트 메뉴에서 데이터베이스 탭을 표시합니다."
+      }
+    }
+  },
+  "tab": {
+    "title": "데이터베이스",
+    "noHost": "호스트에서 데이터베이스를 엽니다.",
+    "error": "이 호스트에서 데이터베이스를 로드할 수 없습니다.",
+    "sudo": "이 호스트는 다른 사용자로 명령을 실행하기 위해 비밀번호 없는 sudo가 필요합니다.",
+    "noTools": "이 호스트에서 데이터베이스 클라이언트를 찾을 수 없습니다. 이 탭을 사용하려면 mysql, psql 또는 sqlite3를 설치하세요.",
+    "empty": "아직 데이터베이스 로그인이 없습니다",
+    "emptyHint": "이 호스트에서 실행되거나 이 호스트에서 접근할 수 있는 데이터베이스의 로그인을 추가하세요.",
+    "clientMissing": "클라이언트 누락"
+  },
+  "conn": {
+    "add": "로그인 추가",
+    "edit": "편집",
+    "addTitle": "새 데이터베이스 로그인",
+    "name": "이름",
+    "type": "데이터베이스 유형",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "호스트에서 이 데이터베이스 유형의 클라이언트를 찾을 수 없습니다.",
+    "file": "데이터베이스 파일",
+    "fileHint": "호스트의 SQLite 파일 전체 경로입니다.",
+    "address": "주소",
+    "addressHint": "로컬 소켓을 사용하려면 비워두세요.",
+    "port": "포트",
+    "user": "사용자",
+    "password": "비밀번호",
+    "passwordSaved": "비밀번호가 저장되어 있습니다. 유지하려면 비워두세요.",
+    "passwordHint": "소켓 또는 피어 로그인을 사용하려면 비워두세요.",
+    "clearPassword": "저장된 비밀번호 제거",
+    "database": "기본 데이터베이스",
+    "databaseHint": "선택 사항. 먼저 열 데이터베이스입니다.",
+    "runAs": "리눅스 사용자로 실행",
+    "runAsHint": "선택 사항. sudo를 사용하여 postgres와 같은 사용자로 클라이언트를 실행합니다. 비밀번호 없는 sudo가 필요합니다.",
+    "readOnly": "읽기 전용",
+    "readOnlyDesc": "Termix를 통해 이 로그인으로 변경하는 작업을 차단합니다. 데이터베이스 사용자 자체의 권한은 여전히 적용됩니다.",
+    "readOnlyBadge": "읽기 전용",
+    "socket": "로컬 소켓",
+    "test": "연결 테스트",
+    "testing": "테스트 중",
+    "testOk": "연결됨. {{version}}",
+    "testFailed": "연결할 수 없습니다.",
+    "saveFailed": "로그인을 저장할 수 없습니다.",
+    "deleteTitle": "{{name}}(을)를 삭제하시겠습니까?",
+    "deleteDesc": "이 작업은 Termix에서 저장된 로그인을 제거합니다. 데이터베이스에는 영향을 주지 않습니다.",
+    "deleteFailed": "로그인을 삭제할 수 없습니다.",
+    "showPassword": "비밀번호 표시",
+    "hidePassword": "비밀번호 숨기기"
+  },
+  "browse": {
+    "tables": "테이블",
+    "sql": "SQL",
+    "database": "데이터베이스",
+    "search": "테이블 검색",
+    "noTables": "테이블을 찾을 수 없습니다.",
+    "view": "보기",
+    "rows": "{{count}}개 행",
+    "loadFailed": "데이터베이스를 읽을 수 없습니다.",
+    "pick": "왼쪽에서 테이블을 선택하세요."
+  },
+  "data": {
+    "title": "데이터",
+    "add": "행 추가",
+    "noKey": "이 테이블에는 기본 키가 없으므로 행은 읽기 전용입니다.",
+    "readOnly": "이 행은 여기서 수정할 수 없습니다.",
+    "noRows": "행이 없습니다.",
+    "apply": "필터",
+    "clear": "지우기",
+    "filterPlaceholder": "조건, 예: status = 'active'",
+    "range": "{{total}} 중 {{from}}~{{to}}",
+    "rowCount": "행 {{count}}개",
+    "prev": "이전 페이지",
+    "next": "다음 페이지",
+    "loadFailed": "행을 읽을 수 없습니다."
+  },
+  "row": {
+    "addTitle": "행 추가",
+    "editTitle": "행 편집",
+    "defaultHint": "기본값: {{value}}",
+    "setValue": "값 설정",
+    "setNull": "NULL 설정",
+    "saveFailed": "행을 저장할 수 없습니다.",
+    "deleteTitle": "이 행을 삭제하시겠습니까?",
+    "deleteDesc": "이 작업은 되돌릴 수 없습니다.",
+    "deleteFailed": "행을 삭제할 수 없습니다.",
+    "locked": "다음 열은 여기서 수정할 수 없습니다:"
+  },
+  "structure": {
+    "title": "구조",
+    "name": "열",
+    "type": "유형",
+    "nullable": "널",
+    "key": "키",
+    "default": "기본값",
+    "extra": "추가",
+    "yes": "예",
+    "no": "아니요",
+    "indexes": "인덱스",
+    "noIndexes": "인덱스가 없습니다."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "실행",
+    "running": "실행 중",
+    "hint": "Ctrl+Enter로 쿼리를 실행합니다.",
+    "history": "최근 사용",
+    "failed": "쿼리 실행에 실패했습니다.",
+    "noResult": "명령이 실행되었으나 반환된 행이 없습니다.",
+    "elapsed": "{{ms}}ms",
+    "readOnlySession": "읽기 전용 세션",
+    "truncated": "처음 {{count}}개 행만 표시합니다."
+  }
+}

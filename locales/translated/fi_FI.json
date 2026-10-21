@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Tietokannat",
+    "description": "Selaa ja muokkaa MySQL-, MariaDB-, PostgreSQL- ja SQLite-tietokantoja isäntälaitteillasi yhdellä välilehdellä."
+  },
+  "common": {
+    "save": "Tallenna",
+    "cancel": "Peruuta",
+    "back": "Takaisin",
+    "delete": "Poista",
+    "refresh": "Päivitä"
+  },
+  "permissions": {
+    "use": {
+      "title": "Käytä tietokantoja",
+      "description": "Avaa Tietokannat-välilehti ja hallitse tietokantoja isäntäkohteissa, joihin sinulla on pääsy."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Tietokannat",
+        "description": "Näytä tietokantojen välilehti tämän isäntäpalvelimen valikossa."
+      }
+    }
+  },
+  "tab": {
+    "title": "Tietokannat",
+    "noHost": "Avaa tietokantoja isäntäpalvelimelta.",
+    "error": "Tietokantoja ei voitu ladata tästä isäntäpalvelimelta.",
+    "sudo": "Tämä isäntä vaatii salasanasuoran sudo-oikeuden, jotta komennot voidaan suorittaa toisena käyttäjänä.",
+    "noTools": "Tältä palvelimelta ei löytynyt tietokanta-asiakasohjelmaa. Asenna mysql, psql tai sqlite3 käyttääksesi tätä välilehteä.",
+    "empty": "Ei vielä tietokantakirjautumisia",
+    "emptyHint": "Lisää kirjautumistiedot tietokannalle, joka toimii tässä isäntäpalvelimessa tai on siitä tavoitettavissa.",
+    "clientMissing": "Asiakas puuttuu"
+  },
+  "conn": {
+    "add": "Lisää kirjautuminen",
+    "edit": "Muokkaa",
+    "addTitle": "Uusi tietokantakirjautuminen",
+    "name": "Nimi",
+    "type": "Tietokantatyypit",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Tämän tietokantatyypin asiakasohjelmaa ei löydy isäntäpalvelimelta.",
+    "file": "Tietokantatiedosto",
+    "fileHint": "SQLite-tiedoston täydellinen polku isäntäpalvelimella.",
+    "address": "Osoite",
+    "addressHint": "Jätä tyhjäksi käyttääksesi paikallista sokettia.",
+    "port": "Portti",
+    "user": "Käyttäjä",
+    "password": "Salasana",
+    "passwordSaved": "Salasana on tallennettu. Jätä tämä tyhjäksi säilyttääksesi sen.",
+    "passwordHint": "Jätä tyhjäksi, jos käytät socket- tai peer-kirjautumista.",
+    "clearPassword": "Poista tallennettu salasana",
+    "database": "Olet tietokanta",
+    "databaseHint": "Valinnainen. Ensimmäisenä avattava tietokanta.",
+    "runAs": "Suorita Linux-käyttäjänä",
+    "runAsHint": "Valinnainen. Suorittaa asiakasohjelman tämän käyttäjän nimellä sudo-komentoa käyttäen, esimerkiksi postgres. Vaatii salasanasuorittoman sudon.",
+    "readOnly": "Vain lukuoikeus",
+    "readOnlyDesc": "Estä muutokset, jotka tehdään Termixin kautta tällä kirjautumisella. Tietokantakäyttäjän omat oikeudet ovat edelleen voimassa.",
+    "readOnlyBadge": "Vain lukuoikeus",
+    "socket": "Paikallinen soketti",
+    "test": "Testaa yhteys",
+    "testing": "Testataan",
+    "testOk": "Yhdistetty. {{version}}",
+    "testFailed": "Yhteyden muodostaminen epäonnistui.",
+    "saveFailed": "Kirjautumistietoja ei voitu tallentaa.",
+    "deleteTitle": "Haluatko poistaa kohteen {{name}}?",
+    "deleteDesc": "Tämä poistaa tallennetut kirjautumistiedot Termixistä. Tietokantaa ei muuteta.",
+    "deleteFailed": "Kirjautumistietoja ei voitu poistaa.",
+    "showPassword": "Näytä salasana",
+    "hidePassword": "Piilota salasana"
+  },
+  "browse": {
+    "tables": "Taulukot",
+    "sql": "SQL",
+    "database": "Tietokanta",
+    "search": "Hae taulukoita",
+    "noTables": "Taulukoita ei löytynyt.",
+    "view": "Näytä",
+    "rows": "{{count}} riviä",
+    "loadFailed": "Tietokantaa ei voitu lukea.",
+    "pick": "Valitse taulukko vasemmalta."
+  },
+  "data": {
+    "title": "Tiedot",
+    "add": "Lisää rivi",
+    "noKey": "Tällä taulukolla ei ole ensisijaista avainta, joten rivit ovat vain luettavissa.",
+    "readOnly": "Tätä riviä ei voi muuttaa tässä.",
+    "noRows": "Rivejä ei ole.",
+    "apply": "Suodata",
+    "clear": "Tyhjennä",
+    "filterPlaceholder": "Ehto, esimerkiksi status = 'active'",
+    "range": "{{from}}–{{to}} / {{total}}",
+    "rowCount": "{{count}} riviä",
+    "prev": "Edellinen sivu",
+    "next": "Seuraava sivu",
+    "loadFailed": "Rivejä ei voitu lukea."
+  },
+  "row": {
+    "addTitle": "Lisää rivi",
+    "editTitle": "Muokkaa riviä",
+    "defaultHint": "Oletus: {{value}}",
+    "setValue": "Aseta arvo",
+    "setNull": "Aseta NULL",
+    "saveFailed": "Riviä ei voitu tallentaa.",
+    "deleteTitle": "Haluatko poistaa tämän rivin?",
+    "deleteDesc": "Tätä ei voi peruuttaa.",
+    "deleteFailed": "Riviä ei voitu poistaa.",
+    "locked": "Näitä sarakkeita ei voi muokata tässä:"
+  },
+  "structure": {
+    "title": "Rakenne",
+    "name": "Sarake",
+    "type": "Tyyppi",
+    "nullable": "Null",
+    "key": "Avain",
+    "default": "Oletus",
+    "extra": "Lisätietoja",
+    "yes": "Kyllä",
+    "no": "Ei",
+    "indexes": "Indeksit",
+    "noIndexes": "Indeksejä ei ole."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Suorita",
+    "running": "Suoritetaan",
+    "hint": "Ctrl+Enter suorittaa kyselyn.",
+    "history": "Viimeisimmät",
+    "failed": "Kysely epäonnistui.",
+    "noResult": "Lauseke suoritettiin. Rivejä ei palautettu.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Vain lukuoikeus",
+    "truncated": "Näytetään ensimmäiset {{count}} riviä."
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "plugin": {
+    "name": "Adatbázisok",
+    "description": "Tallózza és szerkesztheti a MySQL, MariaDB, PostgreSQL és SQLite adatbázisokat a gazdagépein egy fülön keresztül."
+  },
+  "common": {
+    "save": "Mentés",
+    "cancel": "Mégse",
+    "back": "Vissza",
+    "delete": "Törlés",
+    "refresh": "Frissítés"
+  },
+  "permissions": {
+    "use": {
+      "title": "Adatbázisok használata",
+      "description": "Az Adatbázisok fül megnyitása és az adatbázisokkal való munka azokon a gazdagépeken, amelyekhez hozzáfér."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Adatbázisok",
+        "description": "Megjeleníti az Adatbázisok fület ennek a gazdagépnak a menüjében."
+      }
+    }
+  },
+  "tab": {
+    "title": "Adatbázisok",
+    "noHost": "Nyissa meg az Adatbázisokat egy gazdagépről.",
+    "error": "Nem sikerült betölteni az adatbázisokat erről a gazdagépről.",
+    "sudo": "Ennek a gazdagépnek jelszómentes sudo hozzáférésre van szüksége a parancsok másik felhasználóként történő futtatásához.",
+    "noTools": "Nem található adatbázis-ügyfél ezen a gazdagépen. Telepítse a mysql, psql vagy sqlite3 programot a fül használatához.",
+    "empty": "Még nincsenek adatbázis-bejelentkezések",
+    "emptyHint": "Adjon hozzá egy bejelentkezést egy olyan adatbázishoz, amely ezen a gazdagépen fut, vagy onnan elérhető.",
+    "clientMissing": "Hiányzó ügyfél"
+  },
+  "conn": {
+    "add": "Bejelentkezés hozzáadása",
+    "edit": "Szerkesztés",
+    "addTitle": "Új adatbázis-bejelentkezés",
+    "name": "Név",
+    "type": "Adatbázis típusa",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Az adatbázis-típushoz tartozó kliens nem található a gazdagépen.",
+    "file": "Adatbázis-fájl",
+    "fileHint": "Az SQLite-fájl teljes elérési útja a gazdagépen.",
+    "address": "Cím",
+    "addressHint": "Hagyja üresen a helyi socket használatához.",
+    "port": "Port",
+    "user": "Felhasználó",
+    "password": "Jelszó",
+    "passwordSaved": "Már van mentett jelszó. Hagyja üresen, ha meg akarja tartani.",
+    "passwordHint": "Hagyja üresen socket vagy peer bejelentkezéshez.",
+    "clearPassword": "Mentett jelszó törlése",
+    "database": "Alapértelmezett adatbázis",
+    "databaseHint": "Opcionális. Az elsőként megnyitandó adatbázis.",
+    "runAs": "Futtatás Linux felhasználóként",
+    "runAsHint": "Opcionális. A kliens futtatása ezzel a felhasználóval sudo segítségével, például postgres. Jelszómentes sudo szükséges.",
+    "readOnly": "Csak olvasható",
+    "readOnlyDesc": "Blokkolja a Termix-en keresztül ezen bejelentkezéssel végzett módosításokat. Az adatbázis-felhasználó saját jogosultságai továbbra is érvényesek.",
+    "readOnlyBadge": "Csak olvasható",
+    "socket": "Helyi socket",
+    "test": "Kapcsolat tesztelése",
+    "testing": "Tesztelés",
+    "testOk": "Csatlakozva. {{version}}",
+    "testFailed": "Nem sikerült csatlakozni.",
+    "saveFailed": "Nem sikerült menteni a bejelentkezési adatokat.",
+    "deleteTitle": "Törli a(z) {{name}} bejelentkezési adatokat?",
+    "deleteDesc": "Ez eltávolítja a mentett bejelentkezési adatokat a Termixből. Az adatbázis nem érintett.",
+    "deleteFailed": "Nem sikerült törölni a bejelentkezési adatokat.",
+    "showPassword": "Jelszó megjelenítése",
+    "hidePassword": "Jelszó elrejtése"
+  },
+  "browse": {
+    "tables": "Táblák",
+    "sql": "SQL",
+    "database": "Adatbázis",
+    "search": "Táblák keresése",
+    "noTables": "Nem található tábla.",
+    "view": "Megtekintés",
+    "rows": "one: {{count}} sor",
+    "loadFailed": "Nem sikerült beolvasni az adatbázist.",
+    "pick": "Válasszon egy táblát a bal oldalon."
+  },
+  "data": {
+    "title": "Adatok",
+    "add": "Sor hozzáadása",
+    "noKey": "Ennek a táblának nincs elsődleges kulcsa, ezért a sorai csak olvashatók.",
+    "readOnly": "Ez a sor itt nem módosítható.",
+    "noRows": "Nincsenek sorok.",
+    "apply": "Szűrés",
+    "clear": "Törlés",
+    "filterPlaceholder": "Feltétel, például status = 'active'",
+    "range": "{{from}}–{{to}} / összesen {{total}}",
+    "prev": "Előző oldal",
+    "next": "Következő oldal",
+    "loadFailed": "A sorok nem olvashatók."
+  },
+  "row": {
+    "addTitle": "Sor hozzáadása",
+    "editTitle": "Sor szerkesztése",
+    "defaultHint": "Alapértelmezett: {{value}}",
+    "setValue": "Érték beállítása",
+    "setNull": "NULL beállítása",
+    "saveFailed": "A sor nem menthető.",
+    "deleteTitle": "Törli ezt a sort?",
+    "deleteDesc": "Ez nem vonható vissza.",
+    "deleteFailed": "A sor nem törölhető.",
+    "locked": "Ezeket az oszlopokat itt nem lehet szerkeszteni:"
+  },
+  "structure": {
+    "title": "Struktúra",
+    "name": "Oszlop",
+    "type": "Típus",
+    "nullable": "Null",
+    "key": "Kulcs",
+    "default": "Alapértelmezett",
+    "extra": "Extra",
+    "yes": "Igen",
+    "no": "Nem",
+    "indexes": "Indexek",
+    "noIndexes": "Nincsenek indexek."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Futtatás",
+    "running": "Fut",
+    "hint": "A lekérdezés futtatásához nyomja meg a Ctrl+Enter billentyűket.",
+    "history": "Legutóbbi",
+    "failed": "A lekérdezés sikertelen volt.",
+    "noResult": "Az utasítás végrehajtódott. Nem érkezett vissza sor.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Csak olvasható munkamenet",
+    "truncated": "Az első {{count}} sor megjelenítése."
+  }
+}

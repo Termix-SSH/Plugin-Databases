@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Databaser",
+    "description": "Gennemse og rediger MySQL, MariaDB, PostgreSQL og SQLite-databaser på dine værter fra én fane."
+  },
+  "common": {
+    "save": "Gem",
+    "cancel": "Annuller",
+    "back": "Tilbage",
+    "delete": "Slet",
+    "refresh": "Opdater"
+  },
+  "permissions": {
+    "use": {
+      "title": "Brug Databaser",
+      "description": "Åbn fanen Databaser og arbejd med databaser på værter, du har adgang til."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Databaser",
+        "description": "Vis fanen Databaser for denne vært i dens menu."
+      }
+    }
+  },
+  "tab": {
+    "title": "Databaser",
+    "noHost": "Åbn Databaser fra en vært.",
+    "error": "Kunne ikke indlæse Databaser fra denne vært.",
+    "sudo": "Denne vært kræver adgang til sudo uden adgangskode for at køre kommandoer som en anden bruger.",
+    "noTools": "Der blev ikke fundet nogen databaseklient på denne vært. Installer mysql, psql eller sqlite3 for at bruge denne fane.",
+    "empty": "Ingen database-login endnu",
+    "emptyHint": "Tilføj et login til en database, der kører på denne vært eller kan nåes fra den.",
+    "clientMissing": "Klient mangler"
+  },
+  "conn": {
+    "add": "Tilføj login",
+    "edit": "Rediger",
+    "addTitle": "Ny database-login",
+    "name": "Navn",
+    "type": "Database-type",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Klienten til denne database-type blev ikke fundet på værten.",
+    "file": "Databasefil",
+    "fileHint": "Fulde sti til SQLite-filen på værten.",
+    "address": "Adresse",
+    "addressHint": "Lad være med at udfylde for at bruge den lokale socket.",
+    "port": "Port",
+    "user": "Bruger",
+    "password": "Adgangskode",
+    "passwordSaved": "En adgangskode er gemt. Lad være med at udfylde for at beholde den.",
+    "passwordHint": "Lad være med at udfylde for socket- eller peer-login.",
+    "clearPassword": "Fjern den gemte adgangskode",
+    "database": "Standarddatabase",
+    "databaseHint": "Valgfrit. Den database, der skal åbnes først.",
+    "runAs": "Kør som Linux-bruger",
+    "runAsHint": "Valgfrit. Kører klienten som denne bruger med sudo, f.eks. postgres. Kræver passwordløs sudo.",
+    "readOnly": "Skrivebeskyttet",
+    "readOnlyDesc": "Blokér ændringer foretaget via denne login i Termix. Databasebrugerens egne rettigheder gælder stadig.",
+    "readOnlyBadge": "Skrivebeskyttet",
+    "socket": "Lokal socket",
+    "test": "Test forbindelse",
+    "testing": "Tester",
+    "testOk": "Forbundet. {{version}}",
+    "testFailed": "Kunne ikke oprette forbindelse.",
+    "saveFailed": "Kunne ikke gemme loginoplysningerne.",
+    "deleteTitle": "Slet {{name}}?",
+    "deleteDesc": "Dette fjerner de gemte loginoplysninger fra Termix. Databaseen røres ikke.",
+    "deleteFailed": "Kunne ikke slette loginoplysningerne.",
+    "showPassword": "Vis adgangskode",
+    "hidePassword": "Skjul adgangskode"
+  },
+  "browse": {
+    "tables": "Tabeller",
+    "sql": "SQL",
+    "database": "Database",
+    "search": "Søg i tabeller",
+    "noTables": "Ingen tabeller fundet.",
+    "view": "Vis",
+    "rows": "{{count}} rækker",
+    "loadFailed": "Kunne ikke læse databasen.",
+    "pick": "Vælg en tabel til venstre."
+  },
+  "data": {
+    "title": "Data",
+    "add": "Tilføj række",
+    "noKey": "Denne tabel har ingen primær nøgle, så dens rækker er skrivebeskyttede.",
+    "readOnly": "Denne række kan ikke ændres her.",
+    "noRows": "Ingen rækker.",
+    "apply": "Filtrer",
+    "clear": "Ryd",
+    "filterPlaceholder": "Betingelse, f.eks. status = 'active'",
+    "range": "{{from}} til {{to}} af {{total}}",
+    "rowCount": "{{count}} rækker",
+    "prev": "Forrige side",
+    "next": "Næste side",
+    "loadFailed": "Kunne ikke læse rækkerne."
+  },
+  "row": {
+    "addTitle": "Tilføj række",
+    "editTitle": "Rediger række",
+    "defaultHint": "Standard: {{value}}",
+    "setValue": "Sæt værdi",
+    "setNull": "Sæt NULL",
+    "saveFailed": "Kunne ikke gemme rækken.",
+    "deleteTitle": "Slet denne række?",
+    "deleteDesc": "Dette kan ikke fortrydes.",
+    "deleteFailed": "Kunne ikke slette rækken.",
+    "locked": "Disse kolonner kan ikke redigeres her:"
+  },
+  "structure": {
+    "title": "Struktur",
+    "name": "Kolonne",
+    "type": "Type",
+    "nullable": "Null",
+    "key": "Nøgle",
+    "default": "Standard",
+    "extra": "Ekstra",
+    "yes": "Ja",
+    "no": "Nej",
+    "indexes": "Indekser",
+    "noIndexes": "Ingen indekser."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Kør",
+    "running": "Kører",
+    "hint": "Ctrl+Enter kører forespørgslen.",
+    "history": "Seneste",
+    "failed": "Forespørgslen mislykkedes.",
+    "noResult": "Udsagnet blev kørt. Ingen rækker blev returneret.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Skrivebeskyttet session",
+    "truncated": "Viser de første {{count}} rækker."
+  }
+}

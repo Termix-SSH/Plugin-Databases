@@ -1,0 +1,141 @@
+{
+  "plugin": {
+    "name": "Databázy",
+    "description": "Prezerajte a upravujte databázy MySQL, MariaDB, PostgreSQL a SQLite na vašich hostoch z jednej karty."
+  },
+  "common": {
+    "save": "Uložiť",
+    "cancel": "Zrušiť",
+    "back": "Späť",
+    "delete": "Odstrániť",
+    "refresh": "Obnoviť"
+  },
+  "permissions": {
+    "use": {
+      "title": "Používať databázy",
+      "description": "Otvorte kartu Databázy a pracujte s databázami na hostoch, ku ktorým máte prístup."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Databázy",
+        "description": "Zobrazí kartu Databázy pre tento hostiteľ v jeho ponuke."
+      }
+    }
+  },
+  "tab": {
+    "title": "Databázy",
+    "noHost": "Otvorte Databázy z hostiteľa.",
+    "error": "Nepodarilo sa načítať Databázy z tohto hostiteľa.",
+    "sudo": "Tento hostiteľ vyžaduje sudo bez hesla na spúšťanie príkazov ako iný používateľ.",
+    "noTools": "Na tomto hostiteľovi nebol nájdený žiadny databázový klient. Nainštalujte mysql, psql alebo sqlite3 na použitie tejto karty.",
+    "empty": "Zatiaľ žiadne prihlásenia do databázy",
+    "emptyHint": "Pridajte prihlásenie pre databázu, ktorá beží na tomto hostiteľovi alebo je z neho dostupná.",
+    "clientMissing": "Chýbajúci klient"
+  },
+  "conn": {
+    "add": "Pridať prihlásenie",
+    "edit": "Upraviť",
+    "addTitle": "Nové prihlásenie do databázy",
+    "name": "Názov",
+    "type": "Typ databázy",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Klient pre tento typ databázy sa na hostiteľovi nenašiel.",
+    "file": "Súbor databázy",
+    "fileHint": "Plná cesta k súboru SQLite na hostiteľovi.",
+    "address": "Adresa",
+    "addressHint": "Nechajte prázdne, ak chcete použiť lokálny socket.",
+    "port": "Port",
+    "user": "Používateľ",
+    "password": "Heslo",
+    "passwordSaved": "Heslo je uložené. Ak ho chcete ponechať, nechajte toto pole prázdne.",
+    "passwordHint": "Nechajte prázdne pre prihlásenie cez socket alebo peer.",
+    "clearPassword": "Odstrániť uložené heslo",
+    "database": "Predvolená databáza",
+    "databaseHint": "Voliteľné. Databáza, ktorá sa otvorí ako prvá.",
+    "runAs": "Spustiť ako Linux používateľ",
+    "runAsHint": "Voliteľné. Spustí klienta ako tento používateľ pomocou sudo, napríklad postgres. Vyžaduje sudo bez hesla.",
+    "readOnly": "Iba na čítanie",
+    "readOnlyDesc": "Zablokujte zmeny vykonané cez toto prihlásenie v Termix. Stále platia vlastné oprávnenia používateľa databázy.",
+    "readOnlyBadge": "Iba na čítanie",
+    "socket": "Lokálny socket",
+    "test": "Otestovať pripojenie",
+    "testing": "Testovanie",
+    "testOk": "Pripojené. {{version}}",
+    "testFailed": "Nepodarilo sa pripojiť.",
+    "saveFailed": "Prihlásenie sa nepodarilo uložiť.",
+    "deleteTitle": "Chcete odstrániť {{name}}?",
+    "deleteDesc": "Týmto sa odstráni uložené prihlásenie z Termixu. Databáza zostane nedotknutá.",
+    "deleteFailed": "Prihlásenie sa nepodarilo odstrániť.",
+    "showPassword": "Zobraziť heslo",
+    "hidePassword": "Skryť heslo"
+  },
+  "browse": {
+    "tables": "Tabuľky",
+    "sql": "SQL",
+    "database": "Databáza",
+    "search": "Vyhľadať tabuľky",
+    "noTables": "Nenašli sa žiadne tabuľky.",
+    "view": "Zobraziť",
+    "loadFailed": "Databázu sa nepodarilo prečítať.",
+    "pick": "Vyberte tabuľku vľavo."
+  },
+  "data": {
+    "title": "Údaje",
+    "add": "Pridať riadok",
+    "noKey": "Táto tabuľka nemá primárny kľúč, preto sú jej riadky len na čítanie.",
+    "readOnly": "Tento riadok sa tu nedá zmeniť.",
+    "noRows": "Žiadne riadky.",
+    "apply": "Filter",
+    "clear": "Vymazať",
+    "filterPlaceholder": "Podmienka, napr. status = 'active'",
+    "range": "{{from}} až {{to}} z {{total}}",
+    "rowCount": "{{count}} riadkov",
+    "prev": "Predchádzajúca strana",
+    "next": "Nasledujúca strana",
+    "loadFailed": "Nepodarilo sa načítať riadky."
+  },
+  "row": {
+    "addTitle": "Pridať riadok",
+    "editTitle": "Upraviť riadok",
+    "defaultHint": "Predvolené: {{value}}",
+    "setValue": "Nastaviť hodnotu",
+    "setNull": "Nastaviť NULL",
+    "saveFailed": "Záznam sa nepodarilo uložiť.",
+    "deleteTitle": "Odstrániť tento záznam?",
+    "deleteDesc": "Tento krok nemožno vrátiť späť.",
+    "deleteFailed": "Záznam sa nepodarilo odstrániť.",
+    "locked": "Tieto stĺpce sa tu nedajú upravovať:"
+  },
+  "structure": {
+    "title": "Štruktúra",
+    "name": "Stĺpec",
+    "type": "Typ",
+    "nullable": "Null",
+    "key": "Kľúč",
+    "default": "Predvolené",
+    "extra": "Extra",
+    "yes": "Áno",
+    "no": "Nie",
+    "indexes": "Indexy",
+    "noIndexes": "Žiadne indexy."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Spustiť",
+    "running": "Beží",
+    "hint": "Stlačením Ctrl+Enter sa spustí dopyt.",
+    "history": "Nedávne",
+    "failed": "Dopyt zlyhal.",
+    "noResult": "Príkaz bol vykonaný. Neboli vrátené žiadne riadky.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Relácia len na čítanie",
+    "truncated": "Zobrazuje sa prvých {{count}} riadkov."
+  }
+}

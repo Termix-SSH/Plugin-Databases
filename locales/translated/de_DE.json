@@ -1,0 +1,142 @@
+{
+  "plugin": {
+    "name": "Datenbanken",
+    "description": "Durchsuchen und bearbeiten Sie MySQL-, MariaDB-, PostgreSQL- und SQLite-Datenbanken auf Ihren Hosts in einem einzigen Tab."
+  },
+  "common": {
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "back": "Zurück",
+    "delete": "Löschen",
+    "refresh": "Aktualisieren"
+  },
+  "permissions": {
+    "use": {
+      "title": "Datenbanken verwenden",
+      "description": "Öffnen Sie den Tab Datenbanken und arbeiten Sie mit Datenbanken auf Hosts, auf die Sie Zugriff haben."
+    }
+  },
+  "settings": {
+    "host": {
+      "enable": {
+        "label": "Datenbanken",
+        "description": "Zeigt den Tab \"Datenbanken\" für diesen Host in dessen Menü an."
+      }
+    }
+  },
+  "tab": {
+    "title": "Datenbanken",
+    "noHost": "Öffnen Sie Datenbanken von einem Host.",
+    "error": "Datenbanken konnten von diesem Host nicht geladen werden.",
+    "sudo": "Dieser Host benötigt ein passwortloses sudo, um Befehle als anderer Benutzer auszuführen.",
+    "noTools": "Auf diesem Host wurde kein Datenbankclient gefunden. Installieren Sie mysql, psql oder sqlite3, um diesen Tab zu nutzen.",
+    "empty": "Noch keine Datenbank-Logins",
+    "emptyHint": "Fügen Sie einen Login für eine Datenbank hinzu, die auf diesem Host läuft oder von diesem aus erreichbar ist.",
+    "clientMissing": "Client fehlt"
+  },
+  "conn": {
+    "add": "Login hinzufügen",
+    "edit": "Bearbeiten",
+    "addTitle": "Neue Datenbankverbindung",
+    "name": "Name",
+    "type": "Datenbanktyp",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "Der Client für diesen Datenbanktyp wurde auf dem Host nicht gefunden.",
+    "file": "Datenbankdatei",
+    "fileHint": "Vollständiger Pfad zur SQLite-Datei auf dem Host.",
+    "address": "Adresse",
+    "addressHint": "Leer lassen, um den lokalen Socket zu verwenden.",
+    "port": "Port",
+    "user": "Benutzer",
+    "password": "Passwort",
+    "passwordSaved": "Ein Passwort ist gespeichert. Leer lassen, um es beizubehalten.",
+    "passwordHint": "Leer lassen für Socket- oder Peer-Login.",
+    "clearPassword": "Gespeichertes Passwort entfernen",
+    "database": "Standarddatenbank",
+    "databaseHint": "Optional. Die zuerst zu öffnende Datenbank.",
+    "runAs": "Als Linux-Benutzer ausführen",
+    "runAsHint": "Optional. Führt den Client als dieser Benutzer mit sudo aus, z. B. postgres. Erfordert sudo ohne Passwort.",
+    "readOnly": "Schreibgeschützt",
+    "readOnlyDesc": "Änderungen, die über diese Anmeldung in Termix vorgenommen werden, werden blockiert. Die eigenen Berechtigungen des Datenbankbenutzers gelten weiterhin.",
+    "readOnlyBadge": "Schreibgeschützt",
+    "socket": "Lokaler Socket",
+    "test": "Verbindung testen",
+    "testing": "Wird getestet",
+    "testOk": "Verbunden. {{version}}",
+    "testFailed": "Verbindung fehlgeschlagen.",
+    "saveFailed": "Anmeldung konnte nicht gespeichert werden.",
+    "deleteTitle": "{{name}} löschen?",
+    "deleteDesc": "Dadurch wird die gespeicherte Anmeldung aus Termix entfernt. Die Datenbank bleibt unberührt.",
+    "deleteFailed": "Anmeldung konnte nicht gelöscht werden.",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort verbergen"
+  },
+  "browse": {
+    "tables": "Tabellen",
+    "sql": "SQL",
+    "database": "Datenbank",
+    "search": "Tabellen durchsuchen",
+    "noTables": "Keine Tabellen gefunden.",
+    "view": "Anzeigen",
+    "rows": "one: {{count}} Zeile",
+    "loadFailed": "Die Datenbank konnte nicht gelesen werden.",
+    "pick": "Wählen Sie links eine Tabelle aus."
+  },
+  "data": {
+    "title": "Daten",
+    "add": "Zeile hinzufügen",
+    "noKey": "Diese Tabelle hat keinen Primärschlüssel, daher sind ihre Zeilen schreibgeschützt.",
+    "readOnly": "Diese Zeile kann hier nicht geändert werden.",
+    "noRows": "Keine Zeilen.",
+    "apply": "Filtern",
+    "clear": "Löschen",
+    "filterPlaceholder": "Bedingung, z. B. status = 'active'",
+    "range": "{{from}} bis {{to}} von {{total}}",
+    "rowCount": "one: {{count}} Zeile",
+    "prev": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "loadFailed": "Die Zeilen konnten nicht gelesen werden."
+  },
+  "row": {
+    "addTitle": "Zeile hinzufügen",
+    "editTitle": "Zeile bearbeiten",
+    "defaultHint": "Standard: {{value}}",
+    "setValue": "Wert setzen",
+    "setNull": "NULL setzen",
+    "saveFailed": "Die Zeile konnte nicht gespeichert werden.",
+    "deleteTitle": "Diese Zeile löschen?",
+    "deleteDesc": "Dies kann nicht rückgängig gemacht werden.",
+    "deleteFailed": "Die Zeile konnte nicht gelöscht werden.",
+    "locked": "Diese Spalten können hier nicht bearbeitet werden:"
+  },
+  "structure": {
+    "title": "Struktur",
+    "name": "Spalte",
+    "type": "Typ",
+    "nullable": "Null",
+    "key": "Schlüssel",
+    "default": "Standard",
+    "extra": "Zusätzlich",
+    "yes": "Ja",
+    "no": "Nein",
+    "indexes": "Indizes",
+    "noIndexes": "Keine Indizes."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Ausführen",
+    "running": "Wird ausgeführt",
+    "hint": "Strg+Enter führt die Abfrage aus.",
+    "history": "Kürzlich",
+    "failed": "Die Abfrage ist fehlgeschlagen.",
+    "noResult": "Die Anweisung wurde ausgeführt. Keine Zeilen zurückgegeben.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Schreibgeschützte Sitzung",
+    "truncated": "Es werden die ersten {{count}} Zeilen angezeigt."
+  }
+}
