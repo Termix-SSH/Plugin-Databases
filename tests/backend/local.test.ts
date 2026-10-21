@@ -187,7 +187,7 @@ describe.skipIf(!ready)("sqlite on a local shell", () => {
     expect(write.body.columns).toEqual([]);
     const bad = await s.request("POST", `${base()}/query`, {
       db: "main",
-      sql: "SELECT * FROM nothing",
+      sql: "SELECT * FROM missing_table",
     });
     expect(bad.status).toBe(400);
     expect(bad.body.error).toContain("no such table");
