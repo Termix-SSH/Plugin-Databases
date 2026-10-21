@@ -9,6 +9,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/Termix-SSH/Plugin-Databases",
   "docs": "https://docs.termix.site/plugins/databases",
+  "video": "https://www.youtube.com/watch?v=FZ7QuMcDjKM",
   "category": "Infrastructure",
   "icon": "Database",
   "features": [
