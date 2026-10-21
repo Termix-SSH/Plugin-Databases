@@ -1,11 +1,21 @@
 {
   "version": 1,
   "tables": {
-    "notes": {
+    "connections": {
       "columns": {
         "id": {
           "type": "id",
           "primaryKey": true,
+          "notNull": true
+        },
+        "uid": {
+          "type": "varchar",
+          "length": 36,
+          "notNull": true,
+          "unique": true
+        },
+        "hostId": {
+          "type": "refHost",
           "notNull": true
         },
         "userId": {
@@ -13,9 +23,50 @@
           "length": 255,
           "notNull": true
         },
-        "text": {
-          "type": "text",
+        "name": {
+          "type": "varchar",
+          "length": 120,
           "notNull": true
+        },
+        "kind": {
+          "type": "varchar",
+          "length": 10,
+          "notNull": true
+        },
+        "address": {
+          "type": "varchar",
+          "length": 255,
+          "notNull": true,
+          "defaultValue": ""
+        },
+        "port": {
+          "type": "integer"
+        },
+        "username": {
+          "type": "varchar",
+          "length": 128,
+          "notNull": true,
+          "defaultValue": ""
+        },
+        "passwordSealed": {
+          "type": "text"
+        },
+        "dbName": {
+          "type": "varchar",
+          "length": 1024,
+          "notNull": true,
+          "defaultValue": ""
+        },
+        "runAs": {
+          "type": "varchar",
+          "length": 64,
+          "notNull": true,
+          "defaultValue": ""
+        },
+        "readOnly": {
+          "type": "boolean",
+          "notNull": true,
+          "defaultValue": false
         },
         "createdAt": {
           "type": "timestamp",
@@ -25,8 +76,10 @@
       },
       "indexes": [
         {
-          "name": "idx_p_hello_world_notes_user_id",
-          "columns": ["userId"]
+          "name": "idx_p_databases_connections_host_id",
+          "columns": [
+            "hostId"
+          ]
         }
       ]
     }

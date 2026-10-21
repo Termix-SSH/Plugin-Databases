@@ -1,27 +1,142 @@
 {
   "plugin": {
-    "name": "Hello World",
-    "description": "A minimal Termix plugin: one tab, one route, one setting and one table."
+    "name": "Databases",
+    "description": "Browse and edit MySQL, MariaDB, PostgreSQL and SQLite databases on your hosts from one tab."
   },
-  "tab": {
-    "title": "Hello World",
-    "empty": "No notes yet.",
-    "placeholder": "Write a note",
-    "add": "Add",
-    "error": "Could not load or save notes."
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "delete": "Delete",
+    "refresh": "Refresh"
   },
   "permissions": {
     "use": {
-      "title": "Use Hello World",
-      "description": "Open the Hello World tab and keep notes in it."
+      "title": "Use Databases",
+      "description": "Open the Databases tab and work with databases on hosts you can access."
     }
   },
   "settings": {
-    "admin": {
-      "greeting": {
-        "label": "Greeting",
-        "description": "Shown at the top of the Hello World tab."
+    "host": {
+      "enable": {
+        "label": "Databases",
+        "description": "Show the Databases tab for this host in its menu."
       }
     }
+  },
+  "tab": {
+    "title": "Databases",
+    "noHost": "Open Databases from a host.",
+    "error": "Could not load Databases from this host.",
+    "sudo": "This host needs passwordless sudo to run commands as another user.",
+    "noTools": "No database client was found on this host. Install mysql, psql or sqlite3 to use this tab.",
+    "empty": "No database logins yet",
+    "emptyHint": "Add a login for a database that runs on this host or can be reached from it.",
+    "clientMissing": "Client missing"
+  },
+  "conn": {
+    "add": "Add login",
+    "edit": "Edit",
+    "addTitle": "New database login",
+    "name": "Name",
+    "type": "Database type",
+    "engine": {
+      "mysql": "MySQL / MariaDB",
+      "postgres": "PostgreSQL",
+      "sqlite": "SQLite"
+    },
+    "clientMissing": "The client for this database type was not found on the host.",
+    "file": "Database file",
+    "fileHint": "Full path of the SQLite file on the host.",
+    "address": "Address",
+    "addressHint": "Leave empty to use the local socket.",
+    "port": "Port",
+    "user": "User",
+    "password": "Password",
+    "passwordSaved": "A password is saved. Leave this empty to keep it.",
+    "passwordHint": "Leave empty for socket or peer login.",
+    "clearPassword": "Remove the saved password",
+    "database": "Default database",
+    "databaseHint": "Optional. The database to open first.",
+    "runAs": "Run as Linux user",
+    "runAsHint": "Optional. Runs the client as this user with sudo, for example postgres. Needs passwordless sudo.",
+    "readOnly": "Read only",
+    "readOnlyDesc": "Block changes made through this login in Termix. The database user's own rights still apply.",
+    "readOnlyBadge": "Read only",
+    "socket": "Local socket",
+    "test": "Test connection",
+    "testing": "Testing",
+    "testOk": "Connected. {{version}}",
+    "testFailed": "Could not connect.",
+    "saveFailed": "Could not save the login.",
+    "deleteTitle": "Delete {{name}}?",
+    "deleteDesc": "This removes the saved login from Termix. The database is not touched.",
+    "deleteFailed": "Could not delete the login.",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
+  },
+  "browse": {
+    "tables": "Tables",
+    "sql": "SQL",
+    "database": "Database",
+    "search": "Search tables",
+    "noTables": "No tables found.",
+    "view": "View",
+    "rows": "{{count}} rows",
+    "loadFailed": "Could not read the database.",
+    "pick": "Pick a table on the left."
+  },
+  "data": {
+    "title": "Data",
+    "add": "Add row",
+    "noKey": "This table has no primary key, so its rows are read only.",
+    "readOnly": "This row cannot be changed here.",
+    "noRows": "No rows.",
+    "apply": "Filter",
+    "clear": "Clear",
+    "filterPlaceholder": "Condition, for example status = 'active'",
+    "range": "{{from}} to {{to}} of {{total}}",
+    "rowCount": "{{count}} rows",
+    "prev": "Previous page",
+    "next": "Next page",
+    "loadFailed": "Could not read the rows."
+  },
+  "row": {
+    "addTitle": "Add row",
+    "editTitle": "Edit row",
+    "defaultHint": "Default: {{value}}",
+    "setValue": "Set value",
+    "setNull": "Set NULL",
+    "saveFailed": "Could not save the row.",
+    "deleteTitle": "Delete this row?",
+    "deleteDesc": "This cannot be undone.",
+    "deleteFailed": "Could not delete the row.",
+    "locked": "These columns cannot be edited here:"
+  },
+  "structure": {
+    "title": "Structure",
+    "name": "Column",
+    "type": "Type",
+    "nullable": "Null",
+    "key": "Key",
+    "default": "Default",
+    "extra": "Extra",
+    "yes": "Yes",
+    "no": "No",
+    "indexes": "Indexes",
+    "noIndexes": "No indexes."
+  },
+  "sql": {
+    "label": "SQL",
+    "placeholder": "SELECT * FROM users LIMIT 10",
+    "run": "Run",
+    "running": "Running",
+    "hint": "Ctrl+Enter runs the query.",
+    "history": "Recent",
+    "failed": "The query failed.",
+    "noResult": "The statement ran. No rows came back.",
+    "elapsed": "{{ms}} ms",
+    "readOnlySession": "Read only session",
+    "truncated": "Showing the first {{count}} rows."
   }
 }
