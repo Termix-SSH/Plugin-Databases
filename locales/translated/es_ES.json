@@ -21,6 +21,31 @@
       "enable": {
         "label": "Bases de datos",
         "description": "Mostrar la pestaña Bases de datos para este host en su menú."
+      },
+      "showPanel": {
+        "label": "Panel junto al terminal",
+        "description": "Muestra un panel de bases de datos junto al terminal SSH de este host."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Abrir el panel de bases de datos con un terminal",
+        "description": "Muestra el panel de bases de datos cuando se abre un terminal en un host que lo tenga."
+      },
+      "companionSide": {
+        "label": "Posición del panel de bases de datos",
+        "description": "Dónde se sitúa el panel junto al terminal.",
+        "right": "Derecha",
+        "left": "Izquierda",
+        "bottom": "Abajo"
+      },
+      "companionSize": {
+        "label": "Tamaño del panel de bases de datos",
+        "description": "Ancho, o altura en la parte inferior, en píxeles."
+      },
+      "companionEdgeButton": {
+        "label": "Botón del borde del panel de bases de datos",
+        "description": "Muestra un botón pequeño en el borde del terminal para abrir el panel."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sesión de solo lectura",
     "truncated": "Mostrando las primeras {{count}} filas."
+  },
+  "companion": {
+    "toggle": "Panel de bases de datos"
   }
 }

@@ -21,6 +21,31 @@
       "enable": {
         "label": "Databases",
         "description": "Show the Databases tab for this host in its menu."
+      },
+      "showPanel": {
+        "label": "Panel beside the terminal",
+        "description": "Offer a databases panel next to this host's SSH terminal."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Open the databases panel with a terminal",
+        "description": "Show the databases panel when a terminal opens on a host that has it."
+      },
+      "companionSide": {
+        "label": "Databases panel side",
+        "description": "Where the panel sits next to the terminal.",
+        "right": "Right",
+        "left": "Left",
+        "bottom": "Bottom"
+      },
+      "companionSize": {
+        "label": "Databases panel size",
+        "description": "Width, or height at the bottom, in pixels."
+      },
+      "companionEdgeButton": {
+        "label": "Databases panel edge button",
+        "description": "Show a small button on the terminal edge to open the panel."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Read only session",
     "truncated": "Showing the first {{count}} rows."
+  },
+  "companion": {
+    "toggle": "Databases panel"
   }
 }

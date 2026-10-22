@@ -21,6 +21,31 @@
       "enable": {
         "label": "데이터베이스",
         "description": "이 호스트 메뉴에서 데이터베이스 탭을 표시합니다."
+      },
+      "showPanel": {
+        "label": "터미널 옆 패널",
+        "description": "이 호스트의 SSH 터미널 옆에 데이터베이스 패널을 제공합니다."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "터미널과 함께 데이터베이스 패널 열기",
+        "description": "데이터베이스 패널이 있는 호스트에서 터미널이 열릴 때 데이터베이스 패널을 표시합니다."
+      },
+      "companionSide": {
+        "label": "데이터베이스 패널 위치",
+        "description": "터미널 옆에 패널이 배치되는 위치입니다.",
+        "right": "오른쪽",
+        "left": "왼쪽",
+        "bottom": "아래쪽"
+      },
+      "companionSize": {
+        "label": "데이터베이스 패널 크기",
+        "description": "너비 또는 하단 높이를 픽셀 단위로 설정합니다."
+      },
+      "companionEdgeButton": {
+        "label": "데이터베이스 패널 가장자리 버튼",
+        "description": "패널을 열기 위해 터미널 가장자리에 작은 버튼을 표시합니다."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}}ms",
     "readOnlySession": "읽기 전용 세션",
     "truncated": "처음 {{count}}개 행만 표시합니다."
+  },
+  "companion": {
+    "toggle": "데이터베이스 패널"
   }
 }

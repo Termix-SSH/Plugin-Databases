@@ -21,6 +21,31 @@
       "enable": {
         "label": "Datubāzes",
         "description": "Rādīt šī hosta izvēlnē Databases cilni."
+      },
+      "showPanel": {
+        "label": "Panelis blakus terminālim",
+        "description": "Piedāvāt datubāzu paneli blakus šī resursa SSH terminālim."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Atvērt datubāzu paneli kopā ar termināli",
+        "description": "Rādīt datubāzu paneli, kad tiek atvērts terminālis resursā, kuram tas ir pieejams."
+      },
+      "companionSide": {
+        "label": "Datubāzu paneļa atrašanās vieta",
+        "description": "Kur atrodas panelis attiecībā pret termināli.",
+        "right": "Labajā pusē",
+        "left": "Kreisajā pusē",
+        "bottom": "Apakšā"
+      },
+      "companionSize": {
+        "label": "Datubāzu paneļa izmērs",
+        "description": "Platums vai augstums apakšā pikseļos."
+      },
+      "companionEdgeButton": {
+        "label": "Datubāzu panela malas poga",
+        "description": "Rādīt mazu pogu termināļa malā, lai atvērtu paneli."
       }
     }
   },
@@ -137,5 +162,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sesija tikai lasīšanai",
     "truncated": "Tiek parādītas pirmās {{count}} rindas."
+  },
+  "companion": {
+    "toggle": "Datubāzu panelis"
   }
 }

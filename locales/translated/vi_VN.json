@@ -21,6 +21,31 @@
       "enable": {
         "label": "Cơ sở dữ liệu",
         "description": "Hiển thị tab Cơ sở dữ liệu cho máy chủ này trong menu của nó."
+      },
+      "showPanel": {
+        "label": "Bảng điều khiển bên cạnh terminal",
+        "description": "Hiển thị bảng điều khiển cơ sở dữ liệu bên cạnh terminal SSH của máy chủ này."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Mở bảng điều khiển cơ sở dữ liệu cùng với terminal",
+        "description": "Hiển thị bảng điều khiển cơ sở dữ liệu khi terminal mở trên máy chủ có tính năng này."
+      },
+      "companionSide": {
+        "label": "Vị trí bảng điều khiển cơ sở dữ liệu",
+        "description": "Vị trí của bảng điều khiển so với terminal.",
+        "right": "Phải",
+        "left": "Trái",
+        "bottom": "Dưới"
+      },
+      "companionSize": {
+        "label": "Kích thước bảng điều khiển cơ sở dữ liệu",
+        "description": "Chiều rộng, hoặc chiều cao ở phía dưới, tính bằng pixel."
+      },
+      "companionEdgeButton": {
+        "label": "Nút mép bảng Databases",
+        "description": "Hiển thị một nút nhỏ trên mép terminal để mở bảng."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Phiên chỉ đọc",
     "truncated": "Hiển thị {{count}} hàng đầu tiên."
+  },
+  "companion": {
+    "toggle": "Bảng Databases"
   }
 }

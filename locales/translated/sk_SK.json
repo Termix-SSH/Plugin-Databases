@@ -21,6 +21,31 @@
       "enable": {
         "label": "Databázy",
         "description": "Zobrazí kartu Databázy pre tento hostiteľ v jeho ponuke."
+      },
+      "showPanel": {
+        "label": "Panel vedľa terminálu",
+        "description": "Umožní zobraziť panel databáz vedľa SSH terminálu tohto hostiteľa."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Otvoriť panel databáz s terminálom",
+        "description": "Zobraziť panel databáz pri otvorení terminálu na hostiteľovi, ktorý ho má."
+      },
+      "companionSide": {
+        "label": "Poloha panela databáz",
+        "description": "Kde sa panel zobrazuje vedľa terminálu.",
+        "right": "Vpravo",
+        "left": "Vľavo",
+        "bottom": "Dole"
+      },
+      "companionSize": {
+        "label": "Veľkosť panela databáz",
+        "description": "Šírka, alebo výška na spodnej strane, v pixeloch."
+      },
+      "companionEdgeButton": {
+        "label": "Tlačidlo na okraji pre panel databáz",
+        "description": "Zobraziť malé tlačidlo na okraji terminálu na otvorenie panela."
       }
     }
   },
@@ -137,5 +162,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Relácia len na čítanie",
     "truncated": "Zobrazuje sa prvých {{count}} riadkov."
+  },
+  "companion": {
+    "toggle": "Panel databáz"
   }
 }

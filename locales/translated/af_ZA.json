@@ -21,6 +21,31 @@
       "enable": {
         "label": "Databasisse",
         "description": "Wys die Databasisse-oortjie vir hierdie gasheer in sy kieslys."
+      },
+      "showPanel": {
+        "label": "Paneel langs die terminaal",
+        "description": "Bied 'n databasispaneel langs hierdie gasheer se SSH-terminaal."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Maak die databasispaneel oop met 'n terminaal",
+        "description": "Wys die databasispaneel wanneer 'n terminaal oopmaak op 'n gasheer wat dit het."
+      },
+      "companionSide": {
+        "label": "Databasispaneel se kant",
+        "description": "Waar die paneel langs die terminaal sit.",
+        "right": "Regs",
+        "left": "Links",
+        "bottom": "Onder"
+      },
+      "companionSize": {
+        "label": "Databasispaneel se grootte",
+        "description": "Wyde, of hoogte onderaan, in pixels."
+      },
+      "companionEdgeButton": {
+        "label": "Databasispaneel se randknoppie",
+        "description": "Wys 'n klein knoppie op die terminaal se rand om die paneel oop te maak."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Slegs-lees sessie",
     "truncated": "Die eerste {{count}} rye word vertoon."
+  },
+  "companion": {
+    "toggle": "Databasispaneel"
   }
 }

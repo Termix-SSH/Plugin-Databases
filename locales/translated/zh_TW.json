@@ -21,6 +21,31 @@
       "enable": {
         "label": "資料庫",
         "description": "在此主機的選單中顯示資料庫標籤頁。"
+      },
+      "showPanel": {
+        "label": "終端機旁的面板",
+        "description": "在此主機的 SSH 終端機旁提供資料庫面板。"
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "開啟終端機時顯示資料庫面板",
+        "description": "當終端機在已啟用此功能的主機上開啟時，顯示資料庫面板。"
+      },
+      "companionSide": {
+        "label": "資料庫面板位置",
+        "description": "面板相對於終端機的位置。",
+        "right": "右側",
+        "left": "左側",
+        "bottom": "底部"
+      },
+      "companionSize": {
+        "label": "資料庫面板大小",
+        "description": "寬度，或位於底部時的高度，單位為像素。"
+      },
+      "companionEdgeButton": {
+        "label": "資料庫面板邊緣按鈕",
+        "description": "在終端機邊緣顯示小按鈕，以便開啟面板。"
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} 毫秒",
     "readOnlySession": "唯讀工作階段",
     "truncated": "僅顯示前 {{count}} 列。"
+  },
+  "companion": {
+    "toggle": "資料庫面板"
   }
 }

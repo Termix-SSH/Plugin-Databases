@@ -10,6 +10,19 @@
   "permissions.use.description": "70881c698425",
   "settings.host.enable.label": "d9df769b266c",
   "settings.host.enable.description": "4420f649f2a4",
+  "settings.host.showPanel.label": "1f6dccd9a3c4",
+  "settings.host.showPanel.description": "0de312714b1e",
+  "settings.user.companionAutoOpen.label": "af4b3a01f62b",
+  "settings.user.companionAutoOpen.description": "117a037dc616",
+  "settings.user.companionSide.label": "7bbfff6074fb",
+  "settings.user.companionSide.description": "4567e964c938",
+  "settings.user.companionSide.right": "954daa8b0033",
+  "settings.user.companionSide.left": "8ae1c34bd37f",
+  "settings.user.companionSide.bottom": "cce7f2f2f0dc",
+  "settings.user.companionSize.label": "3c3175e13eac",
+  "settings.user.companionSize.description": "1c61f4e55136",
+  "settings.user.companionEdgeButton.label": "9b4829dc3656",
+  "settings.user.companionEdgeButton.description": "74059d0910d4",
   "tab.title": "d9df769b266c",
   "tab.noHost": "6d628f426663",
   "tab.error": "d6d516b75c43",
@@ -106,5 +119,6 @@
   "sql.noResult": "ccbfe1ca2b37",
   "sql.elapsed": "5e29aab92591",
   "sql.readOnlySession": "0db39c1c79f8",
-  "sql.truncated": "eaf973f5e4a2"
+  "sql.truncated": "eaf973f5e4a2",
+  "companion.toggle": "4c3e842f65e8"
 }

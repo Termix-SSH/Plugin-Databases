@@ -21,6 +21,31 @@
       "enable": {
         "label": "Baze podataka",
         "description": "Prikaži karticu Baze podataka za ovaj host u njegovom izborniku."
+      },
+      "showPanel": {
+        "label": "Panel pored terminala",
+        "description": "Prikaži panel za baze podataka uz SSH terminal ovog hosta."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Otvori panel za baze podataka s terminalom",
+        "description": "Prikaži panel za baze podataka kada se terminal otvori na hostu koji ga ima."
+      },
+      "companionSide": {
+        "label": "Položaj panela za baze podataka",
+        "description": "Gdje se panel nalazi uz terminal.",
+        "right": "Desno",
+        "left": "Lijevo",
+        "bottom": "Dolje"
+      },
+      "companionSize": {
+        "label": "Veličina panela za baze podataka",
+        "description": "Širina, ili visina ako je na dnu, u pikselima."
+      },
+      "companionEdgeButton": {
+        "label": "Gumb na rubu za panel baza podataka",
+        "description": "Prikaži mali gumb na rubu terminala za otvaranje panela."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sesija samo za čitanje",
     "truncated": "Prikazuje se prvih {{count}} redaka."
+  },
+  "companion": {
+    "toggle": "Panel za baze podataka"
   }
 }

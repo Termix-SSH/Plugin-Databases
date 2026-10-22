@@ -21,6 +21,31 @@
       "enable": {
         "label": "Baze podatkov",
         "description": "Prikaži zavihek Baze podatkov za tega gostitelja v njegovem meniju."
+      },
+      "showPanel": {
+        "label": "Plošča poleg terminala",
+        "description": "Omogoči ploščo za baze podatkov poleg SSH terminala tega gostitelja."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Odpri ploščo za baze podatkov s terminalom",
+        "description": "Prikaži ploščo za baze podatkov, ko se na gostitelju, ki jo podpira, odpre terminal."
+      },
+      "companionSide": {
+        "label": "Stran plošče za baze podatkov",
+        "description": "Kje se plošča nahaja poleg terminala.",
+        "right": "Desno",
+        "left": "Levo",
+        "bottom": "Spodaj"
+      },
+      "companionSize": {
+        "label": "Velikost plošče za baze podatkov",
+        "description": "Širina ali višina na dnu v slikovnih točkah."
+      },
+      "companionEdgeButton": {
+        "label": "Gumb za robne baze podatkov",
+        "description": "Prikaži majhen gumb na robu terminala za odpiranje plošče."
       }
     }
   },
@@ -82,6 +107,7 @@
     "search": "Išči tabele",
     "noTables": "Ni najdenih tabel.",
     "view": "Prikaz",
+    "rows": "one: {{count}} vrstica",
     "loadFailed": "Baze podatkov ni bilo mogoče prebrati.",
     "pick": "Izberite tabelo na levi."
   },
@@ -137,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sesija samo za branje",
     "truncated": "Prikazanih je prvih {{count}} vrstic."
+  },
+  "companion": {
+    "toggle": "Plošča za baze podatkov"
   }
 }

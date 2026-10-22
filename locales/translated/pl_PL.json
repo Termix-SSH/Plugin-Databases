@@ -21,6 +21,31 @@
       "enable": {
         "label": "Bazy danych",
         "description": "Wyświetl kartę Bazy danych dla tego hosta w jego menu."
+      },
+      "showPanel": {
+        "label": "Panel obok terminala",
+        "description": "Wyświetl panel baz danych obok terminala SSH tego hosta."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Otwieraj panel baz danych razem z terminalem",
+        "description": "Wyświetlaj panel baz danych przy otwarciu terminala na hoście, który go obsługuje."
+      },
+      "companionSide": {
+        "label": "Położenie panelu baz danych",
+        "description": "Gdzie panel znajduje się względem terminala.",
+        "right": "Prawa",
+        "left": "Lewa",
+        "bottom": "Dolna"
+      },
+      "companionSize": {
+        "label": "Rozmiar panelu baz danych",
+        "description": "Szerokość, lub wysokość na dole, w pikselach."
+      },
+      "companionEdgeButton": {
+        "label": "Przycisk krawędziowy panelu baz danych",
+        "description": "Wyświetl mały przycisk na krawędzi terminala, aby otworzyć panel."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sesja tylko do odczytu",
     "truncated": "Wyświetlanie pierwszych {{count}} wierszy."
+  },
+  "companion": {
+    "toggle": "Panel baz danych"
   }
 }

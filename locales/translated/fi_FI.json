@@ -21,6 +21,31 @@
       "enable": {
         "label": "Tietokannat",
         "description": "Näytä tietokantojen välilehti tämän isäntäpalvelimen valikossa."
+      },
+      "showPanel": {
+        "label": "Paneeli terminaalin vieressä",
+        "description": "Näytä tietokantapaneeli tämän isäntäterminaalin vieressä."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Avaa tietokantapaneeli terminaalin kanssa",
+        "description": "Näytä tietokantapaneeli, kun terminaali avautuu isännällä, jossa se on käytössä."
+      },
+      "companionSide": {
+        "label": "Tietokantapaneelin sijainti",
+        "description": "Missä paneeli sijaitsee terminaalin vieressä.",
+        "right": "Oikealla",
+        "left": "Vasemmalla",
+        "bottom": "Alareunassa"
+      },
+      "companionSize": {
+        "label": "Tietokantapaneelin koko",
+        "description": "Leveys tai alareunan korkeus pikseleinä."
+      },
+      "companionEdgeButton": {
+        "label": "Tietokantapaneelin reunapainike",
+        "description": "Näytä pieni painike terminaalin reunassa paneelin avaamiseksi."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Vain lukuoikeus",
     "truncated": "Näytetään ensimmäiset {{count}} riviä."
+  },
+  "companion": {
+    "toggle": "Tietokantapaneeli"
   }
 }

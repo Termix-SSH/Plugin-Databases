@@ -21,6 +21,31 @@
       "enable": {
         "label": "Adatbázisok",
         "description": "Megjeleníti az Adatbázisok fület ennek a gazdagépnak a menüjében."
+      },
+      "showPanel": {
+        "label": "Panel a terminál mellett",
+        "description": "Adjon hozzá egy adatbázis panelt a host SSH termináljának mellé."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "A terminállal együtt nyissa meg az adatbázisok panelt",
+        "description": "Mutasd a adatbázisok panelt, amikor egy olyan hoszton nyílik meg a terminál, amelyik támogatja."
+      },
+      "companionSide": {
+        "label": "Adatbázisok panel oldala",
+        "description": "A panel elhelyezkedése a terminál mellett.",
+        "right": "Jobb",
+        "left": "Bal",
+        "bottom": "Alsó"
+      },
+      "companionSize": {
+        "label": "Adatbázisok panel mérete",
+        "description": "Szélesség, vagy az alsó rész magassága pixelekben."
+      },
+      "companionEdgeButton": {
+        "label": "Adatbázisok panel szélére helyezett gomb",
+        "description": "Mutasd a terminál szélén egy kis gombot a panel megnyitásához."
       }
     }
   },
@@ -137,5 +162,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Csak olvasható munkamenet",
     "truncated": "Az első {{count}} sor megjelenítése."
+  },
+  "companion": {
+    "toggle": "Adatbázisok panel"
   }
 }

@@ -21,6 +21,31 @@
       "enable": {
         "label": "データベース",
         "description": "このホストのメニューに「データベース」タブを表示します。"
+      },
+      "showPanel": {
+        "label": "ターミナル横のパネル",
+        "description": "このホストの SSH ターミナルの横にデータベースパネルを表示します。"
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "ターミナルと同時にデータベースパネルを開く",
+        "description": "データベースパネルが設定されたホストでターミナルを開いた際、データベースパネルを表示します。"
+      },
+      "companionSide": {
+        "label": "データベースパネルの配置",
+        "description": "ターミナルに対するパネルの配置場所です。",
+        "right": "右",
+        "left": "左",
+        "bottom": "下"
+      },
+      "companionSize": {
+        "label": "データベースパネルのサイズ",
+        "description": "幅、または下部の高さ（ピクセル単位）。"
+      },
+      "companionEdgeButton": {
+        "label": "データベースパネルのエッジボタン",
+        "description": "パネルを開くための小さなボタンをターミナルのエッジに表示します。"
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "読み取り専用セッション",
     "truncated": "最初の {{count}} 行を表示しています。"
+  },
+  "companion": {
+    "toggle": "データベースパネル"
   }
 }

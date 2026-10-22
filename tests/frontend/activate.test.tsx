@@ -106,6 +106,24 @@ describe(`${manifest.id} activate`, () => {
     expect(rendered.registered.tabs()).toEqual(["databases"]);
   });
 
+  it("offers a panel beside the terminal on enabled hosts", async () => {
+    rendered = await renderWithApp(plugin, { manifest, locales });
+    expect(rendered.registered.actions()).toContain("databases.togglePanel");
+    expect(rendered.registered.slot("tab.menu")).toEqual([
+      "databases.togglePanel",
+    ]);
+    const on = { pluginSettings: { databases: { enableDatabases: true } } };
+    expect(plugin.databasesPanelEnabled(on)).toBe(true);
+    expect(
+      plugin.databasesPanelEnabled({
+        pluginSettings: {
+          databases: { enableDatabases: true, showPanel: false },
+        },
+      }),
+    ).toBe(false);
+    expect(plugin.databasesPanelEnabled({ pluginSettings: {} })).toBe(false);
+  });
+
   it("shows an empty state with no logins", async () => {
     rendered = await renderWithApp(plugin, {
       manifest,

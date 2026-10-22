@@ -1,7 +1,7 @@
 {
   "id": "databases",
   "name": "Databases",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Browse and edit MySQL, MariaDB, PostgreSQL and SQLite databases on your hosts from one tab.",
   "author": {
     "name": "Termix"
@@ -18,7 +18,8 @@
     "Page, sort and filter table data",
     "Add, edit and delete rows by primary key",
     "See columns, types and indexes",
-    "Run SQL in a console and export results as CSV or JSON"
+    "Run SQL in a console and export results as CSV or JSON",
+    "A databases panel beside any SSH terminal"
   ],
   "env": [],
   "engine": {
@@ -58,8 +59,63 @@
         "enableDescriptionKey": "settings.host.enable.description",
         "enableDefault": false,
         "editorGroup": "ssh",
-        "fields": []
-      }
+        "fields": [
+          {
+            "key": "showPanel",
+            "type": "boolean",
+            "labelKey": "settings.host.showPanel.label",
+            "descriptionKey": "settings.host.showPanel.description",
+            "default": true,
+            "requires": "enableDatabases"
+          }
+        ]
+      },
+      "user": [
+        {
+          "key": "companionAutoOpen",
+          "type": "boolean",
+          "labelKey": "settings.user.companionAutoOpen.label",
+          "descriptionKey": "settings.user.companionAutoOpen.description",
+          "default": false
+        },
+        {
+          "key": "companionSide",
+          "type": "select",
+          "labelKey": "settings.user.companionSide.label",
+          "descriptionKey": "settings.user.companionSide.description",
+          "default": "right",
+          "options": [
+            {
+              "value": "right",
+              "labelKey": "settings.user.companionSide.right"
+            },
+            {
+              "value": "left",
+              "labelKey": "settings.user.companionSide.left"
+            },
+            {
+              "value": "bottom",
+              "labelKey": "settings.user.companionSide.bottom"
+            }
+          ]
+        },
+        {
+          "key": "companionSize",
+          "type": "number",
+          "labelKey": "settings.user.companionSize.label",
+          "descriptionKey": "settings.user.companionSize.description",
+          "min": 240,
+          "max": 900,
+          "default": 480
+        },
+        {
+          "key": "companionEdgeButton",
+          "type": "boolean",
+          "labelKey": "settings.user.companionEdgeButton.label",
+          "descriptionKey": "settings.user.companionEdgeButton.description",
+          "default": true
+        }
+      ]
     }
   },
   "locales": "locales",

@@ -21,6 +21,31 @@
       "enable": {
         "label": "Databases",
         "description": "Toon het tabblad Databases voor deze host in het menu."
+      },
+      "showPanel": {
+        "label": "Paneel naast de terminal",
+        "description": "Een database-paneel aanbieden naast de SSH-terminal van deze host."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Database-paneel openen met een terminal",
+        "description": "Het database-paneel tonen wanneer een terminal opent op een host die dit heeft."
+      },
+      "companionSide": {
+        "label": "Positie database-paneel",
+        "description": "Waar het paneel naast de terminal staat.",
+        "right": "Rechts",
+        "left": "Links",
+        "bottom": "Onderaan"
+      },
+      "companionSize": {
+        "label": "Grootte database-paneel",
+        "description": "Breedte, of hoogte onderaan, in pixels."
+      },
+      "companionEdgeButton": {
+        "label": "Knop aan de rand voor database-paneel",
+        "description": "Een kleine knop tonen aan de rand van de terminal om het paneel te openen."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Alleen-lezen sessie",
     "truncated": "De eerste {{count}} rijen worden weergegeven."
+  },
+  "companion": {
+    "toggle": "Database-paneel"
   }
 }

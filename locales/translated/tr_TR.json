@@ -21,6 +21,31 @@
       "enable": {
         "label": "Veritabanları",
         "description": "Bu ana bilgisayarın menüsünde Veritabanları sekmesini göster."
+      },
+      "showPanel": {
+        "label": "Terminalin yanında panel",
+        "description": "Bu ana bilgisayarın SSH terminalinin yanında bir veritabanları paneli sunun."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Veritabanları panelini bir terminal ile aç",
+        "description": "Bu panele sahip bir ana bilgisayarda terminal açıldığında veritabanları panelini göster."
+      },
+      "companionSide": {
+        "label": "Veritabanları paneli konumu",
+        "description": "Panelin terminalin yanında nerede duracağı.",
+        "right": "Sağ",
+        "left": "Sol",
+        "bottom": "Alt"
+      },
+      "companionSize": {
+        "label": "Veritabanları paneli boyutu",
+        "description": "Genişlik veya alt kısımdaki yükseklik (piksel cinsinden)."
+      },
+      "companionEdgeButton": {
+        "label": "Veritabanları paneli kenar düğmesi",
+        "description": "Paneli açmak için terminal kenarında küçük bir düğme göster."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Salt okunur oturum",
     "truncated": "İlk {{count}} satır gösteriliyor."
+  },
+  "companion": {
+    "toggle": "Veritabanları paneli"
   }
 }

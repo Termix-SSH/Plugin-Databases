@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Added
+
+- Databases panel beside an SSH terminal: the host's saved logins, tables and SQL console next to its shell
+
 ## 1.0.0
 
 ### Added

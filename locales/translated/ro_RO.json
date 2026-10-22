@@ -21,6 +21,31 @@
       "enable": {
         "label": "Baze de date",
         "description": "Afișează fila Baze de date pentru acest gazdă în meniul său."
+      },
+      "showPanel": {
+        "label": "Panoul lângă terminal",
+        "description": "Afișează un panou pentru baze de date lângă terminalul SSH al acestui gazdă."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Deschide panoul pentru baze de date împreună cu un terminal",
+        "description": "Afișează panoul pentru baze de date când se deschide un terminal pe o gazdă care are acest panou configurat."
+      },
+      "companionSide": {
+        "label": "Poziția panoului pentru baze de date",
+        "description": "Unde este poziționat panoul față de terminal.",
+        "right": "Dreapta",
+        "left": "Stânga",
+        "bottom": "Jos"
+      },
+      "companionSize": {
+        "label": "Dimensiunea panoului pentru baze de date",
+        "description": "Lățime, sau înălțime în partea de jos, în pixeli."
+      },
+      "companionEdgeButton": {
+        "label": "Buton de margine pentru panoul de baze de date",
+        "description": "Afișează un buton mic pe marginea terminalului pentru a deschide panoul."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sesiune doar în citire",
     "truncated": "Se afișează primele {{count}} rânduri."
+  },
+  "companion": {
+    "toggle": "Panoul de baze de date"
   }
 }

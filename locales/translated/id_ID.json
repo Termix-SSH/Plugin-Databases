@@ -21,6 +21,31 @@
       "enable": {
         "label": "Basis Data",
         "description": "Tampilkan tab Basis Data untuk host ini di menunya."
+      },
+      "showPanel": {
+        "label": "Panel di samping terminal",
+        "description": "Tampilkan panel database di sebelah terminal SSH host ini."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Buka panel database bersama terminal",
+        "description": "Tampilkan panel database saat terminal terbuka pada host yang memiliki fitur ini."
+      },
+      "companionSide": {
+        "label": "Posisi panel database",
+        "description": "Di mana panel berada di samping terminal.",
+        "right": "Kanan",
+        "left": "Kiri",
+        "bottom": "Bawah"
+      },
+      "companionSize": {
+        "label": "Ukuran panel database",
+        "description": "Lebar, atau tinggi di bagian bawah, dalam piksel."
+      },
+      "companionEdgeButton": {
+        "label": "Tombol tepi panel Database",
+        "description": "Tampilkan tombol kecil di tepi terminal untuk membuka panel."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sesi hanya baca",
     "truncated": "Menampilkan {{count}} baris pertama."
+  },
+  "companion": {
+    "toggle": "Panel Database"
   }
 }

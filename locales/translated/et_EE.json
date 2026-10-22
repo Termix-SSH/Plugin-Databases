@@ -21,6 +21,31 @@
       "enable": {
         "label": "Andmebaasid",
         "description": "Kuva selle hosti menüüs Andmebaaside vaheleht."
+      },
+      "showPanel": {
+        "label": "Paneel terminali kõrval",
+        "description": "Kuvab andmebaaside paneeli selle hosti SSH-terminali kõrval."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Ava andmebaaside paneel koos terminaliga",
+        "description": "Kuva andmebaaside paneel, kui terminal avaneb hostil, millel see on saadaval."
+      },
+      "companionSide": {
+        "label": "Andmebaaside paneeli asukoht",
+        "description": "Kus paneel terminali kõrval asub.",
+        "right": "Parem",
+        "left": "Vasak",
+        "bottom": "Alumine"
+      },
+      "companionSize": {
+        "label": "Andmebaaside paneeli suurus",
+        "description": "Laius või alumisel küljel kõrgus pikslites."
+      },
+      "companionEdgeButton": {
+        "label": "Andmebaaside paneeli servanupp",
+        "description": "Kuva terminali serval väike nupp paneeli avamiseks."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Ainult lugemiseks mõeldud sessioon",
     "truncated": "Kuvatakse esimesed {{count}} rida."
+  },
+  "companion": {
+    "toggle": "Andmebaaside paneel"
   }
 }

@@ -21,6 +21,31 @@
       "enable": {
         "label": "Database",
         "description": "Mostra la scheda Database per questo host nel suo menu."
+      },
+      "showPanel": {
+        "label": "Pannello accanto al terminale",
+        "description": "Mostra un pannello database accanto al terminale SSH di questo host."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Apri il pannello database con un terminale",
+        "description": "Mostra il pannello database quando si apre un terminale su un host che lo supporta."
+      },
+      "companionSide": {
+        "label": "Posizione del pannello database",
+        "description": "Dove posizionare il pannello rispetto al terminale.",
+        "right": "Destra",
+        "left": "Sinistra",
+        "bottom": "In basso"
+      },
+      "companionSize": {
+        "label": "Dimensione del pannello database",
+        "description": "Larghezza, o altezza in basso, in pixel."
+      },
+      "companionEdgeButton": {
+        "label": "Pulsante laterale del pannello Database",
+        "description": "Mostra un piccolo pulsante sul bordo del terminale per aprire il pannello."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sessione di sola lettura",
     "truncated": "Vengono mostrate le prime {{count}} righe."
+  },
+  "companion": {
+    "toggle": "Pannello Database"
   }
 }

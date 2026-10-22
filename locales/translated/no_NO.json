@@ -21,6 +21,31 @@
       "enable": {
         "label": "Databaser",
         "description": "Vis fanen Databaser for denne verten i menyen."
+      },
+      "showPanel": {
+        "label": "Panel ved siden av terminalen",
+        "description": "Vis et databasepanel ved siden av SSH-terminalen for denne verten."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Åpne databasepanelet med en terminal",
+        "description": "Vis databasepanelet når en terminal åpnes på en vert som har det."
+      },
+      "companionSide": {
+        "label": "Plassering av databasepanelet",
+        "description": "Hvor panelet vises i forhold til terminalen.",
+        "right": "Høyre",
+        "left": "Venstre",
+        "bottom": "Bunn"
+      },
+      "companionSize": {
+        "label": "Størrelse på databasepanelet",
+        "description": "Bredde, eller høyde nederst, i piksler."
+      },
+      "companionEdgeButton": {
+        "label": "Knapp for databasepanel på kanten",
+        "description": "Vis en liten knapp på terminalens kant for å åpne panelet."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Skrivebeskyttet økt",
     "truncated": "Viser de første {{count}} radene."
+  },
+  "companion": {
+    "toggle": "Databasepanel"
   }
 }

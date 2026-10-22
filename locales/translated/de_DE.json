@@ -21,6 +21,31 @@
       "enable": {
         "label": "Datenbanken",
         "description": "Zeigt den Tab \"Datenbanken\" für diesen Host in dessen Menü an."
+      },
+      "showPanel": {
+        "label": "Panel neben dem Terminal",
+        "description": "Ein Datenbank-Panel neben dem SSH-Terminal dieses Hosts anzeigen."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Datenbank-Panel mit Terminal öffnen",
+        "description": "Das Datenbank-Panel anzeigen, wenn ein Terminal auf einem Host geöffnet wird, der dieses unterstützt."
+      },
+      "companionSide": {
+        "label": "Position des Datenbank-Panels",
+        "description": "Wo das Panel neben dem Terminal platziert wird.",
+        "right": "Rechts",
+        "left": "Links",
+        "bottom": "Unten"
+      },
+      "companionSize": {
+        "label": "Größe des Datenbank-Panels",
+        "description": "Breite oder Höhe (wenn unten) in Pixeln."
+      },
+      "companionEdgeButton": {
+        "label": "Kantenschaltfläche für das Datenbank-Panel",
+        "description": "Eine kleine Schaltfläche am Terminalrand anzeigen, um das Panel zu öffnen."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Schreibgeschützte Sitzung",
     "truncated": "Es werden die ersten {{count}} Zeilen angezeigt."
+  },
+  "companion": {
+    "toggle": "Datenbank-Panel"
   }
 }

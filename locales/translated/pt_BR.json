@@ -21,6 +21,31 @@
       "enable": {
         "label": "Bancos de dados",
         "description": "Exibir a guia Bancos de dados para este host em seu menu."
+      },
+      "showPanel": {
+        "label": "Painel ao lado do terminal",
+        "description": "Exibir um painel de bancos de dados ao lado do terminal SSH deste host."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Abrir o painel de bancos de dados com um terminal",
+        "description": "Exibir o painel de bancos de dados quando um terminal for aberto em um host que o possui."
+      },
+      "companionSide": {
+        "label": "Lado do painel de bancos de dados",
+        "description": "Onde o painel fica ao lado do terminal.",
+        "right": "Direita",
+        "left": "Esquerda",
+        "bottom": "Inferior"
+      },
+      "companionSize": {
+        "label": "Tamanho do painel de bancos de dados",
+        "description": "Largura, ou altura na parte inferior, em pixels."
+      },
+      "companionEdgeButton": {
+        "label": "Botão de borda do painel de bancos de dados",
+        "description": "Exibir um pequeno botão na borda do terminal para abrir o painel."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sessão somente leitura",
     "truncated": "Mostrando as primeiras {{count}} linhas."
+  },
+  "companion": {
+    "toggle": "Painel de bancos de dados"
   }
 }

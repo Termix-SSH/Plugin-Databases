@@ -21,6 +21,31 @@
       "enable": {
         "label": "Duomenų bazės",
         "description": "Rodyti šio serverio meniu skirtuką „Duomenų bazės“."
+      },
+      "showPanel": {
+        "label": "Skydelis šalia terminalo",
+        "description": "Rodyti duomenų bazių skydelį šalia šio serverio SSH terminalo."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Atidaryti duomenų bazių skydelį kartu su terminalu",
+        "description": "Rodyti duomenų bazių skydelį, kai atidaromas terminalas serveryje, kuriame jis yra."
+      },
+      "companionSide": {
+        "label": "Duomenų bazių skydelio padėtis",
+        "description": "Kur skydelis rodomas šalia terminalo.",
+        "right": "Dešinėje",
+        "left": "Kairėje",
+        "bottom": "Apačioje"
+      },
+      "companionSize": {
+        "label": "Duomenų bazių skydelio dydis",
+        "description": "Plotis arba aukštis apačioje, pikseliais."
+      },
+      "companionEdgeButton": {
+        "label": "Duomenų bazių skydelio mygtukas krašte",
+        "description": "Rodyti mažą mygtuką terminalo krašte, skirtą skydeliui atidaryti."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Tik skaitymo sesija",
     "truncated": "Rodomos pirmosios {{count}} eilutės."
+  },
+  "companion": {
+    "toggle": "Duomenų bazių skydelis"
   }
 }

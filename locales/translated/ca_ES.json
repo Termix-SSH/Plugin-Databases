@@ -21,6 +21,31 @@
       "enable": {
         "label": "Bases de dades",
         "description": "Mostra la pestanya Bases de dades per a aquest amfitrió al seu menú."
+      },
+      "showPanel": {
+        "label": "Panell al costat del terminal",
+        "description": "Mostra un panell de bases de dades al costat del terminal SSH d'aquest amfitrió."
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "Obre el panell de bases de dades amb un terminal",
+        "description": "Mostra el panell de bases de dades quan s'obre un terminal en un amfitrió que en tingui."
+      },
+      "companionSide": {
+        "label": "Posició del panell de bases de dades",
+        "description": "On es col·loca el panell al costat del terminal.",
+        "right": "Dreta",
+        "left": "Esquerra",
+        "bottom": "Inferior"
+      },
+      "companionSize": {
+        "label": "Mida del panell de bases de dades",
+        "description": "Amplada, o alçada si és a la part inferior, en píxels."
+      },
+      "companionEdgeButton": {
+        "label": "Botó lateral del panell de bases de dades",
+        "description": "Mostra un botó petit al costat del terminal per obrir el panell."
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} ms",
     "readOnlySession": "Sessió de només lectura",
     "truncated": "S'estan mostrant les primeres {{count}} files."
+  },
+  "companion": {
+    "toggle": "Panell de bases de dades"
   }
 }

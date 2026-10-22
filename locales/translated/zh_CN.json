@@ -21,6 +21,31 @@
       "enable": {
         "label": "数据库",
         "description": "在此主机的菜单中显示数据库标签页。"
+      },
+      "showPanel": {
+        "label": "终端旁边的面板",
+        "description": "在此主机的 SSH 终端旁提供数据库面板。"
+      }
+    },
+    "user": {
+      "companionAutoOpen": {
+        "label": "随终端打开数据库面板",
+        "description": "当在已配置该功能的主机上打开终端时，显示数据库面板。"
+      },
+      "companionSide": {
+        "label": "数据库面板位置",
+        "description": "面板相对于终端的位置。",
+        "right": "右侧",
+        "left": "左侧",
+        "bottom": "底部"
+      },
+      "companionSize": {
+        "label": "数据库面板大小",
+        "description": "宽度（或位于底部时的高度），单位为像素。"
+      },
+      "companionEdgeButton": {
+        "label": "数据库面板边缘按钮",
+        "description": "在终端边缘显示一个小按钮，用于打开面板。"
       }
     }
   },
@@ -138,5 +163,8 @@
     "elapsed": "{{ms}} 毫秒",
     "readOnlySession": "只读会话",
     "truncated": "仅显示前 {{count}} 行。"
+  },
+  "companion": {
+    "toggle": "数据库面板"
   }
 }
