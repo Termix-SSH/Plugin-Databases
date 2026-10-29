@@ -109,7 +109,14 @@
     "view": "Visa",
     "rows": "one: {{count}} rad",
     "loadFailed": "Kunde inte läsa databasen.",
-    "pick": "Välj en tabell till vänster."
+    "pick": "Välj en tabell till vänster.",
+    "routines": "Rutiner",
+    "searchRoutines": "Sök efter procedurer och funktioner",
+    "noRoutines": "Inga lagrade procedurer eller funktioner hittades.",
+    "procedure": "Procedur",
+    "function": "Funktion",
+    "pickRoutine": "Välj en procedur eller funktion till vänster.",
+    "noDefinition": "Detta inloggning har inte behörighet att läsa definitionen."
   },
   "data": {
     "title": "Data",
@@ -157,6 +164,10 @@
     "running": "Kör...",
     "hint": "Ctrl+Enter kör frågan.",
     "history": "Senaste",
+    "save": "Spara",
+    "saveHint": "Spara detta skript för denna inloggning. Den första raden är dess namn, så börja med en -- kommentar för att namnge det.",
+    "saved": "Sparat",
+    "removeScript": "Ta bort {{name}}",
     "failed": "Frågan misslyckades.",
     "noResult": "Satsen kördes. Inga rader returnerades.",
     "elapsed": "{{ms}} ms",

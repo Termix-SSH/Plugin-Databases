@@ -107,8 +107,16 @@
     "search": "Meklēt tabulas",
     "noTables": "Nav atrasta neviens tabula.",
     "view": "Apskatīt",
+    "rows": "Rindas: {{count}}",
     "loadFailed": "Neizdevās izlasīt datubāzi.",
-    "pick": "Izvēlieties tabulu kreisajā pusē."
+    "pick": "Izvēlieties tabulu kreisajā pusē.",
+    "routines": "Rutīnas",
+    "searchRoutines": "Meklēt procedūras un funkcijas",
+    "noRoutines": "Nav atrasta ne viena saglabāta procedūra vai funkcija.",
+    "procedure": "Procedūra",
+    "function": "Funkcija",
+    "pickRoutine": "Izvēlieties procedūru vai funkciju no kreisās puses.",
+    "noDefinition": "Šim pieteikumam nav atļauts lasīt definīciju."
   },
   "data": {
     "title": "Dati",
@@ -157,6 +165,10 @@
     "running": "Notiek izpilde",
     "hint": "Lai palaistu vaicājumu, nospiediet Ctrl+Enter.",
     "history": "Nesenie",
+    "save": "Saglabāt",
+    "saveHint": "Saglabājiet šo skriptu šim pieteikumam. Tā pirmais rindkops ir tā nosaukums, tāpēc sāciet to ar -- komentāru, lai to nosauktu.",
+    "saved": "Saglabāts",
+    "removeScript": "Noņemt {{name}}",
     "failed": "Vaicājums neizdevās.",
     "noResult": "Declarācija tika izpildīta. Rezultātu rindas netika atgrieztas.",
     "elapsed": "{{ms}} ms",

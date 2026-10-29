@@ -109,7 +109,14 @@
     "view": "檢視",
     "rows": "{{count}} 列",
     "loadFailed": "無法讀取資料庫。",
-    "pick": "請在左側選擇一個資料表。"
+    "pick": "請在左側選擇一個資料表。",
+    "routines": "常式",
+    "searchRoutines": "搜尋程序與函式",
+    "noRoutines": "找不到任何儲存程序或函式。",
+    "procedure": "程序",
+    "function": "函式",
+    "pickRoutine": "請在左側選擇一個程序或函式。",
+    "noDefinition": "此登入帳號可能無權讀取定義。"
   },
   "data": {
     "title": "資料",
@@ -158,6 +165,10 @@
     "running": "執行中",
     "hint": "按 Ctrl+Enter 執行查詢。",
     "history": "最近使用",
+    "save": "儲存",
+    "saveHint": "將此腳本保留給此登入帳號使用。其第一行即為名稱，因此請以 -- 註解開頭來命名。",
+    "saved": "已儲存",
+    "removeScript": "移除 {{name}}",
     "failed": "查詢失敗。",
     "noResult": "陳述式已執行。沒有返回任何列。",
     "elapsed": "{{ms}} 毫秒",

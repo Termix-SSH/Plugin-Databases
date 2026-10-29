@@ -447,6 +447,40 @@ export function registerRoutes(
 
   /**
    * @openapi
+   * /plugin-api/databases/{hostId}/connections/{connId}/routines:
+   *   get:
+   *     summary: List stored procedures and functions
+   *     description: Lists the stored procedures and functions of a database with their definitions. Empty for SQLite.
+   *     tags:
+   *       - Databases
+   *     parameters:
+   *       - in: path
+   *         name: hostId
+   *         required: true
+   *         schema:
+   *           type: integer
+   *       - in: path
+   *         name: connId
+   *         required: true
+   *         schema:
+   *           type: integer
+   *       - in: query
+   *         name: db
+   *         schema:
+   *           type: string
+   *     responses:
+   *       200:
+   *         description: The procedures and functions.
+   */
+  router.get(
+    "/:hostId/connections/:connId/routines",
+    onConnection((hostId, conn, _rec, req) =>
+      service.routines(hostId, conn, name(req.query.db, "The database", false)),
+    ),
+  );
+
+  /**
+   * @openapi
    * /plugin-api/databases/{hostId}/connections/{connId}/describe:
    *   get:
    *     summary: Describe a table

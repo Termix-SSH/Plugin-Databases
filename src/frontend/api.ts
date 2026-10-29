@@ -10,6 +10,7 @@ import type {
   RowWrite,
   RowsRequest,
   RowsView,
+  RoutineEntry,
   TableEntry,
   TestResult,
   ToolsView,
@@ -93,6 +94,18 @@ export async function listTables(
 ): Promise<TableEntry[]> {
   return (
     await api().get<TableEntry[]>(`${base(host, conn)}/tables`, {
+      params: { db },
+    })
+  ).data;
+}
+
+export async function listRoutines(
+  host: number,
+  conn: number,
+  db: string,
+): Promise<RoutineEntry[]> {
+  return (
+    await api().get<RoutineEntry[]>(`${base(host, conn)}/routines`, {
       params: { db },
     })
   ).data;

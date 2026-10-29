@@ -109,7 +109,14 @@
     "view": "Vis",
     "rows": "{{count}} rader",
     "loadFailed": "Kunne ikke lese databasen.",
-    "pick": "Velg en tabell til venstre."
+    "pick": "Velg en tabell til venstre.",
+    "routines": "Rutiner",
+    "searchRoutines": "Søk etter prosedyrer og funksjoner",
+    "noRoutines": "Ingen lagrede prosedyrer eller funksjoner funnet.",
+    "procedure": "Prosedyre",
+    "function": "Funksjon",
+    "pickRoutine": "Velg en prosedyre eller funksjon til venstre.",
+    "noDefinition": "Denne påloggingen har kanskje ikke tilgang til å lese definisjonen."
   },
   "data": {
     "title": "Data",
@@ -158,6 +165,10 @@
     "running": "Kjører",
     "hint": "Ctrl+Enter kjører spørringen.",
     "history": "Siste",
+    "save": "Lagre",
+    "saveHint": "Behold dette skriptet for denne påloggingen. Første linje er navnet, så start med en -- kommentar for å gi det et navn.",
+    "saved": "Lagret",
+    "removeScript": "Fjern {{name}}",
     "failed": "Spørringen mislyktes.",
     "noResult": "Setningen ble kjørt. Ingen rader ble returnert.",
     "elapsed": "{{ms}} ms",

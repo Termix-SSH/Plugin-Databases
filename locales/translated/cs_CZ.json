@@ -107,8 +107,16 @@
     "search": "Hledat tabulky",
     "noTables": "Nebyly nalezeny žádné tabulky.",
     "view": "Zobrazit",
+    "rows": "{{count}} řádků",
     "loadFailed": "Nelze přečíst databázi.",
-    "pick": "Vyberte tabulku vlevo."
+    "pick": "Vyberte tabulku vlevo.",
+    "routines": "Rutiny",
+    "searchRoutines": "Hledat procedury a funkce",
+    "noRoutines": "Nebyly nalezeny žádné uložené procedury ani funkce.",
+    "procedure": "Procedura",
+    "function": "Funkce",
+    "pickRoutine": "Vyberte proceduru nebo funkci vlevo.",
+    "noDefinition": "Tento přihlašovací účet nemá oprávnění ke čtení definice."
   },
   "data": {
     "title": "Data",
@@ -157,6 +165,10 @@
     "running": "Probíhá",
     "hint": "Stisknutím Ctrl+Enter se dotaz spustí.",
     "history": "Nedávné",
+    "save": "Uložit",
+    "saveHint": "Udržet tento skript pro tento přihlašovací účet. Jeho první řádek je jeho název, takže ho začněte komentářem -- pro jeho pojmenování.",
+    "saved": "Uloženo",
+    "removeScript": "Odstranit {{name}}",
     "failed": "Dotaz selhal.",
     "noResult": "Příkaz byl proveden. Nebyly vráceny žádné řádky.",
     "elapsed": "{{ms}} ms",

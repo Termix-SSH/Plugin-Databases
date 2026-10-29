@@ -9,6 +9,7 @@ import type {
   RowWrite,
   RowsRequest,
   RowsView,
+  RoutineEntry,
   TableEntry,
   TableTarget,
   TestResult,
@@ -185,6 +186,31 @@ export function createService(remote: Remote) {
           name: name ?? "",
           kind: kind === "view" ? "view" : "table",
           rows: rows === null || rows === undefined ? null : Number(rows),
+        }));
+    },
+
+    /** Stored procedures and functions. SQLite has none. */
+    async routines(
+      hostId: number,
+      conn: Conn,
+      db: string,
+    ): Promise<RoutineEntry[]> {
+      const engine = getEngine(conn.engine);
+      if (!engine.routinesSql) return [];
+      const { parts } = await run(
+        hostId,
+        conn,
+        db,
+        [engine.routinesSql(db)],
+        true,
+      );
+      return engine
+        .parse(parts[0] ?? "")
+        .rows.map(([schema, name, kind, definition]) => ({
+          schema: schema ?? "",
+          name: name ?? "",
+          kind: kind === "procedure" ? "procedure" : "function",
+          definition: definition ?? null,
         }));
     },
 

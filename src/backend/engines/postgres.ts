@@ -39,6 +39,14 @@ export const postgres: Engine = {
     "WHERE c.relkind IN ('r', 'p', 'v', 'm', 'f') " +
     "AND n.nspname NOT IN ('pg_catalog', 'information_schema') " +
     "AND n.nspname NOT LIKE 'pg\\_toast%' ORDER BY n.nspname, c.relname",
+  routinesSql: () =>
+    "SELECT n.nspname, p.proname, " +
+    "CASE p.prokind WHEN 'p' THEN 'procedure' ELSE 'function' END, " +
+    "pg_get_functiondef(p.oid) " +
+    "FROM pg_proc p JOIN pg_namespace n ON n.oid = p.pronamespace " +
+    "WHERE p.prokind IN ('f', 'p') " +
+    "AND n.nspname NOT IN ('pg_catalog', 'information_schema') " +
+    "ORDER BY n.nspname, p.proname",
   columnsSql: (schema, table) =>
     "SELECT a.attname, format_type(a.atttypid, a.atttypmod), " +
     "(NOT a.attnotnull)::int, COALESCE(a.attnum = ANY (i.indkey), false)::int, " +

@@ -47,6 +47,14 @@ export interface TableEntry {
   rows: number | null;
 }
 
+export interface RoutineEntry {
+  schema: string;
+  name: string;
+  kind: "procedure" | "function";
+  /** Null when the login may not read it. */
+  definition: string | null;
+}
+
 export interface ColumnInfo {
   name: string;
   type: string;

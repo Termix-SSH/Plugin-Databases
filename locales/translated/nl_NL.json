@@ -109,7 +109,14 @@
     "view": "Weergave",
     "rows": "{{count}} rijen",
     "loadFailed": "De database kon niet worden gelezen.",
-    "pick": "Selecteer een tabel aan de linkerkant."
+    "pick": "Selecteer een tabel aan de linkerkant.",
+    "routines": "Routines",
+    "searchRoutines": "Zoek procedures en functies",
+    "noRoutines": "Geen opgeslagen procedures of functies gevonden.",
+    "procedure": "Procedure",
+    "function": "Functie",
+    "pickRoutine": "Kies een procedure of functie aan de linkerkant.",
+    "noDefinition": "Deze inloggegevens hebben mogelijk geen leesrechten voor de definitie."
   },
   "data": {
     "title": "Gegevens",
@@ -158,6 +165,10 @@
     "running": "Bezig met uitvoeren",
     "hint": "Ctrl+Enter voert de query uit.",
     "history": "Recent",
+    "save": "Opslaan",
+    "saveHint": "Bewaar dit script voor deze inloggegevens. De eerste regel is de naam, dus begin met een ---opmerking om het een naam te geven.",
+    "saved": "Opgeslagen",
+    "removeScript": "Verwijder {{name}}",
     "failed": "De query is mislukt.",
     "noResult": "De instructie is uitgevoerd. Er zijn geen rijen teruggekomen.",
     "elapsed": "{{ms}} ms",

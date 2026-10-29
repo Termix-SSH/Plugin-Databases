@@ -109,7 +109,14 @@
     "view": "Näytä",
     "rows": "{{count}} riviä",
     "loadFailed": "Tietokantaa ei voitu lukea.",
-    "pick": "Valitse taulukko vasemmalta."
+    "pick": "Valitse taulukko vasemmalta.",
+    "routines": "Rutiinit",
+    "searchRoutines": "Hae proseduureja ja funktioita",
+    "noRoutines": "Tallennettuja proseduureja tai funktioita ei löytynyt.",
+    "procedure": "Proseduuri",
+    "function": "Funktio",
+    "pickRoutine": "Valitse proseduuri tai funktio vasemmalta.",
+    "noDefinition": "Tällä kirjautumistunnuksella ei ole oikeutta lukea määritelmää."
   },
   "data": {
     "title": "Tiedot",
@@ -158,6 +165,10 @@
     "running": "Suoritetaan",
     "hint": "Ctrl+Enter suorittaa kyselyn.",
     "history": "Viimeisimmät",
+    "save": "Tallenna",
+    "saveHint": "Säilytä tämä skripti tälle kirjautumistunnukselle. Sen ensimmäinen rivi on sen nimi, joten aloita se -- -kommentilla nimittääksesi sen.",
+    "saved": "Tallennettu",
+    "removeScript": "Poista {{name}}",
     "failed": "Kysely epäonnistui.",
     "noResult": "Lauseke suoritettiin. Rivejä ei palautettu.",
     "elapsed": "{{ms}} ms",

@@ -109,7 +109,14 @@
     "view": "Pregled",
     "rows": "{{count}} redaka",
     "loadFailed": "Baza podataka se ne može čitati.",
-    "pick": "Odaberite tablicu s lijeve strane."
+    "pick": "Odaberite tablicu s lijeve strane.",
+    "routines": "Rutine",
+    "searchRoutines": "Pretraži procedure i funkcije",
+    "noRoutines": "Nema pronađenih spremljenih procedura ili funkcija.",
+    "procedure": "Procedura",
+    "function": "Funkcija",
+    "pickRoutine": "Odaberite proceduru ili funkciju s lijeve strane.",
+    "noDefinition": "Ova prijava možda ne može čitati definiciju."
   },
   "data": {
     "title": "Podaci",
@@ -158,6 +165,10 @@
     "running": "Izvršava se",
     "hint": "Ctrl+Enter izvršava upit.",
     "history": "Nedavno",
+    "save": "Spremi",
+    "saveHint": "Sačuvajte ovaj skript za ovu prijavu. Njegova prva linija je njegovo ime, pa ga započnite s -- komentarom kako biste ga imenovali.",
+    "saved": "Spremljeno",
+    "removeScript": "Ukloni {{name}}",
     "failed": "Upit nije uspio.",
     "noResult": "Naredba je izvršena. Nema povratnih redaka.",
     "elapsed": "{{ms}} ms",

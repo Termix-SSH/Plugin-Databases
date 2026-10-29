@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Play } from "lucide-react";
+import { Play, Save, X } from "lucide-react";
 import { useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import { Button, ListBadge, TextAreaField } from "@termix-ssh/plugin-sdk/ui";
 import type { ConnectionView, QueryResult } from "../shared/types";
@@ -29,6 +29,49 @@ function saveHistory(key: string, items: string[]): void {
   }
 }
 
+export interface SavedScript {
+  name: string;
+  sql: string;
+}
+
+const SCRIPTS_MAX = 50;
+
+function loadScripts(key: string): SavedScript[] {
+  try {
+    const raw = localStorage.getItem(key);
+    const parsed: unknown = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed)
+      ? parsed.filter(
+          (item): item is SavedScript =>
+            !!item &&
+            typeof item.name === "string" &&
+            typeof item.sql === "string",
+        )
+      : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveScripts(key: string, items: SavedScript[]): void {
+  try {
+    localStorage.setItem(key, JSON.stringify(items));
+  } catch {
+    // Storage can be blocked. Scripts then last until the console closes.
+  }
+}
+
+/** A script's name: its first line, without a leading SQL comment mark. */
+export function scriptName(sql: string): string {
+  const first = sql.trim().split("\n")[0] ?? "";
+  return (
+    first
+      .replace(/^--\s*/, "")
+      .trim()
+      .slice(0, 60) || "SQL"
+  );
+}
+
 /** Free SQL. Runs read only unless the host and the login allow changes. */
 export function SqlConsole({
   hostId,
@@ -48,6 +91,25 @@ export function SqlConsole({
   const [history, setHistory] = useState<string[]>(() =>
     loadHistory(historyKey),
   );
+  const scriptsKey = `databases.scripts.${hostId}.${connection.id}`;
+  const [scripts, setScripts] = useState<SavedScript[]>(() =>
+    loadScripts(scriptsKey),
+  );
+  const updateScripts = (next: SavedScript[]) => {
+    setScripts(next);
+    saveScripts(scriptsKey, next);
+  };
+  const saveScript = () => {
+    const text = sql.trim();
+    if (!text) return;
+    const name = scriptName(text);
+    updateScripts(
+      [
+        { name, sql: text },
+        ...scripts.filter((item) => item.name !== name),
+      ].slice(0, SCRIPTS_MAX),
+    );
+  };
 
   const run = async () => {
     const text = sql.trim();
@@ -93,8 +155,47 @@ export function SqlConsole({
           <Play className="size-3.5" />
           {running ? t("sql.running") : t("sql.run")}
         </Button>
+        <Button
+          variant="outline"
+          onClick={saveScript}
+          disabled={!sql.trim()}
+          title={t("sql.saveHint")}
+        >
+          <Save className="size-3.5" />
+          {t("sql.save")}
+        </Button>
         <span className="text-xs text-muted-foreground">{t("sql.hint")}</span>
       </div>
+      {scripts.length > 0 && (
+        <div className="flex shrink-0 flex-wrap items-center gap-1">
+          <span className="text-xs text-muted-foreground">
+            {t("sql.saved")}
+          </span>
+          {scripts.map((item) => (
+            <span key={item.name} className="inline-flex items-center">
+              <Button
+                variant="outline"
+                size="xs"
+                className="max-w-48 truncate"
+                title={item.sql}
+                onClick={() => setSql(item.sql)}
+              >
+                {item.name}
+              </Button>
+              <Button
+                variant="ghost"
+                size="xs"
+                aria-label={t("sql.removeScript", { name: item.name })}
+                onClick={() =>
+                  updateScripts(scripts.filter((other) => other !== item))
+                }
+              >
+                <X className="size-3" />
+              </Button>
+            </span>
+          ))}
+        </div>
+      )}
       {history.length > 0 && (
         <div className="flex shrink-0 flex-wrap items-center gap-1">
           <span className="text-xs text-muted-foreground">

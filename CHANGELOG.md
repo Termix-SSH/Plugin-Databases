@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.1.1
+
+### Added
+
+- A Routines view lists stored procedures and functions with their code, for MySQL, MariaDB and PostgreSQL
+- Save SQL scripts in the console and load them again with one click
+
+### Fixed
+
+- The table list and the data grid scroll again instead of cutting off after the first rows
+
 ## 1.1.0
 
 ### Added

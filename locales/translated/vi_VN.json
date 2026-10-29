@@ -109,7 +109,14 @@
     "view": "Xem",
     "rows": "{{count}} hàng",
     "loadFailed": "Không thể đọc cơ sở dữ liệu.",
-    "pick": "Chọn một bảng ở bên trái."
+    "pick": "Chọn một bảng ở bên trái.",
+    "routines": "Routines",
+    "searchRoutines": "Tìm kiếm thủ tục và hàm",
+    "noRoutines": "Không tìm thấy thủ tục hoặc hàm nào.",
+    "procedure": "Thủ tục",
+    "function": "Hàm",
+    "pickRoutine": "Chọn một thủ tục hoặc hàm ở bên trái.",
+    "noDefinition": "Tài khoản này có thể không có quyền đọc định nghĩa."
   },
   "data": {
     "title": "Dữ liệu",
@@ -158,6 +165,10 @@
     "running": "Đang chạy",
     "hint": "Ctrl+Enter để chạy truy vấn.",
     "history": "Gần đây",
+    "save": "Lưu",
+    "saveHint": "Giữ kịch bản này cho tài khoản hiện tại. Dòng đầu tiên là tên của nó, vì vậy hãy bắt đầu bằng một dòng chú thích -- để đặt tên.",
+    "saved": "Đã lưu",
+    "removeScript": "Xóa {{name}}",
     "failed": "Truy vấn thất bại.",
     "noResult": "Câu lệnh đã chạy. Không có hàng nào trả về.",
     "elapsed": "{{ms}} ms",

@@ -109,7 +109,14 @@
     "view": "ดูข้อมูล",
     "rows": "{{count}} แถว",
     "loadFailed": "ไม่สามารถอ่านฐานข้อมูลได้",
-    "pick": "เลือกตารางจากด้านซ้าย"
+    "pick": "เลือกตารางจากด้านซ้าย",
+    "routines": "Routines",
+    "searchRoutines": "ค้นหา procedure และ function",
+    "noRoutines": "ไม่พบ stored procedure หรือ function",
+    "procedure": "Procedure",
+    "function": "Function",
+    "pickRoutine": "เลือก procedure หรือ function จากด้านซ้าย",
+    "noDefinition": "การเข้าสู่ระบบนี้ไม่มีสิทธิ์อ่านนิยาม"
   },
   "data": {
     "title": "ข้อมูล",
@@ -158,6 +165,10 @@
     "running": "กำลังรัน",
     "hint": "กด Ctrl+Enter เพื่อรันคำสั่ง",
     "history": "ล่าสุด",
+    "save": "บันทึก",
+    "saveHint": "เก็บสคริปต์นี้ไว้สำหรับการเข้าสู่ระบบนี้ บรรทัดแรกจะเป็นชื่อของสคริปต์ ดังนั้นให้เริ่มต้นด้วยคอมเมนต์ -- เพื่อตั้งชื่อ",
+    "saved": "บันทึกแล้ว",
+    "removeScript": "ลบ {{name}}",
     "failed": "คำสั่งล้มเหลว",
     "noResult": "คำสั่งทำงานเสร็จสิ้น ไม่พบแถวที่ส่งกลับ",
     "elapsed": "{{ms}} มิลลิวินาที",

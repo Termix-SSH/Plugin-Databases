@@ -34,6 +34,9 @@ export const mysql: Engine = {
   tablesSql: (db) =>
     "SELECT table_schema, table_name, IF(table_type = 'VIEW', 'view', 'table'), table_rows " +
     `FROM information_schema.tables WHERE table_schema = ${lit(db)} ORDER BY table_name`,
+  routinesSql: (db) =>
+    "SELECT routine_schema, routine_name, LOWER(routine_type), routine_definition " +
+    `FROM information_schema.routines WHERE routine_schema = ${lit(db)} ORDER BY routine_name`,
   columnsSql: (schema, table) =>
     "SELECT column_name, column_type, IF(is_nullable = 'YES', 1, 0), " +
     "IF(column_key = 'PRI', 1, 0), column_default, extra " +

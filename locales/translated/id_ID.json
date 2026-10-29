@@ -109,7 +109,14 @@
     "view": "Lihat",
     "rows": "{{count}} baris",
     "loadFailed": "Tidak dapat membaca database.",
-    "pick": "Pilih tabel di sebelah kiri."
+    "pick": "Pilih tabel di sebelah kiri.",
+    "routines": "Rutinitas",
+    "searchRoutines": "Cari prosedur dan fungsi",
+    "noRoutines": "Tidak ada prosedur atau fungsi yang ditemukan.",
+    "procedure": "Prosedur",
+    "function": "Fungsi",
+    "pickRoutine": "Pilih prosedur atau fungsi di sebelah kiri.",
+    "noDefinition": "Login ini mungkin tidak dapat membaca definisi."
   },
   "data": {
     "title": "Data",
@@ -158,6 +165,10 @@
     "running": "Sedang berjalan",
     "hint": "Ctrl+Enter menjalankan kueri.",
     "history": "Terbaru",
+    "save": "Simpan",
+    "saveHint": "Simpan skrip ini untuk login ini. Baris pertamanya adalah namanya, jadi mulailah dengan komentar -- untuk memberinya nama.",
+    "saved": "Tersimpan",
+    "removeScript": "Hapus {{name}}",
     "failed": "Kueri gagal.",
     "noResult": "Pernyataan berjalan. Tidak ada baris yang dikembalikan.",
     "elapsed": "{{ms}} ms",

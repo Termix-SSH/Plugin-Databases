@@ -107,8 +107,16 @@
     "search": "Vyhľadať tabuľky",
     "noTables": "Nenašli sa žiadne tabuľky.",
     "view": "Zobraziť",
+    "rows": "Riadky: {{count}}",
     "loadFailed": "Databázu sa nepodarilo prečítať.",
-    "pick": "Vyberte tabuľku vľavo."
+    "pick": "Vyberte tabuľku vľavo.",
+    "routines": "Rutiny",
+    "searchRoutines": "Vyhľadať procedúry a funkcie",
+    "noRoutines": "Nenašli sa žiadne uložené procedúry ani funkcie.",
+    "procedure": "Procedúra",
+    "function": "Funkcia",
+    "pickRoutine": "Vyberte procedúru alebo funkciu vľavo.",
+    "noDefinition": "Tento prihlásený používateľ nemá oprávnenie na čítanie definície."
   },
   "data": {
     "title": "Údaje",
@@ -157,6 +165,10 @@
     "running": "Beží",
     "hint": "Stlačením Ctrl+Enter sa spustí dopyt.",
     "history": "Nedávne",
+    "save": "Uložiť",
+    "saveHint": "Uchovať tento skript pre tento prihlásený používateľ. Jeho prvý riadok je jeho názov, takže ho začnite komentárom -- pre pomenovanie.",
+    "saved": "Uložené",
+    "removeScript": "Odstrániť {{name}}",
     "failed": "Dopyt zlyhal.",
     "noResult": "Príkaz bol vykonaný. Neboli vrátené žiadne riadky.",
     "elapsed": "{{ms}} ms",

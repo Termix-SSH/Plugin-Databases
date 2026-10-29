@@ -108,7 +108,14 @@
     "noTables": "Ниједна табела није пронађена.",
     "view": "Приказ",
     "loadFailed": "Није могуће прочитати базу података.",
-    "pick": "Изаберите табелу са леве стране."
+    "pick": "Изаберите табелу са леве стране.",
+    "routines": "forms",
+    "searchRoutines": "forms",
+    "noRoutines": "forms",
+    "procedure": "forms",
+    "function": "forms",
+    "pickRoutine": "forms",
+    "noDefinition": "forms"
   },
   "data": {
     "title": "Подаци",
@@ -156,6 +163,10 @@
     "running": "Извршава се",
     "hint": "Ctrl+Enter покрећу упит.",
     "history": "Недавни",
+    "save": "forms",
+    "saveHint": "forms",
+    "saved": "forms",
+    "removeScript": "Уклони {{name}}",
     "failed": "Упит није успео.",
     "noResult": "Изјава је извршена. Нема повратних редова.",
     "elapsed": "{{ms}} ms",

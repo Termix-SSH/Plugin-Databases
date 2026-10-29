@@ -109,7 +109,14 @@
     "view": "보기",
     "rows": "{{count}}개 행",
     "loadFailed": "데이터베이스를 읽을 수 없습니다.",
-    "pick": "왼쪽에서 테이블을 선택하세요."
+    "pick": "왼쪽에서 테이블을 선택하세요.",
+    "routines": "루틴",
+    "searchRoutines": "프로시저 및 함수 검색",
+    "noRoutines": "저장된 프로시저 또는 함수가 없습니다.",
+    "procedure": "프로시저",
+    "function": "함수",
+    "pickRoutine": "왼쪽에서 프로시저 또는 함수를 선택하세요.",
+    "noDefinition": "이 로그인 계정에는 정의를 읽을 권한이 없습니다."
   },
   "data": {
     "title": "데이터",
@@ -158,6 +165,10 @@
     "running": "실행 중",
     "hint": "Ctrl+Enter로 쿼리를 실행합니다.",
     "history": "최근 사용",
+    "save": "저장",
+    "saveHint": "이 로그인 계정에 이 스크립트를 유지합니다. 첫 번째 줄이 이름이 되므로, 이름을 지정하려면 -- 주석으로 시작하세요.",
+    "saved": "저장됨",
+    "removeScript": "{{name}} 제거",
     "failed": "쿼리 실행에 실패했습니다.",
     "noResult": "명령이 실행되었으나 반환된 행이 없습니다.",
     "elapsed": "{{ms}}ms",

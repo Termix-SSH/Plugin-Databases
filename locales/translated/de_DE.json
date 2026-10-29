@@ -109,7 +109,14 @@
     "view": "Anzeigen",
     "rows": "one: {{count}} Zeile",
     "loadFailed": "Die Datenbank konnte nicht gelesen werden.",
-    "pick": "Wählen Sie links eine Tabelle aus."
+    "pick": "Wählen Sie links eine Tabelle aus.",
+    "routines": "Routinen",
+    "searchRoutines": "Prozeduren und Funktionen suchen",
+    "noRoutines": "Keine gespeicherten Prozeduren oder Funktionen gefunden.",
+    "procedure": "Prozedur",
+    "function": "Funktion",
+    "pickRoutine": "Wählen Sie links eine Prozedur oder Funktion aus.",
+    "noDefinition": "Diese Anmeldung darf die Definition nicht lesen."
   },
   "data": {
     "title": "Daten",
@@ -158,6 +165,10 @@
     "running": "Wird ausgeführt",
     "hint": "Strg+Enter führt die Abfrage aus.",
     "history": "Kürzlich",
+    "save": "Speichern",
+    "saveHint": "Dieses Skript für diese Anmeldung speichern. Die erste Zeile ist der Name, beginnen Sie daher mit einem -- Kommentar, um es zu benennen.",
+    "saved": "Gespeichert",
+    "removeScript": "{{name}} entfernen",
     "failed": "Die Abfrage ist fehlgeschlagen.",
     "noResult": "Die Anweisung wurde ausgeführt. Keine Zeilen zurückgegeben.",
     "elapsed": "{{ms}} ms",

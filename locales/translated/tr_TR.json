@@ -109,7 +109,14 @@
     "view": "Görüntüle",
     "rows": "{{count}} satır",
     "loadFailed": "Veritabanı okunamadı.",
-    "pick": "Soldan bir tablo seçin."
+    "pick": "Soldan bir tablo seçin.",
+    "routines": "Rutinler",
+    "searchRoutines": "Prosedür ve fonksiyonları ara",
+    "noRoutines": "Kayıtlı prosedür veya fonksiyon bulunamadı.",
+    "procedure": "Prosedür",
+    "function": "Fonksiyon",
+    "pickRoutine": "Soldan bir prosedür veya fonksiyon seçin.",
+    "noDefinition": "Bu oturum tanımı okuyamıyor olabilir."
   },
   "data": {
     "title": "Veri",
@@ -158,6 +165,10 @@
     "running": "Çalışıyor",
     "hint": "Ctrl+Enter sorguyu çalıştırır.",
     "history": "Son Sorgular",
+    "save": "Kaydet",
+    "saveHint": "Bu betiği bu oturum için saklayın. İlk satırı adıdır, bu yüzden adlandırmak için -- yorumuyla başlayın.",
+    "saved": "Kaydedildi",
+    "removeScript": "{{name}} kaldır",
     "failed": "Sorgu başarısız oldu.",
     "noResult": "İşlem çalıştırıldı. Hiçbir satır döndürülmedi.",
     "elapsed": "{{ms}} ms",

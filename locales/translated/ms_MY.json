@@ -109,7 +109,14 @@
     "view": "Lihat",
     "rows": "{{count}} baris",
     "loadFailed": "Tidak dapat membaca pangkalan data.",
-    "pick": "Pilih jadual di sebelah kiri."
+    "pick": "Pilih jadual di sebelah kiri.",
+    "routines": "Rutin",
+    "searchRoutines": "Cari prosedur dan fungsi",
+    "noRoutines": "Tiada prosedur atau fungsi tersimpan ditemui.",
+    "procedure": "Prosedur",
+    "function": "Fungsi",
+    "pickRoutine": "Pilih prosedur atau fungsi di sebelah kiri.",
+    "noDefinition": "Log masuk ini mungkin tidak boleh membaca definisi."
   },
   "data": {
     "title": "Data",
@@ -158,6 +165,10 @@
     "running": "Sedang dijalankan",
     "hint": "Ctrl+Enter menjalankan pertanyaan.",
     "history": "Terbaru",
+    "save": "Simpan",
+    "saveHint": "Simpan skrip ini untuk log masuk ini. Baris pertama ialah namanya, jadi mulakan dengan komen -- untuk menamakannya.",
+    "saved": "Disimpan",
+    "removeScript": "Buang {{name}}",
     "failed": "Pertanyaan gagal.",
     "noResult": "Pernyataan telah dijalankan. Tiada baris dikembalikan.",
     "elapsed": "{{ms}} ms",

@@ -109,7 +109,14 @@
     "view": "Vizualizare",
     "rows": "one: {{count}} rând",
     "loadFailed": "Nu s-a putut citi baza de date.",
-    "pick": "Selectați o tabelă din stânga."
+    "pick": "Selectați o tabelă din stânga.",
+    "routines": "Rutine",
+    "searchRoutines": "Caută proceduri și funcții",
+    "noRoutines": "Nu s-au găsit proceduri sau funcții stocate.",
+    "procedure": "Procedură",
+    "function": "Funcție",
+    "pickRoutine": "Selectează o procedură sau o funcție din stânga.",
+    "noDefinition": "Acest cont nu are permisiunea de a citi definiția."
   },
   "data": {
     "title": "Date",
@@ -158,6 +165,10 @@
     "running": "Se execută",
     "hint": "Ctrl+Enter execută interogarea.",
     "history": "Recente",
+    "save": "Salvează",
+    "saveHint": "Păstrează acest script pentru acest cont. Prima linie este numele său, așa că începe cu un comentariu -- pentru a-l numi.",
+    "saved": "Salvat",
+    "removeScript": "Elimină {{name}}",
     "failed": "Interogarea a eșuat.",
     "noResult": "Instrucțiunea s-a executat. Nu s-au returnat rânduri.",
     "elapsed": "{{ms}} ms",

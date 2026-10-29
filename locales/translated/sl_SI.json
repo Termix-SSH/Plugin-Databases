@@ -109,7 +109,14 @@
     "view": "Prikaz",
     "rows": "one: {{count}} vrstica",
     "loadFailed": "Baze podatkov ni bilo mogoče prebrati.",
-    "pick": "Izberite tabelo na levi."
+    "pick": "Izberite tabelo na levi.",
+    "routines": "Rutine",
+    "searchRoutines": "Išči postopke in funkcije",
+    "noRoutines": "Shranjenih postopkov ali funkcij ni bilo najdenih.",
+    "procedure": "Postopek",
+    "function": "Funkcija",
+    "pickRoutine": "Izberite postopek ali funkcijo na levi.",
+    "noDefinition": "Ta prijava morda nima pravice do branja definicije."
   },
   "data": {
     "title": "Podatki",
@@ -158,6 +165,10 @@
     "running": "V teku",
     "hint": "Z Ctrl+Enter izvedete poizvedbo.",
     "history": "Nedavno",
+    "save": "Shrani",
+    "saveHint": "Shranite to skripto za to prijavo. Njena prva vrstica je njeno ime, zato jo začnite z opombo -- za poimenovanje.",
+    "saved": "Shranjeno",
+    "removeScript": "Odstrani {{name}}",
     "failed": "Poizvedba ni uspela.",
     "noResult": "Stavek je bil izveden. Ni bilo vrnjenih vrstic.",
     "elapsed": "{{ms}} ms",

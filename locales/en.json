@@ -109,7 +109,14 @@
     "view": "View",
     "rows": "{{count}} rows",
     "loadFailed": "Could not read the database.",
-    "pick": "Pick a table on the left."
+    "pick": "Pick a table on the left.",
+    "routines": "Routines",
+    "searchRoutines": "Search procedures and functions",
+    "noRoutines": "No stored procedures or functions found.",
+    "procedure": "Procedure",
+    "function": "Function",
+    "pickRoutine": "Pick a procedure or function on the left.",
+    "noDefinition": "This login may not read the definition."
   },
   "data": {
     "title": "Data",
@@ -158,6 +165,10 @@
     "running": "Running",
     "hint": "Ctrl+Enter runs the query.",
     "history": "Recent",
+    "save": "Save",
+    "saveHint": "Keep this script for this login. Its first line is its name, so start it with a -- comment to name it.",
+    "saved": "Saved",
+    "removeScript": "Remove {{name}}",
     "failed": "The query failed.",
     "noResult": "The statement ran. No rows came back.",
     "elapsed": "{{ms}} ms",

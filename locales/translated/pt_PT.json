@@ -109,7 +109,14 @@
     "view": "Ver",
     "rows": "{{count}} linhas",
     "loadFailed": "Não foi possível ler a base de dados.",
-    "pick": "Selecione uma tabela à esquerda."
+    "pick": "Selecione uma tabela à esquerda.",
+    "routines": "Rotinas",
+    "searchRoutines": "Pesquisar procedimentos e funções",
+    "noRoutines": "Nenhum procedimento ou função armazenada encontrado.",
+    "procedure": "Procedimento",
+    "function": "Função",
+    "pickRoutine": "Selecione um procedimento ou função à esquerda.",
+    "noDefinition": "Esta conta de acesso pode não ter permissão para ler a definição."
   },
   "data": {
     "title": "Dados",
@@ -158,6 +165,10 @@
     "running": "A executar",
     "hint": "Ctrl+Enter executa a consulta.",
     "history": "Recentes",
+    "save": "Guardar",
+    "saveHint": "Mantenha este script para esta conta de acesso. A sua primeira linha é o seu nome, por isso comece com um comentário -- para o nomear.",
+    "saved": "Guardado",
+    "removeScript": "Remover {{name}}",
     "failed": "A consulta falhou.",
     "noResult": "A instrução foi executada. Nenhuma linha foi retornada.",
     "elapsed": "{{ms}} ms",

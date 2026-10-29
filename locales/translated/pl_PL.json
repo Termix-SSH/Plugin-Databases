@@ -109,7 +109,14 @@
     "view": "Podgląd",
     "rows": "Wiersze: {{count}}",
     "loadFailed": "Nie udało się odczytać bazy danych.",
-    "pick": "Wybierz tabelę po lewej stronie."
+    "pick": "Wybierz tabelę po lewej stronie.",
+    "routines": "Rutyny",
+    "searchRoutines": "Szukaj procedur i funkcji",
+    "noRoutines": "Nie znaleziono żadnych procedur ani funkcji.",
+    "procedure": "Procedura",
+    "function": "Funkcja",
+    "pickRoutine": "Wybierz procedurę lub funkcję po lewej stronie.",
+    "noDefinition": "To konto może nie mieć uprawnień do odczytu definicji."
   },
   "data": {
     "title": "Dane",
@@ -158,6 +165,10 @@
     "running": "Uruchamianie",
     "hint": "Ctrl+Enter uruchamia zapytanie.",
     "history": "Ostatnie",
+    "save": "Zapisz",
+    "saveHint": "Zapisz ten skrypt dla tego konta. Jego pierwsza linia to jego nazwa, więc zacznij ją od komentarza -- aby nadać nazwę.",
+    "saved": "Zapisano",
+    "removeScript": "Usuń {{name}}",
     "failed": "Zapytanie nie powiodło się.",
     "noResult": "Instrukcja została wykonana. Nie zwrócono żadnych wierszy.",
     "elapsed": "{{ms}} ms",

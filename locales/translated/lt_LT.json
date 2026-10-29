@@ -109,7 +109,14 @@
     "view": "Peržiūra",
     "rows": "{{count}} eilutės",
     "loadFailed": "Nepavyko perskaityti duomenų bazės.",
-    "pick": "Pasirinkite lentelę kairėje."
+    "pick": "Pasirinkite lentelę kairėje.",
+    "routines": "Rutinos",
+    "searchRoutines": "Ieškoti procedūrų ir funkcijų",
+    "noRoutines": "Nerasta jokių išsaugotų procedūrų ar funkcijų.",
+    "procedure": "Procedūra",
+    "function": "Funkcija",
+    "pickRoutine": "Pasirinkite procedūrą arba funkciją kairėje.",
+    "noDefinition": "Šis prisijungimas gali neturėti teisių skaityti apibrėžimą."
   },
   "data": {
     "title": "Duomenys",
@@ -158,6 +165,10 @@
     "running": "Vykdoma",
     "hint": "Paspaudus Ctrl+Enter, užklausa bus vykdoma.",
     "history": "Naujausi",
+    "save": "Išsaugoti",
+    "saveHint": "Išsaugokite šį scenarijų šiam prisijungimui. Jo pirmoji eilutė yra jo pavadinimas, todėl pradėkite jį nuo -- komentaro, kad suteiktumėte jam pavadinimą.",
+    "saved": "Išsaugota",
+    "removeScript": "Pašalinti {{name}}",
     "failed": "Užklausa nepavyko.",
     "noResult": "Pareigybė įvykdyta. Eilučių negauta.",
     "elapsed": "{{ms}} ms",

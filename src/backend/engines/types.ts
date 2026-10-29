@@ -34,6 +34,8 @@ export interface Engine {
   databasesSql: string;
   /** schema, name, kind (table or view), rows. */
   tablesSql: (db: string) => string;
+  /** schema, name, kind (procedure or function), definition. Absent when the engine has none. */
+  routinesSql?: (db: string) => string;
   /** name, type, nullable, primary, default, extra. */
   columnsSql: (schema: string, table: string) => string;
   /** name, definition. */

@@ -109,7 +109,14 @@
     "view": "Ver",
     "rows": "one: {{count}} fila",
     "loadFailed": "No se ha podido leer la base de datos.",
-    "pick": "Selecciona una tabla a la izquierda."
+    "pick": "Selecciona una tabla a la izquierda.",
+    "routines": "Rutinas",
+    "searchRoutines": "Buscar procedimientos y funciones",
+    "noRoutines": "No se han encontrado procedimientos almacenados ni funciones.",
+    "procedure": "Procedimiento",
+    "function": "Función",
+    "pickRoutine": "Selecciona un procedimiento o función en el panel izquierdo.",
+    "noDefinition": "Este inicio de sesión no tiene permiso para leer la definición."
   },
   "data": {
     "title": "Datos",
@@ -158,6 +165,10 @@
     "running": "Ejecutando",
     "hint": "Ctrl+Enter ejecuta la consulta.",
     "history": "Recientes",
+    "save": "Guardar",
+    "saveHint": "Conserva este script para este inicio de sesión. Su primera línea es su nombre, así que empieza con un comentario -- para nombrarlo.",
+    "saved": "Guardado",
+    "removeScript": "Eliminar {{name}}",
     "failed": "La consulta ha fallado.",
     "noResult": "La instrucción se ha ejecutado. No se han devuelto filas.",
     "elapsed": "{{ms}} ms",

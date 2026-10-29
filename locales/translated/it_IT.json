@@ -109,7 +109,14 @@
     "view": "Visualizza",
     "rows": "righe {{count}}",
     "loadFailed": "Impossibile leggere il database.",
-    "pick": "Seleziona una tabella a sinistra."
+    "pick": "Seleziona una tabella a sinistra.",
+    "routines": "Routine",
+    "searchRoutines": "Cerca procedure e funzioni",
+    "noRoutines": "Nessuna procedura o funzione trovata.",
+    "procedure": "Procedura",
+    "function": "Funzione",
+    "pickRoutine": "Seleziona una procedura o una funzione a sinistra.",
+    "noDefinition": "Questo account potrebbe non avere i permessi per leggere la definizione."
   },
   "data": {
     "title": "Dati",
@@ -158,6 +165,10 @@
     "running": "In esecuzione",
     "hint": "Ctrl+Invio esegue la query.",
     "history": "Recenti",
+    "save": "Salva",
+    "saveHint": "Conserva questo script per questo account. La prima riga ne costituisce il nome, quindi inizia con un commento -- per assegnargli un nome.",
+    "saved": "Salvato",
+    "removeScript": "Rimuovi {{name}}",
     "failed": "La query non è riuscita.",
     "noResult": "L'istruzione è stata eseguita. Nessun record restituito.",
     "elapsed": "{{ms}} ms",

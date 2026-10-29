@@ -109,7 +109,14 @@
     "view": "Megtekintés",
     "rows": "one: {{count}} sor",
     "loadFailed": "Nem sikerült beolvasni az adatbázist.",
-    "pick": "Válasszon egy táblát a bal oldalon."
+    "pick": "Válasszon egy táblát a bal oldalon.",
+    "routines": "Rutinák",
+    "searchRoutines": "Eljárások és függvények keresése",
+    "noRoutines": "Nem találhatóak tárolt eljárások vagy függvények.",
+    "procedure": "Eljárás",
+    "function": "Függvény",
+    "pickRoutine": "Válasszon egy eljárást vagy függvényt a bal oldalon.",
+    "noDefinition": "Ez a bejelentkezés nem olvashatja a definíciót."
   },
   "data": {
     "title": "Adatok",
@@ -157,6 +164,10 @@
     "running": "Fut",
     "hint": "A lekérdezés futtatásához nyomja meg a Ctrl+Enter billentyűket.",
     "history": "Legutóbbi",
+    "save": "Mentés",
+    "saveHint": "Tartsa meg ezt a szkriptet ehhez a bejelentkezéshez. Az első sora a neve, ezért kezdje megjegyzéssel (--) a nevének megadásához.",
+    "saved": "Mentve",
+    "removeScript": "{{name}} eltávolítása",
     "failed": "A lekérdezés sikertelen volt.",
     "noResult": "Az utasítás végrehajtódott. Nem érkezett vissza sor.",
     "elapsed": "{{ms}} ms",

@@ -109,7 +109,14 @@
     "view": "Vaade",
     "rows": "{{count}} rida",
     "loadFailed": "Andmebaasi ei õnnestunud lugeda.",
-    "pick": "Valige tabel vasakult."
+    "pick": "Valige tabel vasakult.",
+    "routines": "Rutiinid",
+    "searchRoutines": "Otsi protseduure ja funktsioone",
+    "noRoutines": "Salvestatud protseduure ega funktsioone ei leitud.",
+    "procedure": "Protseduur",
+    "function": "Funktsioon",
+    "pickRoutine": "Valige vasakult protseduur või funktsioon.",
+    "noDefinition": "Sellel kasutajal ei ole õigust definitsiooni lugeda."
   },
   "data": {
     "title": "Andmed",
@@ -158,6 +165,10 @@
     "running": "Käivitub",
     "hint": "Ctrl+Enter käivitab päringu.",
     "history": "Viimased",
+    "save": "Salvesta",
+    "saveHint": "Salvesta see skript sellele kasutajale. Selle esimene rida on selle nimi, seega alusta nime andmiseks -- kommentaariga.",
+    "saved": "Salvestatud",
+    "removeScript": "Eemalda {{name}}",
     "failed": "Päring ebaõnnestus.",
     "noResult": "Käsk käivitati. Ühtegi rida ei tagastatud.",
     "elapsed": "{{ms}} ms",

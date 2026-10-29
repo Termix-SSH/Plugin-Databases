@@ -109,7 +109,14 @@
     "view": "Visualitza",
     "rows": "{{count}} files",
     "loadFailed": "No s'ha pogut llegir la base de dades.",
-    "pick": "Tria una taula a l'esquerra."
+    "pick": "Tria una taula a l'esquerra.",
+    "routines": "Rutines",
+    "searchRoutines": "Cerca procediments i funcions",
+    "noRoutines": "No s'han trobat procediments emmagatzemats ni funcions.",
+    "procedure": "Procediment",
+    "function": "Funció",
+    "pickRoutine": "Tria un procediment o una funció a l'esquerra.",
+    "noDefinition": "Aquesta connexió potser no té permís per llegir la definició."
   },
   "data": {
     "title": "Dades",
@@ -158,6 +165,10 @@
     "running": "S'està executant",
     "hint": "Ctrl+Enter executa la consulta.",
     "history": "Recents",
+    "save": "Desa",
+    "saveHint": "Conserva aquest script per a aquesta connexió. La primera línia és el seu nom, així que comença amb un comentari -- per donar-li nom.",
+    "saved": "Desat",
+    "removeScript": "Elimina {{name}}",
     "failed": "La consulta ha fallat.",
     "noResult": "L'ordre s'ha executat. No s'han retornat files.",
     "elapsed": "{{ms}} ms",

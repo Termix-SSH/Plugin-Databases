@@ -109,7 +109,14 @@
     "view": "查看",
     "rows": "{{count}} 行",
     "loadFailed": "无法读取数据库。",
-    "pick": "请在左侧选择一个表。"
+    "pick": "请在左侧选择一个表。",
+    "routines": "例程",
+    "searchRoutines": "搜索过程和函数",
+    "noRoutines": "未找到存储过程或函数。",
+    "procedure": "过程",
+    "function": "函数",
+    "pickRoutine": "请在左侧选择一个过程或函数。",
+    "noDefinition": "当前登录可能无权读取定义。"
   },
   "data": {
     "title": "数据",
@@ -158,6 +165,10 @@
     "running": "运行中",
     "hint": "按 Ctrl+Enter 运行查询。",
     "history": "最近查询",
+    "save": "保存",
+    "saveHint": "为此登录保留此脚本。其第一行即为名称，因此请以 -- 注释开头来命名。",
+    "saved": "已保存",
+    "removeScript": "移除 {{name}}",
     "failed": "查询失败。",
     "noResult": "语句已执行。未返回任何行。",
     "elapsed": "{{ms}} 毫秒",

@@ -109,7 +109,14 @@
     "view": "Afficher",
     "rows": "one: {{count}} ligne",
     "loadFailed": "Impossible de lire la base de données.",
-    "pick": "Sélectionnez une table à gauche."
+    "pick": "Sélectionnez une table à gauche.",
+    "routines": "Routines",
+    "searchRoutines": "Rechercher des procédures et fonctions",
+    "noRoutines": "Aucune procédure stockée ni fonction trouvée.",
+    "procedure": "Procédure",
+    "function": "Fonction",
+    "pickRoutine": "Sélectionnez une procédure ou une fonction à gauche.",
+    "noDefinition": "Cette connexion n'a peut-être pas les droits pour lire la définition."
   },
   "data": {
     "title": "Données",
@@ -158,6 +165,10 @@
     "running": "En cours d'exécution",
     "hint": "Ctrl+Entrée exécute la requête.",
     "history": "Récents",
+    "save": "Enregistrer",
+    "saveHint": "Conservez ce script pour cette connexion. Sa première ligne sert de nom, commencez donc par un commentaire -- pour le nommer.",
+    "saved": "Enregistré",
+    "removeScript": "Supprimer {{name}}",
     "failed": "La requête a échoué.",
     "noResult": "L'instruction a été exécutée. Aucune ligne retournée.",
     "elapsed": "{{ms}} ms",

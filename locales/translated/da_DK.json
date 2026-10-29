@@ -109,7 +109,14 @@
     "view": "Vis",
     "rows": "{{count}} rækker",
     "loadFailed": "Kunne ikke læse databasen.",
-    "pick": "Vælg en tabel til venstre."
+    "pick": "Vælg en tabel til venstre.",
+    "routines": "Rutiner",
+    "searchRoutines": "Søg efter procedurer og funktioner",
+    "noRoutines": "Ingen lagrede procedurer eller funktioner fundet.",
+    "procedure": "Procedure",
+    "function": "Funktion",
+    "pickRoutine": "Vælg en procedure eller funktion til venstre.",
+    "noDefinition": "Denne login har måske ikke tilladelse til at læse definitionen."
   },
   "data": {
     "title": "Data",
@@ -158,6 +165,10 @@
     "running": "Kører",
     "hint": "Ctrl+Enter kører forespørgslen.",
     "history": "Seneste",
+    "save": "Gem",
+    "saveHint": "Gem dette script til denne login. Den første linje er navnet, så start med en -- kommentar for at navngive det.",
+    "saved": "Gemt",
+    "removeScript": "Fjern {{name}}",
     "failed": "Forespørgslen mislykkedes.",
     "noResult": "Udsagnet blev kørt. Ingen rækker blev returneret.",
     "elapsed": "{{ms}} ms",

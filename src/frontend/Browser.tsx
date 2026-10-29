@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Database, Eye, Table2 } from "lucide-react";
+import { Braces, Database, Eye, Table2 } from "lucide-react";
 import { useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import {
   BackButton,
@@ -11,13 +11,13 @@ import {
   Segmented,
   SelectField,
 } from "@termix-ssh/plugin-sdk/ui";
-import type { ConnectionView, TableEntry } from "../shared/types";
-import { errorMessage, listDatabases, listTables } from "./api";
+import type { ConnectionView, RoutineEntry, TableEntry } from "../shared/types";
+import { errorMessage, listDatabases, listRoutines, listTables } from "./api";
 import { DataGrid } from "./DataGrid";
 import { SqlConsole } from "./SqlConsole";
 import { StructureView } from "./StructureView";
 
-type Mode = "tables" | "sql";
+type Mode = "tables" | "routines" | "sql";
 type Pane = "data" | "structure";
 
 /** The tables of one login on the left, and the chosen table or SQL on the right. */
@@ -38,6 +38,8 @@ export function Browser({
   const [tables, setTables] = useState<TableEntry[] | null>(null);
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState<TableEntry | null>(null);
+  const [routines, setRoutines] = useState<RoutineEntry[] | null>(null);
+  const [routine, setRoutine] = useState<RoutineEntry | null>(null);
   const [mode, setMode] = useState<Mode>("tables");
   const [pane, setPane] = useState<Pane>("data");
   const [error, setError] = useState("");
@@ -80,6 +82,30 @@ export function Browser({
     };
   }, [databases, db, hostId, connection.id, t]);
 
+  useEffect(() => {
+    if (databases === null || mode !== "routines") return;
+    let live = true;
+    setRoutines(null);
+    setRoutine(null);
+    listRoutines(hostId, connection.id, db)
+      .then((list) => {
+        if (live) setRoutines(list);
+      })
+      .catch((e) => {
+        if (live) setError(errorMessage(e, t("browse.loadFailed")));
+      });
+    return () => {
+      live = false;
+    };
+  }, [databases, db, mode, hostId, connection.id, t]);
+
+  const visibleRoutines = useMemo(() => {
+    const needle = search.trim().toLowerCase();
+    return (routines ?? []).filter(
+      (entry) => !needle || entry.name.toLowerCase().includes(needle),
+    );
+  }, [routines, search]);
+
   const visible = useMemo(() => {
     const needle = search.trim().toLowerCase();
     return (tables ?? []).filter(
@@ -104,6 +130,10 @@ export function Browser({
           onChange={setMode}
           options={[
             { value: "tables", label: t("browse.tables") },
+            // SQLite has no stored procedures.
+            ...(connection.engine === "sqlite"
+              ? []
+              : [{ value: "routines" as const, label: t("browse.routines") }]),
             { value: "sql", label: t("browse.sql") },
           ]}
         />
@@ -111,11 +141,10 @@ export function Browser({
       className="gap-2 p-2.5"
     >
       {error && <p className="shrink-0 text-sm text-destructive">{error}</p>}
-      <div className="flex min-h-0 flex-1 flex-wrap gap-2 overflow-hidden">
-        <div
-          className="flex min-h-0 flex-col gap-2"
-          style={{ flex: "0 0 15rem", maxWidth: "100%" }}
-        >
+      {/* No flex-wrap: wrapped lines grow with their content, so the lists
+          below never got a height to scroll in. */}
+      <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-hidden md:flex-row">
+        <div className="flex max-h-[40%] min-h-0 shrink-0 flex-col gap-2 md:max-h-none md:w-60">
           {databases && databases.length > 1 && (
             <SelectField
               label={t("browse.database")}
@@ -123,6 +152,45 @@ export function Browser({
               onChange={setDb}
               options={databases.map((name) => ({ value: name, label: name }))}
             />
+          )}
+          {mode === "routines" && (
+            <>
+              <PanelSearch
+                className="w-full md:w-full"
+                value={search}
+                onChange={setSearch}
+                placeholder={t("browse.searchRoutines")}
+              />
+              <div className="min-h-0 flex-1 overflow-auto">
+                <PanelList
+                  empty={
+                    routines ? (
+                      <p className="p-2 text-xs text-muted-foreground">
+                        {t("browse.noRoutines")}
+                      </p>
+                    ) : undefined
+                  }
+                >
+                  {visibleRoutines.map((entry, index) => (
+                    <ListRow
+                      key={`${entry.schema}.${entry.name}.${index}`}
+                      stripe={index}
+                      icon={<Braces className="size-4" />}
+                      title={entry.name}
+                      selected={routine === entry}
+                      onClick={() => setRoutine(entry)}
+                      badges={
+                        <ListBadge>
+                          {entry.kind === "procedure"
+                            ? t("browse.procedure")
+                            : t("browse.function")}
+                        </ListBadge>
+                      }
+                    />
+                  ))}
+                </PanelList>
+              </div>
+            </>
           )}
           {mode === "tables" && (
             <>
@@ -180,12 +248,19 @@ export function Browser({
             </>
           )}
         </div>
-        <div
-          className="flex min-h-0 min-w-0 flex-col gap-2"
-          style={{ flex: "1 1 20rem" }}
-        >
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col gap-2">
           {mode === "sql" ? (
             <SqlConsole hostId={hostId} connection={connection} db={db} />
+          ) : mode === "routines" ? (
+            routine ? (
+              <pre className="min-h-0 flex-1 overflow-auto whitespace-pre border border-border p-2 font-mono text-xs">
+                {routine.definition ?? t("browse.noDefinition")}
+              </pre>
+            ) : (
+              <p className="p-2 text-sm text-muted-foreground">
+                {t("browse.pickRoutine")}
+              </p>
+            )
           ) : selected ? (
             <>
               <Segmented<Pane>

@@ -109,7 +109,14 @@
     "view": "Besigtig",
     "rows": "1 {{count}} ry",
     "loadFailed": "Kon nie die databasis lees nie.",
-    "pick": "Kies 'n tabel aan die linkerkant."
+    "pick": "Kies 'n tabel aan die linkerkant.",
+    "routines": "Rutines",
+    "searchRoutines": "Soek prosedures en funksies",
+    "noRoutines": "Geen gestoorde prosedures of funksies gevind nie.",
+    "procedure": "Prosedure",
+    "function": "Funksie",
+    "pickRoutine": "Kies 'n prosedure of funksie aan die linkerkant.",
+    "noDefinition": "Hierdie aanmelding mag dalk nie die definisie lees nie."
   },
   "data": {
     "title": "Data",
@@ -158,6 +165,10 @@
     "running": "Besig om uit te voer",
     "hint": "Ctrl+Enter voer die navraag uit.",
     "history": "Onlangse",
+    "save": "Stoor",
+    "saveHint": "Bewaar hierdie script vir hierdie aanmelding. Die eerste lyn is die naam, so begin dit met 'n -- kommentaar om dit te naam.",
+    "saved": "Gestoor",
+    "removeScript": "Verwyder {{name}}",
     "failed": "Die navraag het misluk.",
     "noResult": "Die verklaring is uitgevoer. Geen rye is teruggegee nie.",
     "elapsed": "{{ms}} ms",

@@ -165,6 +165,44 @@ describe("test and scripts", () => {
   });
 });
 
+describe("routines", () => {
+  it("lists procedures and functions with their definitions", async () => {
+    const { s, id } = await withLogin();
+    s.ssh.replies.push({
+      match: "information_schema.routines",
+      stdout:
+        "routine_schema\troutine_name\tkind\tdefinition\n" +
+        "shop\tadd_order\tprocedure\tBEGIN\\n  SELECT 1;\\nEND\n" +
+        "shop\ttotal\tfunction\tNULL\n",
+    });
+    const res = await s.request("GET", `/1/connections/${id}/routines?db=shop`);
+    expect(res.status).toBe(200);
+    expect(res.body).toEqual([
+      {
+        schema: "shop",
+        name: "add_order",
+        kind: "procedure",
+        definition: "BEGIN\n  SELECT 1;\nEND",
+      },
+      { schema: "shop", name: "total", kind: "function", definition: null },
+    ]);
+  });
+
+  it("has none for SQLite", async () => {
+    const { s, id } = await withLogin({
+      engine: "sqlite",
+      address: "",
+      port: null,
+      username: "",
+      password: "",
+      database: "/tmp/app.db",
+    });
+    const res = await s.request("GET", `/1/connections/${id}/routines`);
+    expect(res.status).toBe(200);
+    expect(res.body).toEqual([]);
+  });
+});
+
 describe("rows", () => {
   it("builds the page, count and column queries", async () => {
     const { s, id } = await withLogin();
