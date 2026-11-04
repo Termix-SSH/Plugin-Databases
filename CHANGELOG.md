@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2
+
+### Fixed
+
+- The table structure view now shows a loading message instead of a blank space while it loads
+
 ## 1.1.1
 
 ### Added

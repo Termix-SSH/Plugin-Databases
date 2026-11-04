@@ -38,7 +38,10 @@ export function StructureView({
   }, [hostId, connection.id, db, table.schema, table.name, t]);
 
   if (error) return <p className="text-sm text-destructive">{error}</p>;
-  if (!info) return null;
+  if (!info)
+    return (
+      <p className="p-2 text-xs text-muted-foreground">{t("common.loading")}</p>
+    );
 
   const head = "border-b border-border px-2 py-1.5 text-left font-medium";
   const cell = "px-2 py-1 font-mono";
