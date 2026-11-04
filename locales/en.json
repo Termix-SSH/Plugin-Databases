@@ -178,5 +178,19 @@
   },
   "companion": {
     "toggle": "Databases panel"
+  },
+  "operations": {
+    "list": {
+      "title": "List database logins"
+    },
+    "check": {
+      "title": "Check database login"
+    },
+    "connections": {
+      "title": "Database logins",
+      "engine": "Engine",
+      "database": "Database",
+      "access": "Access"
+    }
   }
 }

@@ -1,6 +1,14 @@
 # Changelog
 
-## 1.1.2
+## 1.2.0
+
+### Added
+
+- See saved database logins across hosts and check that one still works through Termix actions
+
+### Changed
+
+- Needs Termix 26.11.1 or newer
 
 ### Fixed
 
