@@ -235,7 +235,7 @@ export function DataGrid({
         )}
       </div>
       {data && !hasKey && !isView && (
-        <Alert className="shrink-0 border-x-0 border-t-0 text-xs">
+        <Alert className="shrink-0 border-x-0 border-t-0 px-3 text-xs">
           <AlertDescription>{t("data.noKey")}</AlertDescription>
         </Alert>
       )}
@@ -267,7 +267,7 @@ export function DataGrid({
               }
             />
           )}
-          <div className="flex shrink-0 items-center justify-between text-xs text-muted-foreground">
+          <div className="flex shrink-0 items-center justify-between border-t border-border px-3 py-1 text-xs text-muted-foreground">
             <span>
               {shown > 0
                 ? t("data.range", {

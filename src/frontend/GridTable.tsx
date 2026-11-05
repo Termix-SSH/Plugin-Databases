@@ -30,7 +30,7 @@ export function GridTable({
             {columns.map((column) => (
               <th
                 key={column}
-                className="whitespace-nowrap border-b border-border px-2 py-1.5 text-left font-medium"
+                className="whitespace-nowrap border-b border-border px-2 py-1.5 text-left font-medium first:pl-3 last:pr-3"
               >
                 {onSort ? (
                   <button
@@ -68,7 +68,7 @@ export function GridTable({
               {row.map((value, cellIndex) => (
                 <td
                   key={cellIndex}
-                  className="max-w-[24rem] truncate whitespace-nowrap px-2 py-1 font-mono"
+                  className="max-w-[24rem] truncate whitespace-nowrap px-2 py-1 font-mono first:pl-3 last:pr-3"
                   title={value ?? "NULL"}
                 >
                   {value === null ? (
