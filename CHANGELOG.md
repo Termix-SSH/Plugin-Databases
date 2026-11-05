@@ -5,6 +5,7 @@
 ### Added
 
 - See saved database logins across hosts and check that one still works through Termix actions
+- Other plugins, like Backups, can use the saved logins of a host
 
 ### Changed
 

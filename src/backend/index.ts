@@ -6,12 +6,14 @@ import { registerRoutes } from "./routes.js";
 import { createService } from "./service.js";
 import { connections } from "./tables.js";
 import { registerOperations } from "./operations.js";
+import { registerServices } from "./services.js";
 
 export async function activate(ctx: PluginContext) {
   const table = await ctx.db.define(connections);
   const repo = createRepository(ctx, ctx.db, table);
   const service = createService(createRemote(ctx));
   registerOperations(ctx, repo, service);
+  registerServices(ctx, repo);
   registerRoutes(ctx.http.router<Router>(), ctx, { repo, service });
   ctx.log.info("Databases routes mounted at /plugin-api/databases");
 }

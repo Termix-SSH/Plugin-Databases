@@ -36,6 +36,13 @@
     "secrets:own",
     "operations:provide"
   ],
+  "provides": [
+    {
+      "service": "databases.logins",
+      "version": "1.0.0",
+      "permission": "databases.use"
+    }
+  ],
   "contributes": {
     "tabs": [
       {
