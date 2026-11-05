@@ -23,9 +23,9 @@ export function GridTable({
   keyColumns?: ReadonlySet<string>;
 }) {
   return (
-    <div className="min-h-0 flex-1 overflow-auto border border-border">
+    <div className="min-h-0 flex-1 overflow-auto thin-scrollbar">
       <table className="w-max min-w-full border-collapse text-xs">
-        <thead className="sticky top-0 bg-muted">
+        <thead className="sticky top-0 bg-background">
           <tr>
             {columns.map((column) => (
               <th

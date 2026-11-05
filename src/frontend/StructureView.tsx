@@ -47,10 +47,10 @@ export function StructureView({
   const cell = "px-2 py-1 font-mono";
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-auto">
-      <div className="border border-border">
+    <div className="flex min-h-0 flex-1 flex-col overflow-auto">
+      <div className="border-b border-border">
         <table className="w-full border-collapse text-xs">
-          <thead className="bg-muted">
+          <thead className="bg-background">
             <tr>
               <th className={head}>{t("structure.name")}</th>
               <th className={head}>{t("structure.type")}</th>
@@ -83,7 +83,7 @@ export function StructureView({
             {t("structure.noIndexes")}
           </p>
         ) : (
-          <div className="border border-border">
+          <div className="border-b border-border">
             <table className="w-full border-collapse text-xs">
               <tbody>
                 {info.indexes.map((index) => (

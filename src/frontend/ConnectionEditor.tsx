@@ -164,9 +164,8 @@ export function ConnectionEditor({
       icon={<Database className="size-4" />}
       leading={<BackButton onClick={onClose} />}
       title={connection ? connection.name : t("conn.addTitle")}
-      className="gap-2 p-2.5"
     >
-      <div className="flex shrink-0 flex-col gap-3">
+      <div className="flex shrink-0 flex-col gap-3 p-3">
         <TextField
           label={t("conn.name")}
           value={form.name}
@@ -184,7 +183,7 @@ export function ConnectionEditor({
           ]}
         />
         {tools && !client && (
-          <Alert className="rounded-none text-xs">
+          <Alert className="text-xs">
             <AlertDescription>{t("conn.clientMissing")}</AlertDescription>
           </Alert>
         )}

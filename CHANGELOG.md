@@ -9,6 +9,7 @@
 ### Changed
 
 - Needs Termix 26.11.1 or newer
+- Pages use the Termix tile look, with lines between sections instead of separate boxes
 
 ### Fixed
 

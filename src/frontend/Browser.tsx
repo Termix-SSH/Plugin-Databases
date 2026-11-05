@@ -138,13 +138,16 @@ export function Browser({
           ]}
         />
       }
-      className="gap-2 p-2.5"
     >
-      {error && <p className="shrink-0 text-sm text-destructive">{error}</p>}
+      {error && (
+        <p className="shrink-0 border-b border-border px-3 py-2 text-xs text-destructive">
+          {error}
+        </p>
+      )}
       {/* No flex-wrap: wrapped lines grow with their content, so the lists
           below never got a height to scroll in. */}
-      <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-hidden md:flex-row">
-        <div className="flex max-h-[40%] min-h-0 shrink-0 flex-col gap-2 md:max-h-none md:w-60">
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden md:flex-row">
+        <div className="flex max-h-[40%] min-h-0 shrink-0 flex-col gap-2 border-b border-border p-2 md:max-h-none md:w-60 md:border-b-0 md:border-r">
           {databases && databases.length > 1 && (
             <SelectField
               label={t("browse.database")}
@@ -248,12 +251,12 @@ export function Browser({
             </>
           )}
         </div>
-        <div className="flex min-h-0 min-w-0 flex-1 flex-col gap-2">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           {mode === "sql" ? (
             <SqlConsole hostId={hostId} connection={connection} db={db} />
           ) : mode === "routines" ? (
             routine ? (
-              <pre className="min-h-0 flex-1 overflow-auto whitespace-pre border border-border p-2 font-mono text-xs">
+              <pre className="min-h-0 flex-1 overflow-auto whitespace-pre p-3 font-mono text-xs">
                 {routine.definition ?? t("browse.noDefinition")}
               </pre>
             ) : (
