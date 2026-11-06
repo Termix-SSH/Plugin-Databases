@@ -126,3 +126,13 @@ export interface RowDelete extends TableTarget {
 export interface Affected {
   affected: number;
 }
+
+/** One host's saved logins and whether each answers. */
+export interface HostSummary {
+  hostId: number;
+  checkedAt: string;
+  total: number;
+  unreachable: number;
+  logins: Array<{ id: number; name: string; ok: boolean; error?: string }>;
+  error?: string;
+}

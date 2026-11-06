@@ -4,6 +4,7 @@ import type {
 } from "@termix-ssh/plugin-sdk/backend";
 import type { Repository } from "./repository.js";
 import type { Service } from "./service.js";
+import type { SummaryCache } from "./summary.js";
 
 function requireHost(context: PluginOperationContext): number {
   if (context.hostId === undefined) throw new Error("This needs a host");
@@ -15,6 +16,7 @@ export function registerOperations(
   ctx: PluginContext,
   repo: Repository,
   service: Service,
+  summary: SummaryCache,
 ): void {
   if (typeof ctx.operations?.register !== "function") return;
 
@@ -34,6 +36,24 @@ export function registerOperations(
           value: rows.length,
           status: "ok",
           label: `${rows.length} logins`,
+        },
+      };
+    },
+  });
+
+  ctx.operations.register("databases.status", {
+    run: async (_input, context) => {
+      const result = await summary.check(requireHost(context));
+      if (result.error) throw new Error(result.error);
+      const bad = result.unreachable;
+      return {
+        summary: bad
+          ? `${bad} of ${result.total} database logins do not answer`
+          : `${result.total} database logins answer`,
+        data: {
+          value: result.total,
+          status: !result.total ? "unknown" : bad ? "fail" : "ok",
+          label: bad ? `${bad} down` : undefined,
         },
       };
     },
