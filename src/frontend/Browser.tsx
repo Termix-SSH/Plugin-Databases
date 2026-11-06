@@ -10,6 +10,7 @@ import {
   PanelShell,
   Segmented,
   SelectField,
+  TOOLBAR_FIT,
 } from "@termix-ssh/plugin-sdk/ui";
 import type { ConnectionView, RoutineEntry, TableEntry } from "../shared/types";
 import { errorMessage, listDatabases, listRoutines, listTables } from "./api";
@@ -149,7 +150,9 @@ export function Browser({
       <div className="flex min-h-0 flex-1 flex-col overflow-hidden md:flex-row">
         <div className="flex max-h-[40%] min-h-0 shrink-0 flex-col border-b border-border md:max-h-none md:w-60 md:border-b-0 md:border-r">
           {databases && databases.length > 1 && (
-            <div className="shrink-0 border-b border-border px-3 py-2">
+            <div
+              className={`shrink-0 border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}
+            >
               <SelectField
                 label={t("browse.database")}
                 value={db}
@@ -163,7 +166,9 @@ export function Browser({
           )}
           {mode === "routines" && (
             <>
-              <div className="shrink-0 border-b border-border px-3 py-2">
+              <div
+                className={`shrink-0 border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}
+              >
                 <PanelSearch
                   className="w-full md:w-full"
                   value={search}
@@ -204,7 +209,9 @@ export function Browser({
           )}
           {mode === "tables" && (
             <>
-              <div className="shrink-0 border-b border-border px-3 py-2">
+              <div
+                className={`shrink-0 border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}
+              >
                 <PanelSearch
                   className="w-full md:w-full"
                   value={search}
@@ -275,7 +282,9 @@ export function Browser({
             )
           ) : selected ? (
             <>
-              <div className="shrink-0 border-b border-border px-3 py-2">
+              <div
+                className={`shrink-0 border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}
+              >
                 <Segmented<Pane>
                   className="w-fit"
                   value={pane}

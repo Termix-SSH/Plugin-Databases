@@ -11,6 +11,7 @@
 
 - Needs Termix 26.11.1 or newer
 - Pages use the Termix tile look, with lines between sections instead of separate boxes
+- Toolbars, loading screens, back buttons and Save bars match the rest of Termix
 
 ### Fixed
 

@@ -9,6 +9,7 @@ import {
   Input,
   useConfirm,
   RefreshButton,
+  ToolbarBand,
 } from "@termix-ssh/plugin-sdk/ui";
 import type {
   ConnectionView,
@@ -174,7 +175,7 @@ export function DataGrid({
 
   return (
     <div className="flex min-h-0 flex-1 flex-col">
-      <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-border px-3 py-2">
+      <ToolbarBand>
         <Input
           value={filterText}
           onChange={(e) => setFilterText(e.target.value)}
@@ -233,7 +234,7 @@ export function DataGrid({
             }}
           />
         )}
-      </div>
+      </ToolbarBand>
       {data && !hasKey && !isView && (
         <Alert className="shrink-0 border-x-0 border-t-0 px-3 text-xs">
           <AlertDescription>{t("data.noKey")}</AlertDescription>

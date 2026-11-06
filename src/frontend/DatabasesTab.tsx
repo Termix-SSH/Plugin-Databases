@@ -119,7 +119,7 @@ export function DatabasesTab({ isVisible, host, label }: TabProps) {
           </>
         }
       >
-        <div className="flex shrink-0 flex-col">
+        <div className="flex flex-1 shrink-0 flex-col">
           {error ? (
             <Alert className="border-x-0 border-t-0 text-xs">
               <AlertDescription>{error}</AlertDescription>

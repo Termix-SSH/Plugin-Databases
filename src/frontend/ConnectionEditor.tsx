@@ -164,6 +164,18 @@ export function ConnectionEditor({
       icon={<Database className="size-4" />}
       leading={<BackButton onClick={onClose} />}
       title={connection ? connection.name : t("conn.addTitle")}
+      footer={
+        <FormFooter
+          onCancel={onClose}
+          onSave={() => void save()}
+          saving={saving}
+          disabled={!form.name.trim()}
+          cancelLabel={t("common.cancel")}
+          saveLabel={t("common.save")}
+          onDelete={connection ? () => void remove() : undefined}
+          deleteLabel={t("common.delete")}
+        />
+      }
     >
       <div className="flex shrink-0 flex-col gap-3 p-3">
         <TextField
@@ -286,16 +298,6 @@ export function ConnectionEditor({
           {tested && <span className="text-xs text-success">{tested}</span>}
         </div>
         {error && <p className="text-sm text-destructive">{error}</p>}
-        <FormFooter
-          onCancel={onClose}
-          onSave={() => void save()}
-          saving={saving}
-          disabled={!form.name.trim()}
-          cancelLabel={t("common.cancel")}
-          saveLabel={t("common.save")}
-          onDelete={connection ? () => void remove() : undefined}
-          deleteLabel={t("common.delete")}
-        />
       </div>
     </PanelShell>
   );

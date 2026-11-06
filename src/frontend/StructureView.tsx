@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import type { ConnectionView, Description, TableEntry } from "../shared/types";
 import { describeTable, errorMessage } from "./api";
+import { LoadingState } from "@termix-ssh/plugin-sdk/ui";
 
 /** Columns with types and keys, then the indexes. */
 export function StructureView({
@@ -39,10 +40,7 @@ export function StructureView({
 
   if (error)
     return <p className="px-3 py-2 text-xs text-destructive">{error}</p>;
-  if (!info)
-    return (
-      <p className="p-3 text-xs text-muted-foreground">{t("common.loading")}</p>
-    );
+  if (!info) return <LoadingState label={t("common.loading")} />;
 
   const head =
     "border-b border-border px-2 py-1.5 text-left font-medium first:pl-3 last:pr-3";
