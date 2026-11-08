@@ -8,7 +8,8 @@
     "cancel": "Abbrechen",
     "back": "Zurück",
     "delete": "Löschen",
-    "refresh": "Aktualisieren"
+    "refresh": "Aktualisieren",
+    "loading": "Laden..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "Datenbank-Panel"
+  },
+  "operations": {
+    "list": {
+      "title": "Datenbank-Logins auflisten"
+    },
+    "check": {
+      "title": "Datenbank-Login prüfen"
+    },
+    "connections": {
+      "title": "Datenbank-Logins",
+      "engine": "Engine",
+      "database": "Datenbank",
+      "access": "Zugriff"
+    },
+    "status": {
+      "title": "Datenbank-Logins"
+    }
+  },
+  "card": {
+    "title": "Datenbanken",
+    "loading": "Logins werden geprüft...",
+    "refresh": "Erneut prüfen",
+    "empty": "Speichere einen Datenbank-Login auf einem Host, um ihn hier zu sehen.",
+    "summary_one": "{{count}} Login auf {{hosts}} Hosts",
+    "summary_other": "{{count}} Logins auf {{hosts}} Hosts",
+    "logins_one": "{{count}} Login",
+    "logins_other": "{{count}} Logins",
+    "down": "{{count}} ausgefallen",
+    "allUp": "Alle antworten"
   }
 }

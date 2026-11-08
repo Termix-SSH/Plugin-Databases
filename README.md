@@ -33,6 +33,8 @@ Read the [docs](https://docs.termix.site/plugins/databases) to set it up and use
 - Columns, types, keys and indexes
 - SQL console with history and CSV or JSON export
 - Read only logins and read only sessions for users without edit access
+- Check that a saved login still works through Termix actions
+- Other plugins, like Backups, can use a host's saved logins
 
 <br />
 

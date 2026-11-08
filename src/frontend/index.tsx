@@ -1,6 +1,7 @@
 import { Database } from "lucide-react";
 import type { TermixApp } from "@termix-ssh/plugin-sdk/frontend";
 import { initApi } from "./api";
+import { DatabasesHostsCard } from "./DatabasesHostsCard";
 import { DatabasesTab } from "./DatabasesTab";
 import {
   DatabasesCompanion,
@@ -31,6 +32,15 @@ export function activate(app: TermixApp): void {
   let canUse = true;
   void app.hasPermission("use").then((allowed) => {
     canUse = allowed;
+  });
+
+  app.registerDashboardCard({
+    id: "databases-hosts",
+    titleKey: "card.title",
+    defaultPanel: "side",
+    defaultHeight: 220,
+    frame: "framed",
+    component: DatabasesHostsCard,
   });
 
   app.registerTab(TAB_ID, DatabasesTab, {

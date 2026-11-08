@@ -8,7 +8,8 @@
     "cancel": "Batal",
     "back": "Kembali",
     "delete": "Padam",
-    "refresh": "Muat Semula"
+    "refresh": "Muat Semula",
+    "loading": "Memuatkan..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,32 @@
   },
   "companion": {
     "toggle": "Panel Pangkalan Data"
+  },
+  "operations": {
+    "list": {
+      "title": "Senarai log masuk pangkalan data"
+    },
+    "check": {
+      "title": "Semak log masuk pangkalan data"
+    },
+    "connections": {
+      "title": "Log masuk pangkalan data",
+      "engine": "Enjin",
+      "database": "Pangkalan data",
+      "access": "Akses"
+    },
+    "status": {
+      "title": "Log masuk pangkalan data"
+    }
+  },
+  "card": {
+    "title": "Pangkalan data",
+    "loading": "Menyemak log masuk...",
+    "refresh": "Semak semula",
+    "empty": "Simpan log masuk pangkalan data pada hos untuk melihatnya di sini.",
+    "summary_other": "{{count}} log masuk pada {{hosts}} hos",
+    "logins_other": "{{count}} log masuk",
+    "down": "{{count}} tidak tersedia",
+    "allUp": "Semua bertindak balas"
   }
 }

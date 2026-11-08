@@ -8,7 +8,8 @@
     "cancel": "Annuler",
     "back": "Retour",
     "delete": "Supprimer",
-    "refresh": "Actualiser"
+    "refresh": "Actualiser",
+    "loading": "Chargement..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "Panneau de bases de données"
+  },
+  "operations": {
+    "list": {
+      "title": "Lister les identifiants de base de données"
+    },
+    "check": {
+      "title": "Vérifier l'identifiant de base de données"
+    },
+    "connections": {
+      "title": "Identifiants de base de données",
+      "engine": "Moteur",
+      "database": "Base de données",
+      "access": "Accès"
+    },
+    "status": {
+      "title": "Identifiants de base de données"
+    }
+  },
+  "card": {
+    "title": "Bases de données",
+    "loading": "Vérification des identifiants...",
+    "refresh": "Vérifier à nouveau",
+    "empty": "Enregistrez un identifiant de base de données sur un hôte pour le voir ici.",
+    "summary_one": "{{count}} identifiant sur {{hosts}} hôtes",
+    "summary_many": "{{count}} identifiants sur {{hosts}} hôtes",
+    "summary_other": "{{count}} identifiants sur {{hosts}} hôtes",
+    "logins_one": "{{count}} identifiant",
+    "logins_many": "{{count}} identifiants",
+    "logins_other": "{{count}} identifiants",
+    "down": "{{count}} indisponible",
+    "allUp": "Tous répondent"
   }
 }

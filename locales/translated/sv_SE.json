@@ -8,7 +8,8 @@
     "cancel": "Avbryt",
     "back": "Tillbaka",
     "delete": "Ta bort",
-    "refresh": "Uppdatera"
+    "refresh": "Uppdatera",
+    "loading": "Laddar..."
   },
   "permissions": {
     "use": {
@@ -128,6 +129,7 @@
     "clear": "Rensa",
     "filterPlaceholder": "Villkor, till exempel status = 'aktiv'",
     "range": "{{from}} till {{to}} av {{total}}",
+    "rowCount": "{{count}} rader",
     "prev": "Föregående sida",
     "next": "Nästa sida",
     "loadFailed": "Kunde inte läsa raderna."
@@ -176,5 +178,34 @@
   },
   "companion": {
     "toggle": "Databaspanel"
+  },
+  "operations": {
+    "list": {
+      "title": "Lista databasloggar"
+    },
+    "check": {
+      "title": "Kontrollera databaslogg"
+    },
+    "connections": {
+      "title": "Databasloggar",
+      "engine": "Motor",
+      "database": "Databas",
+      "access": "Åtkomst"
+    },
+    "status": {
+      "title": "Databasloggar"
+    }
+  },
+  "card": {
+    "title": "Databaser",
+    "loading": "Kontrollerar loggar...",
+    "refresh": "Kontrollera igen",
+    "empty": "Spara en databaslogg på en värd för att se den här.",
+    "summary_one": "{{count}}logg på {{hosts}} värdar",
+    "summary_other": "{{count}} loggar på {{hosts}} värdar",
+    "logins_one": "{{count}}logg",
+    "logins_other": "{{count}} loggar",
+    "down": "{{count}} nere",
+    "allUp": "Alla svarar"
   }
 }

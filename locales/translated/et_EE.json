@@ -8,7 +8,8 @@
     "cancel": "Tühista",
     "back": "Tagasi",
     "delete": "Kustuta",
-    "refresh": "Värskenda"
+    "refresh": "Värskenda",
+    "loading": "Laadimine..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "Andmebaaside paneel"
+  },
+  "operations": {
+    "list": {
+      "title": "Loetle andmebaasi sisselogimised"
+    },
+    "check": {
+      "title": "Kontrolli andmebaasi sisselogimist"
+    },
+    "connections": {
+      "title": "Andmebaasi sisselogimised",
+      "engine": "Mootor",
+      "database": "Andmebaas",
+      "access": "Juurdepääs"
+    },
+    "status": {
+      "title": "Andmebaasi sisselogimised"
+    }
+  },
+  "card": {
+    "title": "Andmebaasid",
+    "loading": "Sisselogimiste kontrollimine...",
+    "refresh": "Kontrolli uuesti",
+    "empty": "Salvesta andmebaasi sisselogimine hostile, et näha seda siin.",
+    "summary_one": "{{count}} sisselogimine {{hosts}} hostil",
+    "summary_other": "{{count}} sisselogimist {{hosts}} hostil",
+    "logins_one": "{{count}} sisselogimine",
+    "logins_other": "{{count}} sisselogimist",
+    "down": "{{count}} ei vasta",
+    "allUp": "Kõik vastavad"
   }
 }

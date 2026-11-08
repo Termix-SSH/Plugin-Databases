@@ -8,7 +8,8 @@
     "cancel": "Avbryt",
     "back": "Tilbake",
     "delete": "Slett",
-    "refresh": "Oppdater"
+    "refresh": "Oppdater",
+    "loading": "Laster..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "Databasepanel"
+  },
+  "operations": {
+    "list": {
+      "title": "Liste over databaseinnloggingsdetaljer"
+    },
+    "check": {
+      "title": "Sjekk databaseinnlogging"
+    },
+    "connections": {
+      "title": "Databaseinnloggingsdetaljer",
+      "engine": "Motor",
+      "database": "Database",
+      "access": "Tilgang"
+    },
+    "status": {
+      "title": "Databaseinnloggingsdetaljer"
+    }
+  },
+  "card": {
+    "title": "Databaser",
+    "loading": "Sjekker innloggingsdetaljer...",
+    "refresh": "Sjekk igjen",
+    "empty": "Lagre en databaseinnlogging på en vert for å se den her.",
+    "summary_one": "{{count}} innlogging på {{hosts}} verter",
+    "summary_other": "{{count}} innloggingsdetaljer på {{hosts}} verter",
+    "logins_one": "{{count}} innlogging",
+    "logins_other": "{{count}} innloggingsdetaljer",
+    "down": "{{count}} nede",
+    "allUp": "Alle svarer"
   }
 }

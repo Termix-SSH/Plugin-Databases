@@ -8,7 +8,8 @@
     "cancel": "Atcelt",
     "back": "Atpakaļ",
     "delete": "Dzēst",
-    "refresh": "Atsvaidzināt"
+    "refresh": "Atsvaidzināt",
+    "loading": "Ielādē..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "Datubāzu panelis"
+  },
+  "operations": {
+    "list": {
+      "title": "Sarakstīt datubāzes pieteikumus"
+    },
+    "check": {
+      "title": "Pārbaudīt datubāzes pieteikumu"
+    },
+    "connections": {
+      "title": "Datubāzes pieteikumi",
+      "engine": "Dzinējs",
+      "database": "Datubāze",
+      "access": "Piekļuve"
+    },
+    "status": {
+      "title": "Datubāzes pieteikumi"
+    }
+  },
+  "card": {
+    "title": "Datubāzes",
+    "loading": "Pārbauda pieteikumus...",
+    "refresh": "Pārbaudīt vēlreiz",
+    "empty": "Saglabājiet datubāzes pieteikumu uz saimniekdatora, lai to redzētu šeit.",
+    "summary_zero": "0 pieteikumi uz {{hosts}} saimniekdatoriem",
+    "summary_one": "{{count}} pieteikums uz {{hosts}} saimniekdatoriem",
+    "summary_other": "{{count}} pieteikumi uz {{hosts}} saimniekdatoriem",
+    "logins_zero": "0 pieteikumi",
+    "logins_one": "{{count}} pieteikums",
+    "logins_other": "{{count}} pieteikumi",
+    "down": "{{count}} nedarbojas",
+    "allUp": "Visi atbild"
   }
 }

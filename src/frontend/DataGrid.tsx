@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ChevronLeft, ChevronRight, Download, RefreshCw } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download } from "lucide-react";
 import { useToast, useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import {
   AddButton,
@@ -8,6 +8,8 @@ import {
   Button,
   Input,
   useConfirm,
+  RefreshButton,
+  ToolbarBand,
 } from "@termix-ssh/plugin-sdk/ui";
 import type {
   ConnectionView,
@@ -172,8 +174,8 @@ export function DataGrid({
   const shown = data?.grid.rows.length ?? 0;
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-2">
-      <div className="flex shrink-0 flex-wrap items-center gap-2">
+    <div className="flex min-h-0 flex-1 flex-col">
+      <ToolbarBand>
         <Input
           value={filterText}
           onChange={(e) => setFilterText(e.target.value)}
@@ -199,16 +201,11 @@ export function DataGrid({
             {t("data.clear")}
           </Button>
         )}
-        <Button
-          variant="ghost"
-          size="icon"
+        <RefreshButton
           onClick={() => void load()}
-          disabled={loading}
-          title={t("common.refresh")}
-          className="text-accent-brand"
-        >
-          <RefreshCw className={`size-4 ${loading ? "animate-spin" : ""}`} />
-        </Button>
+          loading={loading}
+          label={t("common.refresh")}
+        />
         <Button
           variant="ghost"
           size="sm"
@@ -237,17 +234,21 @@ export function DataGrid({
             }}
           />
         )}
-      </div>
+      </ToolbarBand>
       {data && !hasKey && !isView && (
-        <Alert className="shrink-0 rounded-none text-xs">
+        <Alert className="shrink-0 border-x-0 border-t-0 px-3 text-xs">
           <AlertDescription>{t("data.noKey")}</AlertDescription>
         </Alert>
       )}
-      {error && <p className="shrink-0 text-sm text-destructive">{error}</p>}
+      {error && (
+        <p className="shrink-0 border-b border-border px-3 py-2 text-xs text-destructive">
+          {error}
+        </p>
+      )}
       {data && (
         <>
           {data.grid.rows.length === 0 ? (
-            <p className="p-2 text-sm text-muted-foreground">
+            <p className="p-3 text-xs text-muted-foreground">
               {t("data.noRows")}
             </p>
           ) : (
@@ -267,7 +268,7 @@ export function DataGrid({
               }
             />
           )}
-          <div className="flex shrink-0 items-center justify-between text-xs text-muted-foreground">
+          <div className="flex shrink-0 items-center justify-between border-t border-border px-3 py-1 text-xs text-muted-foreground">
             <span>
               {shown > 0
                 ? t("data.range", {

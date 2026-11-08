@@ -23,14 +23,14 @@ export function GridTable({
   keyColumns?: ReadonlySet<string>;
 }) {
   return (
-    <div className="min-h-0 flex-1 overflow-auto border border-border">
+    <div className="min-h-0 flex-1 overflow-auto thin-scrollbar">
       <table className="w-max min-w-full border-collapse text-xs">
-        <thead className="sticky top-0 bg-muted">
+        <thead className="sticky top-0 bg-background">
           <tr>
             {columns.map((column) => (
               <th
                 key={column}
-                className="whitespace-nowrap border-b border-border px-2 py-1.5 text-left font-medium"
+                className="whitespace-nowrap border-b border-border px-2 py-1.5 text-left font-medium first:pl-3 last:pr-3"
               >
                 {onSort ? (
                   <button
@@ -68,7 +68,7 @@ export function GridTable({
               {row.map((value, cellIndex) => (
                 <td
                   key={cellIndex}
-                  className="max-w-[24rem] truncate whitespace-nowrap px-2 py-1 font-mono"
+                  className="max-w-[24rem] truncate whitespace-nowrap px-2 py-1 font-mono first:pl-3 last:pr-3"
                   title={value ?? "NULL"}
                 >
                   {value === null ? (

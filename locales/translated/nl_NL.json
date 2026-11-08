@@ -8,7 +8,8 @@
     "cancel": "Annuleren",
     "back": "Terug",
     "delete": "Verwijderen",
-    "refresh": "Vernieuwen"
+    "refresh": "Vernieuwen",
+    "loading": "Laden..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "Database-paneel"
+  },
+  "operations": {
+    "list": {
+      "title": "Database-logins tonen"
+    },
+    "check": {
+      "title": "Database-login controleren"
+    },
+    "connections": {
+      "title": "Database-logins",
+      "engine": "Engine",
+      "database": "Database",
+      "access": "Toegang"
+    },
+    "status": {
+      "title": "Database-logins"
+    }
+  },
+  "card": {
+    "title": "Databases",
+    "loading": "Logins controleren...",
+    "refresh": "Opnieuw controleren",
+    "empty": "Sla een database-login op een host op om deze hier te zien.",
+    "summary_one": "{{count}} login op {{hosts}} hosts",
+    "summary_other": "{{count}} logins op {{hosts}} hosts",
+    "logins_one": "{{count}} login",
+    "logins_other": "{{count}} logins",
+    "down": "{{count}} offline",
+    "allUp": "Allemaal bereikbaar"
   }
 }

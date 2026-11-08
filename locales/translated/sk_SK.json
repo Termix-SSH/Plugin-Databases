@@ -8,7 +8,8 @@
     "cancel": "Zrušiť",
     "back": "Späť",
     "delete": "Odstrániť",
-    "refresh": "Obnoviť"
+    "refresh": "Obnoviť",
+    "loading": "Načítava sa..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,38 @@
   },
   "companion": {
     "toggle": "Panel databáz"
+  },
+  "operations": {
+    "list": {
+      "title": "Zoznam prihlásení do databázy"
+    },
+    "check": {
+      "title": "Skontrolovať prihlásenie do databázy"
+    },
+    "connections": {
+      "title": "Prihlásenia do databázy",
+      "engine": "Databázový engine",
+      "database": "Databáza",
+      "access": "Prístup"
+    },
+    "status": {
+      "title": "Prihlásenia do databázy"
+    }
+  },
+  "card": {
+    "title": "Databázy",
+    "loading": "Kontrola prihlásení...",
+    "refresh": "Skontrolovať znova",
+    "empty": "Uložte prihlásenie do databázy na hostiteľovi, aby sa zobrazilo tu.",
+    "summary_one": "{{count}} prihlásenie na {{hosts}} hostiteľoch",
+    "summary_few": "{{count}} prihlásenia na {{hosts}} hostiteľoch",
+    "summary_many": "{{count}} prihlásení na {{hosts}} hostiteľoch",
+    "summary_other": "{{count}} prihlásení na {{hosts}} hostiteľoch",
+    "logins_one": "{{count}} prihlásenie",
+    "logins_few": "{{count}} prihlásenia",
+    "logins_many": "{{count}} prihlásení",
+    "logins_other": "{{count}} prihlásení",
+    "down": "{{count}} nedostupných",
+    "allUp": "Všetky odpovedajú"
   }
 }

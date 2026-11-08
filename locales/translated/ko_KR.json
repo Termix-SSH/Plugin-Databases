@@ -8,7 +8,8 @@
     "cancel": "취소",
     "back": "뒤로",
     "delete": "삭제",
-    "refresh": "새로고침"
+    "refresh": "새로고침",
+    "loading": "로딩 중..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,32 @@
   },
   "companion": {
     "toggle": "데이터베이스 패널"
+  },
+  "operations": {
+    "list": {
+      "title": "데이터베이스 로그인 목록"
+    },
+    "check": {
+      "title": "데이터베이스 로그인 확인"
+    },
+    "connections": {
+      "title": "데이터베이스 로그인",
+      "engine": "엔진",
+      "database": "데이터베이스",
+      "access": "접근"
+    },
+    "status": {
+      "title": "데이터베이스 로그인"
+    }
+  },
+  "card": {
+    "title": "데이터베이스",
+    "loading": "로그인 확인 중...",
+    "refresh": "다시 확인",
+    "empty": "호스트에 데이터베이스 로그인을 저장하면 여기에 표시됩니다.",
+    "summary_other": "{{hosts}}개 호스트에 {{count}}개 로그인",
+    "logins_other": "{{count}}개 로그인",
+    "down": "{{count}}개 다운",
+    "allUp": "모두 응답 중"
   }
 }

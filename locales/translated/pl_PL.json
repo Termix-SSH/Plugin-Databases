@@ -8,7 +8,8 @@
     "cancel": "Anuluj",
     "back": "Wstecz",
     "delete": "Usuń",
-    "refresh": "Odśwież"
+    "refresh": "Odśwież",
+    "loading": "Ładowanie..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,38 @@
   },
   "companion": {
     "toggle": "Panel baz danych"
+  },
+  "operations": {
+    "list": {
+      "title": "Lista logowań do bazy danych"
+    },
+    "check": {
+      "title": "Sprawdź logowanie do bazy danych"
+    },
+    "connections": {
+      "title": "Logowania do bazy danych",
+      "engine": "Silnik",
+      "database": "Baza danych",
+      "access": "Dostęp"
+    },
+    "status": {
+      "title": "Logowania do bazy danych"
+    }
+  },
+  "card": {
+    "title": "Bazy danych",
+    "loading": "Sprawdzanie logowań...",
+    "refresh": "Sprawdź ponownie",
+    "empty": "Zapisz logowanie do bazy danych na hoście, aby zobaczyć je tutaj.",
+    "summary_one": "{{count}} logowanie na {{hosts}} hostach",
+    "summary_few": "{{count}} logowania na {{hosts}} hostach",
+    "summary_many": "{{count}} logowań na {{hosts}} hostach",
+    "summary_other": "{{count}} logowań na {{hosts}} hostach",
+    "logins_one": "{{count}} logowanie",
+    "logins_few": "{{count}} logowania",
+    "logins_many": "{{count}} logowań",
+    "logins_other": "{{count}} logowań",
+    "down": "{{count}} niedostępne",
+    "allUp": "Wszystkie odpowiadają"
   }
 }

@@ -8,7 +8,8 @@
     "cancel": "Peruuta",
     "back": "Takaisin",
     "delete": "Poista",
-    "refresh": "Päivitä"
+    "refresh": "Päivitä",
+    "loading": "Ladataan..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "Tietokantapaneeli"
+  },
+  "operations": {
+    "list": {
+      "title": "Listaa tietokantakirjautumiset"
+    },
+    "check": {
+      "title": "Tarkista tietokantakirjautuminen"
+    },
+    "connections": {
+      "title": "Tietokantakirjautumiset",
+      "engine": "Moottori",
+      "database": "Tietokanta",
+      "access": "Pääsy"
+    },
+    "status": {
+      "title": "Tietokantakirjautumiset"
+    }
+  },
+  "card": {
+    "title": "Tietokannat",
+    "loading": "Tarkistetaan kirjautumisia...",
+    "refresh": "Tarkista uudelleen",
+    "empty": "Tallenna tietokantakirjautuminen isäntään nähdäksesi sen täällä.",
+    "summary_one": "{{count}} kirjautuminen {{hosts}} isännässä",
+    "summary_other": "{{count}} kirjautumista {{hosts}} isännässä",
+    "logins_one": "{{count}} kirjautuminen",
+    "logins_other": "{{count}} kirjautumista",
+    "down": "{{count}} poissa päältä",
+    "allUp": "Kaikki vastaavat"
   }
 }

@@ -8,7 +8,8 @@
     "cancel": "Kanselleer",
     "back": "Terug",
     "delete": "Vee uit",
-    "refresh": "Verfris"
+    "refresh": "Verfris",
+    "loading": "Laai..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "Databasispaneel"
+  },
+  "operations": {
+    "list": {
+      "title": "Lys databasisaanmeldings"
+    },
+    "check": {
+      "title": "Kontroleer databasisaanmelding"
+    },
+    "connections": {
+      "title": "Databasisaanmeldings",
+      "engine": "Enjin",
+      "database": "Databasis",
+      "access": "Toegang"
+    },
+    "status": {
+      "title": "Databasisaanmeldings"
+    }
+  },
+  "card": {
+    "title": "Databasisse",
+    "loading": "Kontroleer aanmeldings...",
+    "refresh": "Kontroleer weer",
+    "empty": "Stoor 'n databasisaanmelding op 'n gasheer om dit hier te sien.",
+    "summary_one": "{{count}} aanmelding op {{hosts}} gasheer",
+    "summary_other": "{{count}} aanmeldings op {{hosts}} gasheer",
+    "logins_one": "{{count}} aanmelding",
+    "logins_other": "{{count}} aanmeldings",
+    "down": "{{count}} af",
+    "allUp": "Almal antwoord"
   }
 }

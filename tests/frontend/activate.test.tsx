@@ -242,3 +242,31 @@ describe(`${manifest.id} activate`, () => {
     expect(await screen.findByText(locales.tab.error)).toBeTruthy();
   });
 });
+
+describe("dashboard card", () => {
+  it("shows hosts with logins that do not answer", async () => {
+    rendered = await renderWithApp(plugin, {
+      manifest,
+      locales,
+      permissions: ["databases.use"],
+      hosts: [{ id: "1", name: "db host", ip: "10.0.0.1", port: 22 }],
+      api: {
+        get: vi.fn(async () => ({
+          data: [
+            {
+              hostId: 1,
+              checkedAt: new Date().toISOString(),
+              total: 2,
+              unreachable: 1,
+              logins: [],
+            },
+          ],
+        })),
+      } as never,
+    });
+    expect(rendered.registered.dashboardCards()).toEqual(["databases-hosts"]);
+    rendered.renderDashboardCard("databases-hosts");
+    expect(await screen.findByText("db host")).toBeTruthy();
+    expect(screen.getByText("1 down")).toBeTruthy();
+  });
+});

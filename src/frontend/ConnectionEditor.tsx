@@ -164,9 +164,20 @@ export function ConnectionEditor({
       icon={<Database className="size-4" />}
       leading={<BackButton onClick={onClose} />}
       title={connection ? connection.name : t("conn.addTitle")}
-      className="gap-2 p-2.5"
+      footer={
+        <FormFooter
+          onCancel={onClose}
+          onSave={() => void save()}
+          saving={saving}
+          disabled={!form.name.trim()}
+          cancelLabel={t("common.cancel")}
+          saveLabel={t("common.save")}
+          onDelete={connection ? () => void remove() : undefined}
+          deleteLabel={t("common.delete")}
+        />
+      }
     >
-      <div className="flex shrink-0 flex-col gap-3">
+      <div className="flex shrink-0 flex-col gap-3 p-3">
         <TextField
           label={t("conn.name")}
           value={form.name}
@@ -184,7 +195,7 @@ export function ConnectionEditor({
           ]}
         />
         {tools && !client && (
-          <Alert className="rounded-none text-xs">
+          <Alert className="text-xs">
             <AlertDescription>{t("conn.clientMissing")}</AlertDescription>
           </Alert>
         )}
@@ -287,16 +298,6 @@ export function ConnectionEditor({
           {tested && <span className="text-xs text-success">{tested}</span>}
         </div>
         {error && <p className="text-sm text-destructive">{error}</p>}
-        <FormFooter
-          onCancel={onClose}
-          onSave={() => void save()}
-          saving={saving}
-          disabled={!form.name.trim()}
-          cancelLabel={t("common.cancel")}
-          saveLabel={t("common.save")}
-          onDelete={connection ? () => void remove() : undefined}
-          deleteLabel={t("common.delete")}
-        />
       </div>
     </PanelShell>
   );

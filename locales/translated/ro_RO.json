@@ -8,7 +8,8 @@
     "cancel": "Anulează",
     "back": "Înapoi",
     "delete": "Șterge",
-    "refresh": "Reîmprospătează"
+    "refresh": "Reîmprospătează",
+    "loading": "Se încarcă..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "Panoul de baze de date"
+  },
+  "operations": {
+    "list": {
+      "title": "Listează autentificările la bazele de date"
+    },
+    "check": {
+      "title": "Verifică autentificarea la baza de date"
+    },
+    "connections": {
+      "title": "Autentificări la baze de date",
+      "engine": "Motor",
+      "database": "Bază de date",
+      "access": "Acces"
+    },
+    "status": {
+      "title": "Autentificări la baze de date"
+    }
+  },
+  "card": {
+    "title": "Baze de date",
+    "loading": "Se verifică autentificările...",
+    "refresh": "Verifică din nou",
+    "empty": "Salvează o autentificare la o bază de date pe un gazdă pentru a o vedea aici.",
+    "summary_one": "{{count}} autentificare pe {{hosts}} gazde",
+    "summary_few": "{{count}} autentificări pe {{hosts}} gazde",
+    "summary_other": "{{count}} autentificări pe {{hosts}} gazde",
+    "logins_one": "{{count}} autentificare",
+    "logins_few": "{{count}} autentificări",
+    "logins_other": "{{count}} autentificări",
+    "down": "{{count}} indisponibile",
+    "allUp": "Toate răspund"
   }
 }

@@ -134,7 +134,7 @@ export function SqlConsole({
 
   return (
     <div
-      className="flex min-h-0 flex-1 flex-col gap-2"
+      className="flex min-h-0 flex-1 flex-col gap-2 p-3"
       onKeyDown={(e) => {
         if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
           e.preventDefault();

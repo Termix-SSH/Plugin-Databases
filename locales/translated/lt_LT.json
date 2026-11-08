@@ -8,7 +8,8 @@
     "cancel": "Atšaukti",
     "back": "Atgal",
     "delete": "Pašalinti",
-    "refresh": "Atnaujinti"
+    "refresh": "Atnaujinti",
+    "loading": "Kraunama..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,38 @@
   },
   "companion": {
     "toggle": "Duomenų bazių skydelis"
+  },
+  "operations": {
+    "list": {
+      "title": "Rodyti duomenų bazių prisijungimus"
+    },
+    "check": {
+      "title": "Patikrinti duomenų bazės prisijungimą"
+    },
+    "connections": {
+      "title": "Duomenų bazių prisijungimai",
+      "engine": "Variklis",
+      "database": "Duomenų bazė",
+      "access": "Prieiga"
+    },
+    "status": {
+      "title": "Duomenų bazių prisijungimai"
+    }
+  },
+  "card": {
+    "title": "Duomenų bazės",
+    "loading": "Tikrinami prisijungimai...",
+    "refresh": "Patikrinti dar kartą",
+    "empty": "Norėdami matyti čia, išsaugokite duomenų bazės prisijungimą serveryje.",
+    "summary_one": "{{count}} prisijungimas {{hosts}} serveriuose",
+    "summary_few": "{{count}} prisijungimai {{hosts}} serveriuose",
+    "summary_many": "{{count}} prisijungimų {{hosts}} serveriuose",
+    "summary_other": "{{count}} prisijungimų {{hosts}} serveriuose",
+    "logins_one": "{{count}} prisijungimas",
+    "logins_few": "{{count}} prisijungimai",
+    "logins_many": "{{count}} prisijungimų",
+    "logins_other": "{{count}} prisijungimų",
+    "down": "{{count}} neveikia",
+    "allUp": "Visi atsako"
   }
 }

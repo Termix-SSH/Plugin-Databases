@@ -8,7 +8,8 @@
     "cancel": "取消",
     "back": "返回",
     "delete": "刪除",
-    "refresh": "重新整理"
+    "refresh": "重新整理",
+    "loading": "載入中..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,32 @@
   },
   "companion": {
     "toggle": "資料庫面板"
+  },
+  "operations": {
+    "list": {
+      "title": "列出資料庫登入資訊"
+    },
+    "check": {
+      "title": "檢查資料庫登入資訊"
+    },
+    "connections": {
+      "title": "資料庫登入資訊",
+      "engine": "資料庫引擎",
+      "database": "資料庫",
+      "access": "存取權限"
+    },
+    "status": {
+      "title": "資料庫登入資訊"
+    }
+  },
+  "card": {
+    "title": "資料庫",
+    "loading": "正在檢查登入資訊...",
+    "refresh": "再次檢查",
+    "empty": "在主機上儲存資料庫登入資訊，即可在此處查看。",
+    "summary_other": "{{count}} 個登入資訊，位於 {{hosts}} 台主機",
+    "logins_other": "{{count}} 個登入資訊",
+    "down": "{{count}} 個離線",
+    "allUp": "全部正常回應"
   }
 }

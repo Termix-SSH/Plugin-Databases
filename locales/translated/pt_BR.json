@@ -8,7 +8,8 @@
     "cancel": "Cancelar",
     "back": "Voltar",
     "delete": "Excluir",
-    "refresh": "Atualizar"
+    "refresh": "Atualizar",
+    "loading": "Carregando..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "Painel de bancos de dados"
+  },
+  "operations": {
+    "list": {
+      "title": "Listar logins de banco de dados"
+    },
+    "check": {
+      "title": "Verificar login de banco de dados"
+    },
+    "connections": {
+      "title": "Logins de banco de dados",
+      "engine": "Motor",
+      "database": "Banco de dados",
+      "access": "Acesso"
+    },
+    "status": {
+      "title": "Logins de banco de dados"
+    }
+  },
+  "card": {
+    "title": "Bancos de dados",
+    "loading": "Verificando logins...",
+    "refresh": "Verificar novamente",
+    "empty": "Salve um login de banco de dados em um host para vê-lo aqui.",
+    "summary_one": "{{count}} login em {{hosts}} hosts",
+    "summary_many": "{{count}} logins em {{hosts}} hosts",
+    "summary_other": "{{count}} logins em {{hosts}} hosts",
+    "logins_one": "{{count}} login",
+    "logins_many": "{{count}} logins",
+    "logins_other": "{{count}} logins",
+    "down": "{{count}} indisponíveis",
+    "allUp": "Todos respondendo"
   }
 }

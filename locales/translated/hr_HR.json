@@ -8,7 +8,8 @@
     "cancel": "Otkaži",
     "back": "Natrag",
     "delete": "Izbriši",
-    "refresh": "Osvježi"
+    "refresh": "Osvježi",
+    "loading": "Učitavanje..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "Panel za baze podataka"
+  },
+  "operations": {
+    "list": {
+      "title": "Popis prijava u bazu podataka"
+    },
+    "check": {
+      "title": "Provjeri prijavu u bazu podataka"
+    },
+    "connections": {
+      "title": "Prijava u bazu podataka",
+      "engine": "Mehanizam",
+      "database": "Baza podataka",
+      "access": "Pristup"
+    },
+    "status": {
+      "title": "Prijava u bazu podataka"
+    }
+  },
+  "card": {
+    "title": "Baze podataka",
+    "loading": "Provjera prijava...",
+    "refresh": "Provjeri ponovno",
+    "empty": "Spremite prijavu u bazu podataka na hostu da biste je vidjeli ovdje.",
+    "summary_one": "{{count}} prijava na {{hosts}} hostova",
+    "summary_few": "{{count}} prijave na {{hosts}} hostova",
+    "summary_other": "{{count}} prijava na {{hosts}} hostova",
+    "logins_one": "{{count}} prijava",
+    "logins_few": "{{count}} prijave",
+    "logins_other": "{{count}} prijava",
+    "down": "{{count}} nedostupno",
+    "allUp": "Svi odgovaraju"
   }
 }

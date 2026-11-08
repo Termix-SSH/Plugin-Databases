@@ -8,7 +8,8 @@
     "cancel": "キャンセル",
     "back": "戻る",
     "delete": "削除",
-    "refresh": "更新"
+    "refresh": "更新",
+    "loading": "読み込み中..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,32 @@
   },
   "companion": {
     "toggle": "データベースパネル"
+  },
+  "operations": {
+    "list": {
+      "title": "データベースのログイン情報を一覧表示"
+    },
+    "check": {
+      "title": "データベースのログイン情報を確認"
+    },
+    "connections": {
+      "title": "データベースのログイン情報",
+      "engine": "エンジン",
+      "database": "データベース",
+      "access": "アクセス"
+    },
+    "status": {
+      "title": "データベースのログイン情報"
+    }
+  },
+  "card": {
+    "title": "データベース",
+    "loading": "ログイン情報を確認中...",
+    "refresh": "再確認",
+    "empty": "ホストにデータベースのログイン情報を保存すると、ここに表示されます。",
+    "summary_other": "{{hosts}} 台のホストに {{count}} 件のログイン情報",
+    "logins_other": "{{count}} 件のログイン情報",
+    "down": "{{count}} 件がダウン",
+    "allUp": "すべて応答あり"
   }
 }

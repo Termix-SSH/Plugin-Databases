@@ -1,7 +1,7 @@
 {
   "id": "databases",
   "name": "Databases",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Browse and edit MySQL, MariaDB, PostgreSQL and SQLite databases on your hosts from one tab.",
   "author": {
     "name": "Termix"
@@ -23,8 +23,8 @@
   ],
   "env": [],
   "engine": {
-    "termix": ">=26.10.3",
-    "api": "^1.5"
+    "termix": ">=26.11.1-0",
+    "api": "^1.15"
   },
   "capabilities": [
     "hosts:read",
@@ -33,7 +33,15 @@
     "network:serve",
     "ui:surface",
     "db:own",
-    "secrets:own"
+    "secrets:own",
+    "operations:provide"
+  ],
+  "provides": [
+    {
+      "service": "databases.logins",
+      "version": "1.0.0",
+      "permission": "databases.use"
+    }
   ],
   "contributes": {
     "tabs": [
@@ -116,7 +124,96 @@
           "default": true
         }
       ]
-    }
+    },
+    "operations": {
+      "actions": [
+        {
+          "id": "databases.list-connections",
+          "titleKey": "operations.list.title",
+          "scope": "host",
+          "risk": "read",
+          "permission": "use",
+          "hostAccess": "connect",
+          "surfaces": {
+            "assistant": true,
+            "mcp": true,
+            "palette": false
+          }
+        },
+        {
+          "id": "databases.status",
+          "titleKey": "operations.status.title",
+          "scope": "host",
+          "risk": "read",
+          "permission": "use",
+          "hostAccess": "connect",
+          "when": {
+            "settings": {
+              "enableDatabases": true
+            }
+          },
+          "surfaces": {
+            "palette": false
+          }
+        },
+        {
+          "id": "databases.check-connection",
+          "titleKey": "operations.check.title",
+          "icon": "PlugZap",
+          "scope": "resource",
+          "resource": "databases.connection",
+          "risk": "read",
+          "permission": "use",
+          "hostAccess": "connect",
+          "surfaces": {
+            "assistant": true,
+            "mcp": true
+          }
+        }
+      ],
+      "resources": [
+        {
+          "id": "databases.connection",
+          "titleKey": "operations.connections.title",
+          "icon": "Database",
+          "list": "databases.list-connections",
+          "key": "id",
+          "name": "name",
+          "tab": "databases",
+          "columns": [
+            {
+              "key": "engine",
+              "titleKey": "operations.connections.engine"
+            },
+            {
+              "key": "database",
+              "titleKey": "operations.connections.database"
+            },
+            {
+              "key": "access",
+              "titleKey": "operations.connections.access"
+            }
+          ]
+        }
+      ],
+      "signals": [
+        {
+          "id": "databases.reachable",
+          "titleKey": "operations.status.title",
+          "read": "databases.status",
+          "scope": "host",
+          "kind": "status",
+          "refreshSec": 300
+        }
+      ]
+    },
+    "dashboardCards": [
+      {
+        "id": "databases-hosts",
+        "titleKey": "card.title",
+        "icon": "Database"
+      }
+    ]
   },
   "locales": "locales",
   "platforms": ["linux", "win32", "darwin"]

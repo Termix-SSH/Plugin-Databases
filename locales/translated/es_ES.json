@@ -8,7 +8,8 @@
     "cancel": "Cancelar",
     "back": "Atrás",
     "delete": "Eliminar",
-    "refresh": "Actualizar"
+    "refresh": "Actualizar",
+    "loading": "Cargando..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "Panel de bases de datos"
+  },
+  "operations": {
+    "list": {
+      "title": "Listar credenciales de base de datos"
+    },
+    "check": {
+      "title": "Comprobar credencial de base de datos"
+    },
+    "connections": {
+      "title": "Credenciales de base de datos",
+      "engine": "Motor",
+      "database": "Base de datos",
+      "access": "Acceso"
+    },
+    "status": {
+      "title": "Credenciales de base de datos"
+    }
+  },
+  "card": {
+    "title": "Bases de datos",
+    "loading": "Comprobando credenciales...",
+    "refresh": "Comprobar de nuevo",
+    "empty": "Guarda una credencial de base de datos en un host para verla aquí.",
+    "summary_one": "{{count}} credencial en {{hosts}} hosts",
+    "summary_many": "{{count}} credenciales en {{hosts}} hosts",
+    "summary_other": "{{count}} credenciales en {{hosts}} hosts",
+    "logins_one": "{{count}} credencial",
+    "logins_many": "{{count}} credenciales",
+    "logins_other": "{{count}} credenciales",
+    "down": "{{count}} no disponibles",
+    "allUp": "Todos responden"
   }
 }

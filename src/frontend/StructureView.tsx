@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import type { ConnectionView, Description, TableEntry } from "../shared/types";
 import { describeTable, errorMessage } from "./api";
+import { LoadingState } from "@termix-ssh/plugin-sdk/ui";
 
 /** Columns with types and keys, then the indexes. */
 export function StructureView({
@@ -37,17 +38,19 @@ export function StructureView({
     };
   }, [hostId, connection.id, db, table.schema, table.name, t]);
 
-  if (error) return <p className="text-sm text-destructive">{error}</p>;
-  if (!info) return null;
+  if (error)
+    return <p className="px-3 py-2 text-xs text-destructive">{error}</p>;
+  if (!info) return <LoadingState label={t("common.loading")} />;
 
-  const head = "border-b border-border px-2 py-1.5 text-left font-medium";
-  const cell = "px-2 py-1 font-mono";
+  const head =
+    "border-b border-border px-2 py-1.5 text-left font-medium first:pl-3 last:pr-3";
+  const cell = "px-2 py-1 font-mono first:pl-3 last:pr-3";
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-auto">
-      <div className="border border-border">
+    <div className="flex min-h-0 flex-1 flex-col overflow-auto">
+      <div className="border-b border-border">
         <table className="w-full border-collapse text-xs">
-          <thead className="bg-muted">
+          <thead className="bg-background">
             <tr>
               <th className={head}>{t("structure.name")}</th>
               <th className={head}>{t("structure.type")}</th>
@@ -59,7 +62,10 @@ export function StructureView({
           </thead>
           <tbody>
             {info.columns.map((column) => (
-              <tr key={column.name} className="border-b border-border/50">
+              <tr
+                key={column.name}
+                className="border-b border-border/50 last:border-b-0"
+              >
                 <td className={cell}>{column.name}</td>
                 <td className={cell}>{column.type}</td>
                 <td className={cell}>
@@ -73,18 +79,23 @@ export function StructureView({
           </tbody>
         </table>
       </div>
-      <div className="flex flex-col gap-1">
-        <p className="text-xs font-medium">{t("structure.indexes")}</p>
+      <div className="flex flex-col">
+        <p className="px-3 pb-1.5 pt-3 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground">
+          {t("structure.indexes")}
+        </p>
         {info.indexes.length === 0 ? (
-          <p className="text-xs text-muted-foreground">
+          <p className="px-3 pb-3 text-xs text-muted-foreground">
             {t("structure.noIndexes")}
           </p>
         ) : (
-          <div className="border border-border">
+          <div className="border-b border-border">
             <table className="w-full border-collapse text-xs">
               <tbody>
                 {info.indexes.map((index) => (
-                  <tr key={index.name} className="border-b border-border/50">
+                  <tr
+                    key={index.name}
+                    className="border-b border-border/50 last:border-b-0"
+                  >
                     <td className={`${cell} whitespace-nowrap`}>
                       {index.name}
                     </td>

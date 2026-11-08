@@ -8,7 +8,8 @@
     "cancel": "取消",
     "back": "返回",
     "delete": "删除",
-    "refresh": "刷新"
+    "refresh": "刷新",
+    "loading": "加载中..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,32 @@
   },
   "companion": {
     "toggle": "数据库面板"
+  },
+  "operations": {
+    "list": {
+      "title": "列出数据库登录凭据"
+    },
+    "check": {
+      "title": "检查数据库登录凭据"
+    },
+    "connections": {
+      "title": "数据库登录凭据",
+      "engine": "引擎",
+      "database": "数据库",
+      "access": "访问权限"
+    },
+    "status": {
+      "title": "数据库登录凭据"
+    }
+  },
+  "card": {
+    "title": "数据库",
+    "loading": "正在检查登录凭据...",
+    "refresh": "重新检查",
+    "empty": "在主机上保存数据库登录凭据即可在此处查看。",
+    "summary_other": "{{hosts}} 台主机上的 {{count}} 个登录凭据",
+    "logins_other": "{{count}} 个登录凭据",
+    "down": "{{count}} 个离线",
+    "allUp": "全部正常"
   }
 }

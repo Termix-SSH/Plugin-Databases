@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { Database, RefreshCw } from "lucide-react";
+import { Database } from "lucide-react";
 import { useTranslation, type TabProps } from "@termix-ssh/plugin-sdk/frontend";
 import {
   AddButton,
@@ -10,12 +10,15 @@ import {
   ListRow,
   PanelList,
   PanelShell,
+  EmptyState,
+  PanelFrame,
+  RefreshButton,
+  NoticePanel,
 } from "@termix-ssh/plugin-sdk/ui";
 import type { ConnectionView, ToolsView } from "../shared/types";
 import { errorCode, errorMessage, getTools, listConnections } from "./api";
 import { Browser } from "./Browser";
 import { ConnectionEditor } from "./ConnectionEditor";
-import { Frame } from "./Frame";
 
 const CLIENT: Record<ConnectionView["engine"], keyof ToolsView> = {
   mysql: "mysql",
@@ -60,16 +63,14 @@ export function DatabasesTab({ isVisible, host, label }: TabProps) {
   }, [isVisible, load]);
 
   if (!host) {
-    return (
-      <p className="p-4 text-sm text-muted-foreground">{t("tab.noHost")}</p>
-    );
+    return <EmptyState title={t("tab.noHost")} />;
   }
 
   const title = label || host.name || t("tab.title");
 
   if (editing) {
     return (
-      <Frame>
+      <PanelFrame>
         <ConnectionEditor
           // A fresh editor per login so old form state never carries over.
           key={editing === "new" ? "new" : editing.id}
@@ -82,70 +83,59 @@ export function DatabasesTab({ isVisible, host, label }: TabProps) {
             void load();
           }}
         />
-      </Frame>
+      </PanelFrame>
     );
   }
 
   if (active) {
     return (
-      <Frame>
+      <PanelFrame>
         <Browser
           hostId={hostId}
           connection={active}
           isVisible={isVisible}
           onBack={() => setActive(null)}
         />
-      </Frame>
+      </PanelFrame>
     );
   }
 
   return (
-    <Frame>
+    <PanelFrame>
       <PanelShell
         icon={<Database className="size-4" />}
         title={title}
         actions={
           <>
-            <Button
-              variant="ghost"
-              size="icon"
+            <RefreshButton
               onClick={() => void load()}
-              disabled={loading}
-              title={t("common.refresh")}
-              className="text-accent-brand"
-            >
-              <RefreshCw
-                className={`size-4 ${loading ? "animate-spin" : ""}`}
-              />
-            </Button>
+              loading={loading}
+              label={t("common.refresh")}
+            />
             <AddButton
               label={t("conn.add")}
               onClick={() => setEditing("new")}
             />
           </>
         }
-        className="gap-2 p-2.5"
       >
-        <div className="flex shrink-0 flex-col gap-2">
+        <div className="flex flex-1 shrink-0 flex-col">
           {error ? (
-            <Alert className="rounded-none text-xs">
+            <Alert className="border-x-0 border-t-0 text-xs">
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           ) : null}
           {tools && !tools.mysql && !tools.psql && !tools.sqlite3 && (
-            <Alert className="rounded-none text-xs">
+            <Alert className="border-x-0 border-t-0 text-xs">
               <AlertDescription>{t("tab.noTools")}</AlertDescription>
             </Alert>
           )}
           {connections && (
             <PanelList
               empty={
-                <div className="flex flex-col gap-1 border border-border p-4">
-                  <p className="text-sm font-medium">{t("tab.empty")}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {t("tab.emptyHint")}
-                  </p>
-                </div>
+                <NoticePanel title={t("tab.empty")}>
+                  {t("tab.emptyHint")}
+                </NoticePanel>
               }
             >
               {connections.map((c, index) => (
@@ -198,6 +188,6 @@ export function DatabasesTab({ isVisible, host, label }: TabProps) {
           )}
         </div>
       </PanelShell>
-    </Frame>
+    </PanelFrame>
   );
 }

@@ -8,7 +8,8 @@
     "cancel": "Hủy",
     "back": "Quay lại",
     "delete": "Xóa",
-    "refresh": "Làm mới"
+    "refresh": "Làm mới",
+    "loading": "Đang tải..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,32 @@
   },
   "companion": {
     "toggle": "Bảng Databases"
+  },
+  "operations": {
+    "list": {
+      "title": "Danh sách đăng nhập cơ sở dữ liệu"
+    },
+    "check": {
+      "title": "Kiểm tra đăng nhập cơ sở dữ liệu"
+    },
+    "connections": {
+      "title": "Đăng nhập cơ sở dữ liệu",
+      "engine": "Cơ chế",
+      "database": "Cơ sở dữ liệu",
+      "access": "Quyền truy cập"
+    },
+    "status": {
+      "title": "Đăng nhập cơ sở dữ liệu"
+    }
+  },
+  "card": {
+    "title": "Cơ sở dữ liệu",
+    "loading": "Đang kiểm tra đăng nhập...",
+    "refresh": "Kiểm tra lại",
+    "empty": "Lưu thông tin đăng nhập cơ sở dữ liệu trên một host để xem ở đây.",
+    "summary_other": "{{count}} đăng nhập trên {{hosts}} host",
+    "logins_other": "{{count}} đăng nhập",
+    "down": "{{count}} không hoạt động",
+    "allUp": "Tất cả đều phản hồi"
   }
 }

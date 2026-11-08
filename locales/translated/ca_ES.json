@@ -8,7 +8,8 @@
     "cancel": "Cancel·la",
     "back": "Enrere",
     "delete": "Suprimeix",
-    "refresh": "Actualitza"
+    "refresh": "Actualitza",
+    "loading": "Carregant..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "Panell de bases de dades"
+  },
+  "operations": {
+    "list": {
+      "title": "Llista d'inicis de sessió de bases de dades"
+    },
+    "check": {
+      "title": "Comprova l'inici de sessió de la base de dades"
+    },
+    "connections": {
+      "title": "Inicis de sessió de bases de dades",
+      "engine": "Motor",
+      "database": "Base de dades",
+      "access": "Accés"
+    },
+    "status": {
+      "title": "Inicis de sessió de bases de dades"
+    }
+  },
+  "card": {
+    "title": "Bases de dades",
+    "loading": "Comprovant inicis de sessió...",
+    "refresh": "Comprova de nou",
+    "empty": "Desa un inici de sessió de base de dades en un host per veure'l aquí.",
+    "summary_one": "{{count}} inici de sessió en {{hosts}} hosts",
+    "summary_many": "{{count}} inicis de sessió en {{hosts}} hosts",
+    "summary_other": "{{count}} inicis de sessió en {{hosts}} hosts",
+    "logins_one": "{{count}} inici de sessió",
+    "logins_many": "{{count}} inicis de sessió",
+    "logins_other": "{{count}} inicis de sessió",
+    "down": "{{count}} inactius",
+    "allUp": "Tots responen"
   }
 }

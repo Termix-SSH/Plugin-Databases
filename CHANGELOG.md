@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.2.0
+
+### Added
+
+- See saved database logins across hosts and check that one still works through Termix actions
+- Other plugins, like Backups, can use the saved logins of a host
+
+### Changed
+
+- Needs Termix 26.11.1 or newer
+- Pages use the Termix tile look, with lines between sections instead of separate boxes
+- Toolbars, loading screens, back buttons and Save bars match the rest of Termix
+
+### Fixed
+
+- The table structure view now shows a loading message instead of a blank space while it loads
+
 ## 1.1.1
 
 ### Added

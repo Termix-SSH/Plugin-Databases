@@ -8,7 +8,8 @@
     "cancel": "Zrušit",
     "back": "Zpět",
     "delete": "Smazat",
-    "refresh": "Obnovit"
+    "refresh": "Obnovit",
+    "loading": "Načítání..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,38 @@
   },
   "companion": {
     "toggle": "Panel databází"
+  },
+  "operations": {
+    "list": {
+      "title": "Seznam přihlášení k databázi"
+    },
+    "check": {
+      "title": "Ověřit přihlášení k databázi"
+    },
+    "connections": {
+      "title": "Přihlášení k databázi",
+      "engine": "Motor",
+      "database": "Databáze",
+      "access": "Přístup"
+    },
+    "status": {
+      "title": "Přihlášení k databázi"
+    }
+  },
+  "card": {
+    "title": "Databáze",
+    "loading": "Ověřování přihlášení...",
+    "refresh": "Znovu ověřit",
+    "empty": "Uložte přihlášení k databázi na hostiteli, aby se zobrazilo zde.",
+    "summary_one": "{{count}} přihlášení na {{hosts}} hostitelích",
+    "summary_few": "{{count}} přihlášení na {{hosts}} hostitelích",
+    "summary_many": "{{count}} přihlášení na {{hosts}} hostitelích",
+    "summary_other": "{{count}} přihlášení na {{hosts}} hostitelích",
+    "logins_one": "{{count}} přihlášení",
+    "logins_few": "{{count}} přihlášení",
+    "logins_many": "{{count}} přihlášení",
+    "logins_other": "{{count}} přihlášení",
+    "down": "{{count}} nedostupných",
+    "allUp": "Všechny reagují"
   }
 }

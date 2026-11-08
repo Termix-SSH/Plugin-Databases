@@ -8,7 +8,8 @@
     "cancel": "Batal",
     "back": "Kembali",
     "delete": "Hapus",
-    "refresh": "Muat Ulang"
+    "refresh": "Muat Ulang",
+    "loading": "Memuat..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,32 @@
   },
   "companion": {
     "toggle": "Panel Database"
+  },
+  "operations": {
+    "list": {
+      "title": "Daftar login database"
+    },
+    "check": {
+      "title": "Periksa login database"
+    },
+    "connections": {
+      "title": "Login database",
+      "engine": "Mesin",
+      "database": "Basis data",
+      "access": "Akses"
+    },
+    "status": {
+      "title": "Login database"
+    }
+  },
+  "card": {
+    "title": "Basis data",
+    "loading": "Memeriksa login...",
+    "refresh": "Periksa lagi",
+    "empty": "Simpan login database pada host untuk melihatnya di sini.",
+    "summary_other": "{{count}} login pada {{hosts}} host",
+    "logins_other": "{{count}} login",
+    "down": "{{count}} tidak tersedia",
+    "allUp": "Semua merespons"
   }
 }

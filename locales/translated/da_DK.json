@@ -8,7 +8,8 @@
     "cancel": "Annuller",
     "back": "Tilbage",
     "delete": "Slet",
-    "refresh": "Opdater"
+    "refresh": "Opdater",
+    "loading": "Indlæser..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "Databasepanel"
+  },
+  "operations": {
+    "list": {
+      "title": "Vis database-login"
+    },
+    "check": {
+      "title": "Tjek database-login"
+    },
+    "connections": {
+      "title": "Database-login",
+      "engine": "Motor",
+      "database": "Database",
+      "access": "Adgang"
+    },
+    "status": {
+      "title": "Database-login"
+    }
+  },
+  "card": {
+    "title": "Databaser",
+    "loading": "Tjekker login...",
+    "refresh": "Tjek igen",
+    "empty": "Gem et database-login på en vært for at se det her.",
+    "summary_one": "{{count}} login på {{hosts}} værter",
+    "summary_other": "{{count}} logins på {{hosts}} værter",
+    "logins_one": "{{count}} login",
+    "logins_other": "{{count}} logins",
+    "down": "{{count}} nede",
+    "allUp": "Alle svarer"
   }
 }

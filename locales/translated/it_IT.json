@@ -8,7 +8,8 @@
     "cancel": "Annulla",
     "back": "Indietro",
     "delete": "Elimina",
-    "refresh": "Aggiorna"
+    "refresh": "Aggiorna",
+    "loading": "Caricamento..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "Pannello Database"
+  },
+  "operations": {
+    "list": {
+      "title": "Elenco accessi al database"
+    },
+    "check": {
+      "title": "Verifica accesso al database"
+    },
+    "connections": {
+      "title": "Accessi al database",
+      "engine": "Motore",
+      "database": "Database",
+      "access": "Accesso"
+    },
+    "status": {
+      "title": "Accessi al database"
+    }
+  },
+  "card": {
+    "title": "Database",
+    "loading": "Verifica accessi in corso...",
+    "refresh": "Verifica di nuovo",
+    "empty": "Salva un accesso al database su un host per visualizzarlo qui.",
+    "summary_one": "{{count}} accesso su {{hosts}} host",
+    "summary_many": "{{count}} accessi su {{hosts}} host",
+    "summary_other": "{{count}} accessi su {{hosts}} host",
+    "logins_one": "{{count}} accesso",
+    "logins_many": "{{count}} accessi",
+    "logins_other": "{{count}} accessi",
+    "down": "{{count}} non disponibili",
+    "allUp": "Tutti rispondono"
   }
 }

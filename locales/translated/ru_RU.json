@@ -8,7 +8,8 @@
     "cancel": "Отмена",
     "back": "Назад",
     "delete": "Удалить",
-    "refresh": "Обновить"
+    "refresh": "Обновить",
+    "loading": "Загрузка..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,38 @@
   },
   "companion": {
     "toggle": "Панель баз данных"
+  },
+  "operations": {
+    "list": {
+      "title": "Список учётных записей БД"
+    },
+    "check": {
+      "title": "Проверка учётной записи БД"
+    },
+    "connections": {
+      "title": "Учётные записи БД",
+      "engine": "Движок",
+      "database": "База данных",
+      "access": "Доступ"
+    },
+    "status": {
+      "title": "Учётные записи БД"
+    }
+  },
+  "card": {
+    "title": "Базы данных",
+    "loading": "Проверка учётных записей...",
+    "refresh": "Проверить снова",
+    "empty": "Сохраните учётную запись БД на хосте, чтобы увидеть её здесь.",
+    "summary_one": "{{count}} учётная запись на {{hosts}} хосте",
+    "summary_few": "{{count}} учётные записи на {{hosts}} хостах",
+    "summary_many": "{{count}} учётных записей на {{hosts}} хостах",
+    "summary_other": "{{count}} учётных записей на {{hosts}} хостах",
+    "logins_one": "{{count}} учётная запись",
+    "logins_few": "{{count}} учётные записи",
+    "logins_many": "{{count}} учётных записей",
+    "logins_other": "{{count}} учётных записей",
+    "down": "{{count}} недоступно",
+    "allUp": "Все отвечают"
   }
 }

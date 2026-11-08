@@ -8,7 +8,8 @@
     "cancel": "বাতিল করুন",
     "back": "পিছনে",
     "delete": "মুছে ফেলুন",
-    "refresh": "রিফ্রেশ করুন"
+    "refresh": "রিফ্রেশ করুন",
+    "loading": "লোড হচ্ছে..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "ডাটাবেস প্যানেল"
+  },
+  "operations": {
+    "list": {
+      "title": "ডেটাবেস লগইন তালিকা"
+    },
+    "check": {
+      "title": "ডেটাবেস লগইন যাচাই করুন"
+    },
+    "connections": {
+      "title": "ডেটাবেস লগইন",
+      "engine": "ইঞ্জিন",
+      "database": "ডেটাবেস",
+      "access": "অ্যাক্সেস"
+    },
+    "status": {
+      "title": "ডেটাবেস লগইন"
+    }
+  },
+  "card": {
+    "title": "ডেটাবেস",
+    "loading": "লগইন যাচাই করা হচ্ছে...",
+    "refresh": "আবার যাচাই করুন",
+    "empty": "এখানে দেখতে হোস্টে একটি ডেটাবেস লগইন সংরক্ষণ করুন।",
+    "summary_one": "{{hosts}} হোস্টে {{count}} লগইন",
+    "summary_other": "{{hosts}} হোস্টে {{count}} লগইন",
+    "logins_one": "{{count}} লগইন",
+    "logins_other": "{{count}} লগইন",
+    "down": "{{count}} ডাউন",
+    "allUp": "সবগুলো উত্তর দিচ্ছে"
   }
 }

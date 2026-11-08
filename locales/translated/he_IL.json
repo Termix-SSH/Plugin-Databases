@@ -8,7 +8,8 @@
     "cancel": "ביטול",
     "back": "חזרה",
     "delete": "מחיקה",
-    "refresh": "רענון"
+    "refresh": "רענון",
+    "loading": "טוען..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,36 @@
   },
   "companion": {
     "toggle": "לוח בסיסי נתונים"
+  },
+  "operations": {
+    "list": {
+      "title": "רשימת התחברויות למסדי נתונים"
+    },
+    "check": {
+      "title": "בדיקת התחברות למסד נתונים"
+    },
+    "connections": {
+      "title": "התחברויות למסדי נתונים",
+      "engine": "מנוע",
+      "database": "מסד נתונים",
+      "access": "גישה"
+    },
+    "status": {
+      "title": "התחברויות למסדי נתונים"
+    }
+  },
+  "card": {
+    "title": "מסדי נתונים",
+    "loading": "בודק התחברויות...",
+    "refresh": "בדוק שוב",
+    "empty": "שמור התחברות למסד נתונים על מארח כדי לראות אותה כאן.",
+    "summary_one": "{{count}} התחברות על {{hosts}} מארחים",
+    "summary_two": "{{count}} התחברויות על {{hosts}} מארחים",
+    "summary_other": "{{count}} התחברויות על {{hosts}} מארחים",
+    "logins_one": "{{count}} התחברות",
+    "logins_two": "{{count}} התחברויות",
+    "logins_other": "{{count}} התחברויות",
+    "down": "{{count}} לא זמינים",
+    "allUp": "הכל זמין"
   }
 }

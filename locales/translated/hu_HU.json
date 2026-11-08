@@ -8,7 +8,8 @@
     "cancel": "Mégse",
     "back": "Vissza",
     "delete": "Törlés",
-    "refresh": "Frissítés"
+    "refresh": "Frissítés",
+    "loading": "Betöltés..."
   },
   "permissions": {
     "use": {
@@ -128,6 +129,7 @@
     "clear": "Törlés",
     "filterPlaceholder": "Feltétel, például status = 'active'",
     "range": "{{from}}–{{to}} / összesen {{total}}",
+    "rowCount": "{{count}} sor",
     "prev": "Előző oldal",
     "next": "Következő oldal",
     "loadFailed": "A sorok nem olvashatók."
@@ -176,5 +178,34 @@
   },
   "companion": {
     "toggle": "Adatbázisok panel"
+  },
+  "operations": {
+    "list": {
+      "title": "Adatbázis-bejelentkezések listázása"
+    },
+    "check": {
+      "title": "Adatbázis-bejelentkezés ellenőrzése"
+    },
+    "connections": {
+      "title": "Adatbázis-bejelentkezések",
+      "engine": "Motor",
+      "database": "Adatbázis",
+      "access": "Hozzáférés"
+    },
+    "status": {
+      "title": "Adatbázis-bejelentkezések"
+    }
+  },
+  "card": {
+    "title": "Adatbázisok",
+    "loading": "Bejelentkezések ellenőrzése...",
+    "refresh": "Újraellenőrzés",
+    "empty": "Ments el egy adatbázis-bejelentkezést egy gazdagépen, hogy itt láthasd.",
+    "summary_one": "{{count}} bejelentkezés {{hosts}} gazdagépen",
+    "summary_other": "{{count}} bejelentkezés {{hosts}} gazdagépen",
+    "logins_one": "{{count}} bejelentkezés",
+    "logins_other": "{{count}} bejelentkezés",
+    "down": "{{count}} elérhetetlen",
+    "allUp": "Minden válaszol"
   }
 }

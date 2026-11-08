@@ -10,6 +10,7 @@ import {
   PanelShell,
   Segmented,
   SelectField,
+  TOOLBAR_FIT,
 } from "@termix-ssh/plugin-sdk/ui";
 import type { ConnectionView, RoutineEntry, TableEntry } from "../shared/types";
 import { errorMessage, listDatabases, listRoutines, listTables } from "./api";
@@ -138,34 +139,48 @@ export function Browser({
           ]}
         />
       }
-      className="gap-2 p-2.5"
     >
-      {error && <p className="shrink-0 text-sm text-destructive">{error}</p>}
+      {error && (
+        <p className="shrink-0 border-b border-border px-3 py-2 text-xs text-destructive">
+          {error}
+        </p>
+      )}
       {/* No flex-wrap: wrapped lines grow with their content, so the lists
           below never got a height to scroll in. */}
-      <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-hidden md:flex-row">
-        <div className="flex max-h-[40%] min-h-0 shrink-0 flex-col gap-2 md:max-h-none md:w-60">
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden md:flex-row">
+        <div className="flex max-h-[40%] min-h-0 shrink-0 flex-col border-b border-border md:max-h-none md:w-60 md:border-b-0 md:border-r">
           {databases && databases.length > 1 && (
-            <SelectField
-              label={t("browse.database")}
-              value={db}
-              onChange={setDb}
-              options={databases.map((name) => ({ value: name, label: name }))}
-            />
+            <div
+              className={`shrink-0 border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}
+            >
+              <SelectField
+                label={t("browse.database")}
+                value={db}
+                onChange={setDb}
+                options={databases.map((name) => ({
+                  value: name,
+                  label: name,
+                }))}
+              />
+            </div>
           )}
           {mode === "routines" && (
             <>
-              <PanelSearch
-                className="w-full md:w-full"
-                value={search}
-                onChange={setSearch}
-                placeholder={t("browse.searchRoutines")}
-              />
+              <div
+                className={`shrink-0 border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}
+              >
+                <PanelSearch
+                  className="w-full md:w-full"
+                  value={search}
+                  onChange={setSearch}
+                  placeholder={t("browse.searchRoutines")}
+                />
+              </div>
               <div className="min-h-0 flex-1 overflow-auto">
                 <PanelList
                   empty={
                     routines ? (
-                      <p className="p-2 text-xs text-muted-foreground">
+                      <p className="p-3 text-xs text-muted-foreground">
                         {t("browse.noRoutines")}
                       </p>
                     ) : undefined
@@ -194,17 +209,21 @@ export function Browser({
           )}
           {mode === "tables" && (
             <>
-              <PanelSearch
-                className="w-full md:w-full"
-                value={search}
-                onChange={setSearch}
-                placeholder={t("browse.search")}
-              />
+              <div
+                className={`shrink-0 border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}
+              >
+                <PanelSearch
+                  className="w-full md:w-full"
+                  value={search}
+                  onChange={setSearch}
+                  placeholder={t("browse.search")}
+                />
+              </div>
               <div className="min-h-0 flex-1 overflow-auto">
                 <PanelList
                   empty={
                     tables ? (
-                      <p className="p-2 text-xs text-muted-foreground">
+                      <p className="p-3 text-xs text-muted-foreground">
                         {t("browse.noTables")}
                       </p>
                     ) : undefined
@@ -248,30 +267,34 @@ export function Browser({
             </>
           )}
         </div>
-        <div className="flex min-h-0 min-w-0 flex-1 flex-col gap-2">
+        <div className="flex min-h-0 min-w-0 flex-1 flex-col">
           {mode === "sql" ? (
             <SqlConsole hostId={hostId} connection={connection} db={db} />
           ) : mode === "routines" ? (
             routine ? (
-              <pre className="min-h-0 flex-1 overflow-auto whitespace-pre border border-border p-2 font-mono text-xs">
+              <pre className="min-h-0 flex-1 overflow-auto whitespace-pre p-3 font-mono text-xs">
                 {routine.definition ?? t("browse.noDefinition")}
               </pre>
             ) : (
-              <p className="p-2 text-sm text-muted-foreground">
+              <p className="p-3 text-xs text-muted-foreground">
                 {t("browse.pickRoutine")}
               </p>
             )
           ) : selected ? (
             <>
-              <Segmented<Pane>
-                className="self-start"
-                value={pane}
-                onChange={setPane}
-                options={[
-                  { value: "data", label: t("data.title") },
-                  { value: "structure", label: t("structure.title") },
-                ]}
-              />
+              <div
+                className={`shrink-0 border-b border-border px-3 py-2 ${TOOLBAR_FIT}`}
+              >
+                <Segmented<Pane>
+                  className="w-fit"
+                  value={pane}
+                  onChange={setPane}
+                  options={[
+                    { value: "data", label: t("data.title") },
+                    { value: "structure", label: t("structure.title") },
+                  ]}
+                />
+              </div>
               {pane === "data" ? (
                 <DataGrid
                   key={`${db}.${selected.schema}.${selected.name}`}
@@ -291,7 +314,7 @@ export function Browser({
               )}
             </>
           ) : (
-            <p className="p-2 text-sm text-muted-foreground">
+            <p className="p-3 text-xs text-muted-foreground">
               {t("browse.pick")}
             </p>
           )}

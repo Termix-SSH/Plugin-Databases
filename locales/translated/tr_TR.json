@@ -8,7 +8,8 @@
     "cancel": "İptal",
     "back": "Geri",
     "delete": "Sil",
-    "refresh": "Yenile"
+    "refresh": "Yenile",
+    "loading": "Yükleniyor..."
   },
   "permissions": {
     "use": {
@@ -177,5 +178,34 @@
   },
   "companion": {
     "toggle": "Veritabanları paneli"
+  },
+  "operations": {
+    "list": {
+      "title": "Veritabanı girişlerini listele"
+    },
+    "check": {
+      "title": "Veritabanı girişini kontrol et"
+    },
+    "connections": {
+      "title": "Veritabanı girişleri",
+      "engine": "Motor",
+      "database": "Veritabanı",
+      "access": "Erişim"
+    },
+    "status": {
+      "title": "Veritabanı girişleri"
+    }
+  },
+  "card": {
+    "title": "Veritabanları",
+    "loading": "Girişler kontrol ediliyor...",
+    "refresh": "Tekrar kontrol et",
+    "empty": "Burada görmek için bir ana bilgisayarda veritabanı girişi kaydedin.",
+    "summary_one": "{{hosts}} ana bilgisayarda {{count}} giriş",
+    "summary_other": "{{hosts}} ana bilgisayarda {{count}} giriş",
+    "logins_one": "{{count}} giriş",
+    "logins_other": "{{count}} giriş",
+    "down": "{{count}} çalışmıyor",
+    "allUp": "Tümü yanıt veriyor"
   }
 }
