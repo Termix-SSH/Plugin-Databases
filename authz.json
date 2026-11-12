@@ -1,0 +1,194 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Termix-SSH/Termix/main/scripts/authz/authz.schema.json",
+  "seed": [],
+  "routes": {
+    "GET /plugin-api/databases/:hostId/connections": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "POST /plugin-api/databases/:hostId/connections": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "DELETE /plugin-api/databases/:hostId/connections/:connId": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "PUT /plugin-api/databases/:hostId/connections/:connId": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "GET /plugin-api/databases/:hostId/connections/:connId/databases": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "GET /plugin-api/databases/:hostId/connections/:connId/describe": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/query": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "GET /plugin-api/databases/:hostId/connections/:connId/routines": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/row": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "PUT /plugin-api/databases/:hostId/connections/:connId/row": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/row/delete": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/rows": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "GET /plugin-api/databases/:hostId/connections/:connId/tables": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/test": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "GET /plugin-api/databases/:hostId/tools": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      }
+    },
+    "GET /plugin-api/databases/summary": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect",
+        "key": "hostId"
+      },
+      "filtered": true,
+      "note": "Lists only what the caller may see"
+    }
+  }
+}
