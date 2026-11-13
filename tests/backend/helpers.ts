@@ -68,6 +68,7 @@ export async function startServer(
   db.sqlite.exec("INSERT INTO ssh_data DEFAULT VALUES");
   db.sqlite.exec("INSERT INTO ssh_data DEFAULT VALUES");
   const mock = createMockCtx({
+    sandbox: true,
     pluginId: manifest.id,
     manifest,
     capabilities: manifest.capabilities,
