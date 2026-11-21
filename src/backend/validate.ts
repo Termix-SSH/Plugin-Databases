@@ -84,6 +84,9 @@ export function connectionInput(body: unknown): ConnectionInput {
   if (CONTROL.test(database)) {
     throw new DatabasesError("The database is not valid");
   }
+  if (engine === "redis" && database && !/^\d{1,4}$/.test(database)) {
+    throw new DatabasesError("The Redis database must be a number like 0");
+  }
   if (engine === "sqlite" && !database.startsWith("/")) {
     throw new DatabasesError("Enter the full path of the SQLite file");
   }
@@ -157,12 +160,19 @@ export function plainSql(engine: EngineId, value: unknown): string {
       ? lines.some((line) => line.startsWith("\\"))
       : engine === "sqlite"
         ? lines.some((line) => line.startsWith("."))
-        : lines.some(
-            (line) =>
-              line.startsWith("\\") ||
-              line.startsWith("!") ||
-              /^(system|source)\s/i.test(line),
-          ) || /\\[!.]/.test(sql);
+        : engine === "mssql"
+          ? lines.some(
+              (line) =>
+                line.startsWith(":") ||
+                line.startsWith("!!") ||
+                /^go\b/i.test(line),
+            )
+          : lines.some(
+              (line) =>
+                line.startsWith("\\") ||
+                line.startsWith("!") ||
+                /^(system|source)\s/i.test(line),
+            ) || /\\[!.]/.test(sql);
   if (bad) {
     throw new DatabasesError("Client commands are not allowed in SQL");
   }

@@ -31,7 +31,7 @@ describe("connectionInput", () => {
 
   it("needs a name and a known type", () => {
     expect(() => connectionInput({ ...base, name: " " })).toThrow();
-    expect(() => connectionInput({ ...base, engine: "mongo" })).toThrow();
+    expect(() => connectionInput({ ...base, engine: "oracle" })).toThrow();
   });
 
   it("checks the address, port and run as user", () => {

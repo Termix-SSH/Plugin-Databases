@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { Play, Save, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { CopyPlus, Play, Save, X } from "lucide-react";
 import { useTranslation } from "@termix-ssh/plugin-sdk/frontend";
 import { Button, ListBadge, TextAreaField } from "@termix-ssh/plugin-sdk/ui";
-import type { ConnectionView, QueryResult } from "../shared/types";
+import type { ConnectionView, QueryResult, ResultSet } from "../shared/types";
 import { errorMessage, runQuery } from "./api";
 import { download, toCsv, toJson } from "./exportGrid";
 import { GridTable } from "./GridTable";
@@ -72,15 +72,106 @@ export function scriptName(sql: string): string {
   );
 }
 
+/** A unique name, adding a number when it is taken. */
+export function uniqueName(name: string, taken: string[]): string {
+  if (!taken.includes(name)) return name;
+  for (let n = 2; ; n++) {
+    const next = `${name} (${n})`;
+    if (!taken.includes(next)) return next;
+  }
+}
+
+/** Puts text into the editor, after what is there with a space. */
+export function appendSql(current: string, text: string): string {
+  if (!current) return text;
+  return /\s$/.test(current) ? current + text : `${current} ${text}`;
+}
+
+/** Text the browser asks the console to add or load. */
+export interface SqlInsert {
+  text: string;
+  replace: boolean;
+  /** Changes on every request, so the same text can be added twice. */
+  n: number;
+}
+
+function ResultBlock({
+  set,
+  title,
+}: {
+  set: Pick<ResultSet, "columns" | "rows"> & { truncated?: boolean };
+  /** Shown above each of several results, which then get a set height. */
+  title?: string;
+}) {
+  const { t } = useTranslation();
+  return (
+    <div
+      className={
+        title
+          ? "flex max-h-[28rem] shrink-0 flex-col gap-1"
+          : "flex min-h-0 flex-1 flex-col gap-1"
+      }
+    >
+      <div className="flex shrink-0 flex-wrap items-center gap-2 text-xs text-muted-foreground">
+        {title && (
+          <span
+            className="max-w-96 truncate font-mono text-foreground"
+            title={title}
+          >
+            {title.replace(/\s+/g, " ")}
+          </span>
+        )}
+        <span>{t("data.rowCount", { count: set.rows.length })}</span>
+        {set.truncated && (
+          <span>{t("sql.truncated", { count: set.rows.length })}</span>
+        )}
+        {set.columns.length > 0 && (
+          <>
+            <Button
+              variant="ghost"
+              size="xs"
+              onClick={() =>
+                download("result.csv", toCsv(set.columns, set.rows), "text/csv")
+              }
+            >
+              CSV
+            </Button>
+            <Button
+              variant="ghost"
+              size="xs"
+              onClick={() =>
+                download(
+                  "result.json",
+                  toJson(set.columns, set.rows),
+                  "application/json",
+                )
+              }
+            >
+              JSON
+            </Button>
+          </>
+        )}
+      </div>
+      {set.columns.length === 0 ? (
+        <p className="text-sm text-muted-foreground">{t("sql.noResult")}</p>
+      ) : (
+        <GridTable columns={set.columns} rows={set.rows} />
+      )}
+    </div>
+  );
+}
+
 /** Free SQL. Runs read only unless the host and the login allow changes. */
 export function SqlConsole({
   hostId,
   connection,
   db,
+  insert,
 }: {
   hostId: number;
   connection: ConnectionView;
   db: string;
+  insert?: SqlInsert | null;
 }) {
   const { t } = useTranslation();
   const historyKey = `databases.history.${hostId}.${connection.id}`;
@@ -95,20 +186,47 @@ export function SqlConsole({
   const [scripts, setScripts] = useState<SavedScript[]>(() =>
     loadScripts(scriptsKey),
   );
+  // The saved script in the editor, so Save changes it in place.
+  const [current, setCurrent] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!insert) return;
+    if (insert.replace) {
+      setSql(insert.text);
+      setCurrent(null);
+    } else {
+      setSql((text) => appendSql(text, insert.text));
+    }
+  }, [insert]);
+
   const updateScripts = (next: SavedScript[]) => {
     setScripts(next);
     saveScripts(scriptsKey, next);
   };
-  const saveScript = () => {
+
+  const saveScript = (asNew: boolean) => {
     const text = sql.trim();
     if (!text) return;
-    const name = scriptName(text);
+    const existing = !asNew && current !== null;
+    const others = scripts.filter((item) => item.name !== current);
+    const name = existing
+      ? current!
+      : uniqueName(
+          scriptName(text),
+          scripts.map((item) => item.name),
+        );
     updateScripts(
-      [
-        { name, sql: text },
-        ...scripts.filter((item) => item.name !== name),
-      ].slice(0, SCRIPTS_MAX),
+      [{ name, sql: text }, ...(existing ? others : scripts)].slice(
+        0,
+        SCRIPTS_MAX,
+      ),
     );
+    setCurrent(name);
+  };
+
+  const clearHistory = () => {
+    setHistory([]);
+    saveHistory(historyKey, []);
   };
 
   const run = async () => {
@@ -134,7 +252,7 @@ export function SqlConsole({
 
   return (
     <div
-      className="flex min-h-0 flex-1 flex-col gap-2 p-3"
+      className="flex min-h-0 flex-1 flex-col gap-2 overflow-auto p-3"
       onKeyDown={(e) => {
         if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
           e.preventDefault();
@@ -143,7 +261,7 @@ export function SqlConsole({
       }}
     >
       <TextAreaField
-        label={t("sql.label")}
+        label={current ? t("sql.editing", { name: current }) : t("sql.label")}
         value={sql}
         onChange={setSql}
         placeholder={t("sql.placeholder")}
@@ -157,13 +275,23 @@ export function SqlConsole({
         </Button>
         <Button
           variant="outline"
-          onClick={saveScript}
+          onClick={() => saveScript(false)}
           disabled={!sql.trim()}
           title={t("sql.saveHint")}
         >
           <Save className="size-3.5" />
           {t("sql.save")}
         </Button>
+        {current && (
+          <Button
+            variant="outline"
+            onClick={() => saveScript(true)}
+            disabled={!sql.trim()}
+          >
+            <CopyPlus className="size-3.5" />
+            {t("sql.saveAsNew")}
+          </Button>
+        )}
         <span className="text-xs text-muted-foreground">{t("sql.hint")}</span>
       </div>
       {scripts.length > 0 && (
@@ -174,11 +302,14 @@ export function SqlConsole({
           {scripts.map((item) => (
             <span key={item.name} className="inline-flex items-center">
               <Button
-                variant="outline"
+                variant={item.name === current ? "default" : "outline"}
                 size="xs"
                 className="max-w-48 truncate"
                 title={item.sql}
-                onClick={() => setSql(item.sql)}
+                onClick={() => {
+                  setSql(item.sql);
+                  setCurrent(item.name);
+                }}
               >
                 {item.name}
               </Button>
@@ -186,9 +317,10 @@ export function SqlConsole({
                 variant="ghost"
                 size="xs"
                 aria-label={t("sql.removeScript", { name: item.name })}
-                onClick={() =>
-                  updateScripts(scripts.filter((other) => other !== item))
-                }
+                onClick={() => {
+                  updateScripts(scripts.filter((other) => other !== item));
+                  if (current === item.name) setCurrent(null);
+                }}
               >
                 <X className="size-3" />
               </Button>
@@ -208,11 +340,17 @@ export function SqlConsole({
               size="xs"
               className="max-w-48 truncate font-mono"
               title={item}
-              onClick={() => setSql(item)}
+              onClick={() => {
+                setSql(item);
+                setCurrent(null);
+              }}
             >
               {item.replace(/\s+/g, " ").slice(0, 40)}
             </Button>
           ))}
+          <Button variant="ghost" size="xs" onClick={clearHistory}>
+            {t("sql.clearHistory")}
+          </Button>
         </div>
       )}
       {error && (
@@ -224,48 +362,19 @@ export function SqlConsole({
         <>
           <div className="flex shrink-0 flex-wrap items-center gap-2 text-xs text-muted-foreground">
             <span>{t("sql.elapsed", { ms: result.elapsedMs })}</span>
-            <span>{t("data.rowCount", { count: result.rows.length })}</span>
+            {result.sets && (
+              <span>{t("sql.results", { count: result.sets.length })}</span>
+            )}
             {result.readOnly && (
               <ListBadge tone="warning">{t("sql.readOnlySession")}</ListBadge>
             )}
-            {result.truncated && (
-              <span>{t("sql.truncated", { count: result.rows.length })}</span>
-            )}
-            {result.columns.length > 0 && (
-              <>
-                <Button
-                  variant="ghost"
-                  size="xs"
-                  onClick={() =>
-                    download(
-                      "result.csv",
-                      toCsv(result.columns, result.rows),
-                      "text/csv",
-                    )
-                  }
-                >
-                  CSV
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="xs"
-                  onClick={() =>
-                    download(
-                      "result.json",
-                      toJson(result.columns, result.rows),
-                      "application/json",
-                    )
-                  }
-                >
-                  JSON
-                </Button>
-              </>
-            )}
           </div>
-          {result.columns.length === 0 ? (
-            <p className="text-sm text-muted-foreground">{t("sql.noResult")}</p>
+          {result.sets ? (
+            result.sets.map((set, index) => (
+              <ResultBlock key={index} set={set} title={set.statement} />
+            ))
           ) : (
-            <GridTable columns={result.columns} rows={result.rows} />
+            <ResultBlock set={result} />
           )}
         </>
       )}

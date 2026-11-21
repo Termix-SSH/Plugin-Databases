@@ -15,16 +15,14 @@ import {
   RefreshButton,
   NoticePanel,
 } from "@termix-ssh/plugin-sdk/ui";
-import type { ConnectionView, ToolsView } from "../shared/types";
+import {
+  ENGINE_CLIENT,
+  type ConnectionView,
+  type ToolsView,
+} from "../shared/types";
 import { errorCode, errorMessage, getTools, listConnections } from "./api";
 import { Browser } from "./Browser";
 import { ConnectionEditor } from "./ConnectionEditor";
-
-const CLIENT: Record<ConnectionView["engine"], keyof ToolsView> = {
-  mysql: "mysql",
-  postgres: "psql",
-  sqlite: "sqlite3",
-};
 
 /** Databases for one host: saved logins, then a browser for the chosen one. */
 export function DatabasesTab({ isVisible, host, label }: TabProps) {
@@ -125,7 +123,7 @@ export function DatabasesTab({ isVisible, host, label }: TabProps) {
               <AlertDescription>{error}</AlertDescription>
             </Alert>
           ) : null}
-          {tools && !tools.mysql && !tools.psql && !tools.sqlite3 && (
+          {tools && Object.values(tools).every((version) => !version) && (
             <Alert className="border-x-0 border-t-0 text-xs">
               <AlertDescription>{t("tab.noTools")}</AlertDescription>
             </Alert>
@@ -154,7 +152,7 @@ export function DatabasesTab({ isVisible, host, label }: TabProps) {
                           {t("conn.readOnlyBadge")}
                         </ListBadge>
                       )}
-                      {tools && !tools[CLIENT[c.engine]] && (
+                      {tools && !tools[ENGINE_CLIENT[c.engine]] && (
                         <ListBadge tone="destructive">
                           {t("tab.clientMissing")}
                         </ListBadge>

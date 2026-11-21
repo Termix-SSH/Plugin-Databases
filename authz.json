@@ -189,6 +189,151 @@
       },
       "filtered": true,
       "note": "Lists only what the caller may see"
+    },
+    "GET /plugin-api/databases/:hostId/connections/:connId/redis/keys": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "GET /plugin-api/databases/:hostId/connections/:connId/redis/key": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/redis/write": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/redis/console": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "GET /plugin-api/databases/:hostId/connections/:connId/mongo/collections": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/mongo/find": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "GET /plugin-api/databases/:hostId/connections/:connId/mongo/indexes": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/mongo/insert": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/mongo/replace": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/mongo/delete": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "destructive": true,
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
+    },
+    "POST /plugin-api/databases/:hostId/connections/:connId/mongo/console": {
+      "access": "user",
+      "permission": "databases.use",
+      "resource": {
+        "kind": "host",
+        "min": "connect"
+      },
+      "params": {
+        "connId": "=999999"
+      },
+      "allowed": "any",
+      "note": "No saved database login in the test data; host access is still checked"
     }
   }
 }

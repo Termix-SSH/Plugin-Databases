@@ -1,8 +1,8 @@
 {
   "id": "databases",
   "name": "Databases",
-  "version": "1.3.0",
-  "description": "Browse and edit MySQL, MariaDB, PostgreSQL and SQLite databases on your hosts from one tab.",
+  "version": "1.4.0",
+  "description": "Browse and edit MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Redis and MongoDB databases on your hosts from one tab.",
   "author": {
     "name": "Termix"
   },
@@ -19,6 +19,7 @@
     "Add, edit and delete rows by primary key",
     "See columns, types and indexes",
     "Run SQL in a console and export results as CSV or JSON",
+    "Browse Redis keys and MongoDB documents, with a console for each",
     "A databases panel beside any SSH terminal"
   ],
   "env": [],

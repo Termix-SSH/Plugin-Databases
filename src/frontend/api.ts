@@ -4,7 +4,13 @@ import type {
   ConnectionInput,
   ConnectionView,
   Description,
+  MongoCollection,
+  MongoFind,
+  MongoPage,
   QueryResult,
+  RedisKeyPage,
+  RedisValue,
+  RedisWrite,
   RowDelete,
   RowUpdate,
   RowWrite,
@@ -164,5 +170,120 @@ export async function runQuery(
 ): Promise<QueryResult> {
   return (
     await api().post<QueryResult>(`${base(host, conn)}/query`, { db, sql })
+  ).data;
+}
+
+export async function redisKeys(
+  host: number,
+  conn: number,
+  db: string,
+  pattern: string,
+  cursor: string,
+): Promise<RedisKeyPage> {
+  return (
+    await api().get<RedisKeyPage>(`${base(host, conn)}/redis/keys`, {
+      params: { db, pattern, cursor },
+    })
+  ).data;
+}
+
+export async function redisValue(
+  host: number,
+  conn: number,
+  db: string,
+  key: string,
+): Promise<RedisValue> {
+  return (
+    await api().get<RedisValue>(`${base(host, conn)}/redis/key`, {
+      params: { db, key },
+    })
+  ).data;
+}
+
+export async function redisWrite(
+  host: number,
+  conn: number,
+  db: string,
+  write: RedisWrite,
+): Promise<{ output: string }> {
+  return (
+    await api().post<{ output: string }>(`${base(host, conn)}/redis/write`, {
+      db,
+      ...write,
+    })
+  ).data;
+}
+
+export async function redisConsole(
+  host: number,
+  conn: number,
+  db: string,
+  line: string,
+): Promise<{ output: string; readOnly: boolean }> {
+  return (
+    await api().post<{ output: string; readOnly: boolean }>(
+      `${base(host, conn)}/redis/console`,
+      { db, line },
+    )
+  ).data;
+}
+
+export async function mongoCollections(
+  host: number,
+  conn: number,
+  db: string,
+): Promise<MongoCollection[]> {
+  return (
+    await api().get<MongoCollection[]>(
+      `${base(host, conn)}/mongo/collections`,
+      {
+        params: { db },
+      },
+    )
+  ).data;
+}
+
+export async function mongoFind(
+  host: number,
+  conn: number,
+  body: MongoFind,
+): Promise<MongoPage> {
+  return (await api().post<MongoPage>(`${base(host, conn)}/mongo/find`, body))
+    .data;
+}
+
+export async function mongoIndexes(
+  host: number,
+  conn: number,
+  db: string,
+  collection: string,
+): Promise<unknown[]> {
+  return (
+    await api().get<unknown[]>(`${base(host, conn)}/mongo/indexes`, {
+      params: { db, collection },
+    })
+  ).data;
+}
+
+export async function mongoWrite(
+  host: number,
+  conn: number,
+  action: "insert" | "replace" | "delete",
+  body: { db: string; collection: string; id?: string; doc?: string },
+): Promise<unknown> {
+  return (await api().post(`${base(host, conn)}/mongo/${action}`, body)).data;
+}
+
+export async function mongoConsole(
+  host: number,
+  conn: number,
+  db: string,
+  code: string,
+): Promise<{ output: string }> {
+  return (
+    await api().post<{ output: string }>(`${base(host, conn)}/mongo/console`, {
+      db,
+      code,
+    })
   ).data;
 }

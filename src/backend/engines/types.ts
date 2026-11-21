@@ -1,4 +1,4 @@
-import type { EngineId, Grid } from "../../shared/types.js";
+import type { EngineId, Grid, SqlEngineId } from "../../shared/types.js";
 
 export interface Conn {
   engine: EngineId;
@@ -12,7 +12,7 @@ export interface Conn {
 }
 
 export interface Engine {
-  id: EngineId;
+  id: SqlEngineId;
   /** The command line client on the host. */
   client: string;
   /** Env var the client reads the password from. */
@@ -30,6 +30,16 @@ export interface Engine {
   /** Wraps a text value for a column of the given type. */
   value: (text: string, type: string) => string;
   ref: (schema: string, table: string) => string;
+  /** The schema a table is in when none is given. */
+  defaultSchema?: string;
+  /** A page of rows, for engines without LIMIT and OFFSET. */
+  page?: (
+    ref: string,
+    where: string,
+    order: string,
+    limit: number,
+    offset: number,
+  ) => string;
   /** Statement that lists database names (one column). */
   databasesSql: string;
   /** schema, name, kind (table or view), rows. */

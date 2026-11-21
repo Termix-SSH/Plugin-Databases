@@ -18,9 +18,12 @@ import type {
 import { DatabasesError } from "./errors.js";
 import { getEngine, type Conn, type Engine } from "./engines/index.js";
 import { sections } from "./engines/parse.js";
+import { createMongo } from "./mongo.js";
+import { createRedis } from "./redis.js";
 import { parseKeys, type Remote } from "./remote.js";
 import { buildScript, TOOLS_SCRIPT } from "./script.js";
 import { CONSOLE_ROWS, MAX_ROWS } from "./validate.js";
+import { resultStatements } from "./split-sql.js";
 
 const BINARY = /blob|binary|bytea/i;
 
@@ -36,7 +39,11 @@ function toColumns(grid: Grid): ColumnInfo[] {
   }));
 }
 
+const MONGO_SYSTEM = ["admin", "config", "local"];
+
 export function createService(remote: Remote) {
+  const redis = createRedis(remote);
+  const mongo = createMongo(remote);
   async function run(
     hostId: number,
     conn: Conn,
@@ -52,7 +59,9 @@ export function createService(remote: Remote) {
 
   /** MySQL has no schema inside a database, so the database is the schema. */
   const schemaOf = (conn: Conn, target: TableTarget) =>
-    conn.engine === "mysql" ? target.db : target.schema || "public";
+    conn.engine === "mysql"
+      ? target.db
+      : target.schema || getEngine(conn.engine).defaultSchema || "public";
 
   async function columnsOf(
     hostId: number,
@@ -134,6 +143,9 @@ export function createService(remote: Remote) {
   }
 
   return {
+    redis,
+    mongo,
+
     async tools(hostId: number): Promise<ToolsView> {
       const output = await remote.run(hostId, "", TOOLS_SCRIPT, 15_000);
       const keys = parseKeys(output);
@@ -141,10 +153,19 @@ export function createService(remote: Remote) {
         mysql: keys.mysql || null,
         psql: keys.psql || null,
         sqlite3: keys.sqlite3 || null,
+        sqlcmd: keys.sqlcmd || null,
+        "redis-cli": keys["redis-cli"] || null,
+        mongosh: keys.mongosh || null,
       };
     },
 
     async test(hostId: number, conn: Conn): Promise<TestResult> {
+      if (conn.engine === "redis") {
+        return { version: await redis.version(hostId, conn) };
+      }
+      if (conn.engine === "mongo") {
+        return { version: await mongo.version(hostId, conn) };
+      }
       const engine = getEngine(conn.engine);
       const { parts } = await run(hostId, conn, "", [engine.versionSql], true);
       const grid = engine.parse(parts[0] ?? "");
@@ -152,6 +173,16 @@ export function createService(remote: Remote) {
     },
 
     async databases(hostId: number, conn: Conn): Promise<string[]> {
+      if (conn.engine === "redis") {
+        const info = await redis.info(hostId, conn);
+        const used = info.databases.map((db) => String(db.index));
+        return used.includes("0") ? used : ["0", ...used];
+      }
+      if (conn.engine === "mongo") {
+        return (await mongo.databases(hostId, conn)).filter(
+          (name) => !MONGO_SYSTEM.includes(name),
+        );
+      }
       const engine = getEngine(conn.engine);
       const { parts } = await run(
         hostId,
@@ -263,7 +294,9 @@ export function createService(remote: Remote) {
         [
           engine.columnsSql(schema, req.table),
           `SELECT COUNT(*) AS n FROM ${ref}${where}`,
-          `SELECT * FROM ${ref}${where}${order} LIMIT ${limit} OFFSET ${offset}`,
+          engine.page
+            ? engine.page(ref, where, order, limit, offset)
+            : `SELECT * FROM ${ref}${where}${order} LIMIT ${limit} OFFSET ${offset}`,
         ],
         true,
       );
@@ -326,15 +359,44 @@ export function createService(remote: Remote) {
       readOnly: boolean,
     ): Promise<QueryResult> {
       const started = Date.now();
-      const { engine, parts } = await run(hostId, conn, db, [sql], readOnly);
-      const grid = engine.parse(parts[0] ?? "");
-      const truncated = grid.rows.length > CONSOLE_ROWS;
+      // The read only run rolls back at the end, which a COMMIT would skip.
+      if (
+        conn.engine === "mssql" &&
+        readOnly &&
+        /\b(commit|save)\s+tran/i.test(sql)
+      ) {
+        throw new DatabasesError("This connection is read only");
+      }
+      const split = resultStatements(sql, conn.engine);
+      const { engine, parts } = await run(
+        hostId,
+        conn,
+        db,
+        split ?? [sql],
+        readOnly,
+      );
+      const sets = parts.map((part, index) => {
+        const grid = engine.parse(part);
+        const truncated = grid.rows.length > CONSOLE_ROWS;
+        return {
+          statement: split?.[index] ?? sql,
+          columns: grid.columns,
+          rows: truncated ? grid.rows.slice(0, CONSOLE_ROWS) : grid.rows,
+          truncated,
+        };
+      });
+      const first = sets[0] ?? {
+        columns: [],
+        rows: [],
+        truncated: false,
+      };
       return {
-        columns: grid.columns,
-        rows: truncated ? grid.rows.slice(0, CONSOLE_ROWS) : grid.rows,
-        truncated,
+        columns: first.columns,
+        rows: first.rows,
+        truncated: first.truncated,
         elapsedMs: Date.now() - started,
         readOnly,
+        ...(split ? { sets } : {}),
       };
     },
   };

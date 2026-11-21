@@ -193,6 +193,23 @@ describe.skipIf(!ready)("sqlite on a local shell", () => {
     expect(bad.body.error).toContain("no such table");
   });
 
+  it("gives each read its own result", async () => {
+    const s = server!;
+    const res = await s.request("POST", `${base()}/query`, {
+      db: "main",
+      sql: "SELECT name FROM users ORDER BY id; SELECT COUNT(*) AS n FROM log;",
+    });
+    expect(res.status).toBe(200);
+    expect(res.body.sets).toHaveLength(2);
+    expect(res.body.sets[0]).toMatchObject({
+      statement: "SELECT name FROM users ORDER BY id",
+      columns: ["name"],
+      rows: [["ann"], ["bob"]],
+    });
+    expect(res.body.sets[1]).toMatchObject({ columns: ["n"], rows: [["0"]] });
+    expect(res.body.columns).toEqual(["name"]);
+  });
+
   it("cannot write in a read only session", async () => {
     const s = server!;
     s.setLevel("connect");

@@ -2,7 +2,7 @@ import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
 import { DatabasesError } from "./errors.js";
 
 const PATH =
-  'export PATH="$PATH:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/bin:/opt/homebrew/bin"; ';
+  'export PATH="$PATH:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/bin:/opt/homebrew/bin:/opt/mssql-tools18/bin:/opt/mssql-tools/bin"; ';
 const PLAIN_SHELL = PATH + "exec bash -s";
 
 const SUDO_HINT = /password is required|a terminal is required|no tty present/i;

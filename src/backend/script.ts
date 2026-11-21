@@ -47,12 +47,18 @@ export function buildScript(
 
 /** Looks for the three clients and prints name=version lines. */
 export const TOOLS_SCRIPT = [
-  "for t in mysql psql sqlite3; do",
+  "for t in mysql psql sqlite3 redis-cli mongosh; do",
   '  if command -v "$t" >/dev/null 2>&1; then',
   '    echo "$t=$("$t" --version 2>&1 | head -n 1)"',
   "  else",
   '    echo "$t="',
   "  fi",
   "done",
+  // sqlcmd has no --version; its help names the version.
+  "if command -v sqlcmd >/dev/null 2>&1; then",
+  '  echo "sqlcmd=$(sqlcmd -? 2>&1 | grep -m 1 -i version)"',
+  "else",
+  '  echo "sqlcmd="',
+  "fi",
   "",
 ].join("\n");

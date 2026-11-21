@@ -161,6 +161,9 @@ describe("test and scripts", () => {
       mysql: "mysql  Ver 8",
       psql: null,
       sqlite3: "3.45.1",
+      sqlcmd: null,
+      "redis-cli": null,
+      mongosh: null,
     });
   });
 });

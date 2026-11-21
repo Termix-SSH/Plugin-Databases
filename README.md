@@ -4,7 +4,7 @@
 
 <h1>Databases</h1>
 
-<p>Browse and edit MySQL, MariaDB, PostgreSQL and SQLite databases on your hosts from one tab</p>
+<p>Browse and edit MySQL, MariaDB, PostgreSQL, SQL Server, SQLite, Redis and MongoDB databases on your hosts from one tab</p>
 
 <!-- VIDEO:START -->
 
@@ -26,7 +26,7 @@ Read the [docs](https://docs.termix.site/plugins/databases) to set it up and use
 
 ## Features
 
-- MySQL, MariaDB, PostgreSQL and SQLite
+- MySQL, MariaDB, PostgreSQL, SQL Server and SQLite, plus Redis keys and MongoDB documents
 - Saved logins per host with sealed passwords, socket logins and run as another Linux user
 - Page, sort and filter table data
 - Add, edit and delete rows by primary key

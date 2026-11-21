@@ -13,11 +13,12 @@ import {
   TextField,
   useConfirm,
 } from "@termix-ssh/plugin-sdk/ui";
-import type {
-  ConnectionInput,
-  ConnectionView,
-  EngineId,
-  ToolsView,
+import {
+  ENGINE_CLIENT,
+  type ConnectionInput,
+  type ConnectionView,
+  type EngineId,
+  type ToolsView,
 } from "../shared/types";
 import {
   createConnection,
@@ -45,7 +46,19 @@ const DEFAULT_PORT: Record<EngineId, string> = {
   mysql: "3306",
   postgres: "5432",
   sqlite: "",
+  mssql: "1433",
+  redis: "6379",
+  mongo: "27017",
 };
+
+const ENGINE_ORDER: EngineId[] = [
+  "mysql",
+  "postgres",
+  "mssql",
+  "sqlite",
+  "redis",
+  "mongo",
+];
 
 function initial(connection: ConnectionView | null): FormState {
   return {
@@ -104,12 +117,7 @@ export function ConnectionEditor({
     setTested("");
   };
   const sqlite = form.engine === "sqlite";
-  const client =
-    form.engine === "mysql"
-      ? tools?.mysql
-      : form.engine === "postgres"
-        ? tools?.psql
-        : tools?.sqlite3;
+  const client = tools?.[ENGINE_CLIENT[form.engine]];
 
   const test = async () => {
     setTesting(true);
@@ -188,15 +196,18 @@ export function ConnectionEditor({
           label={t("conn.type")}
           value={form.engine}
           onChange={(engine) => set({ engine })}
-          options={[
-            { value: "mysql", label: t("conn.engine.mysql") },
-            { value: "postgres", label: t("conn.engine.postgres") },
-            { value: "sqlite", label: t("conn.engine.sqlite") },
-          ]}
+          options={ENGINE_ORDER.map((value) => ({
+            value,
+            label: t(`conn.engine.${value}`),
+          }))}
         />
         {tools && !client && (
           <Alert className="text-xs">
-            <AlertDescription>{t("conn.clientMissing")}</AlertDescription>
+            <AlertDescription>
+              {t("conn.clientMissingFor", {
+                client: ENGINE_CLIENT[form.engine],
+              })}
+            </AlertDescription>
           </Alert>
         )}
         {sqlite ? (
@@ -242,6 +253,9 @@ export function ConnectionEditor({
             >
               <TextField
                 label={t("conn.user")}
+                hint={
+                  form.engine === "redis" ? t("conn.redisUserHint") : undefined
+                }
                 value={form.username}
                 onChange={(username) => set({ username })}
                 mono
@@ -265,10 +279,28 @@ export function ConnectionEditor({
               />
             )}
             <TextField
-              label={t("conn.database")}
-              hint={t("conn.databaseHint")}
+              label={
+                form.engine === "redis"
+                  ? t("conn.redisDatabase")
+                  : t("conn.database")
+              }
+              hint={
+                form.engine === "redis"
+                  ? t("conn.redisDatabaseHint")
+                  : form.engine === "mongo"
+                    ? t("conn.mongoDatabaseHint")
+                    : t("conn.databaseHint")
+              }
               value={form.database}
-              onChange={(database) => set({ database })}
+              onChange={(database) =>
+                set({
+                  database:
+                    form.engine === "redis"
+                      ? database.replace(/\D/g, "")
+                      : database,
+                })
+              }
+              placeholder={form.engine === "redis" ? "0" : ""}
               mono
             />
           </>

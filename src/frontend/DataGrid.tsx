@@ -32,11 +32,14 @@ export function DataGrid({
   connection,
   db,
   table,
+  onTotal,
 }: {
   hostId: number;
   connection: ConnectionView;
   db: string;
   table: TableEntry;
+  /** The exact row count, once the table loads without a filter. */
+  onTotal?: (total: number) => void;
 }) {
   const { t } = useTranslation();
   const toast = useToast();
@@ -91,6 +94,12 @@ export function DataGrid({
   useEffect(() => {
     void load();
   }, [load]);
+
+  useEffect(() => {
+    if (data && !where) onTotal?.(data.total);
+    // Only when new rows arrive.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data]);
 
   const keyColumns = useMemo(
     () =>
